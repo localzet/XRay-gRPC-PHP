@@ -4,13 +4,14 @@
 
 namespace Xray\Core\App\Observatory;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 
 /**
  * Generated from protobuf message <code>xray.core.app.observatory.Intensity</code>
  */
-class Intensity extends Message
+class Intensity extends \Google\Protobuf\Internal\Message
 {
     /**
      * &#64;Document The time interval for a probe request in ms.
@@ -26,13 +27,12 @@ class Intensity extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type int $probe_interval
+     *     @type int $probe_interval
      *           &#64;Document The time interval for a probe request in ms.
      *          &#64;Type time.ms
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\App\Observatory\Config::initOnce();
         parent::__construct($data);
     }

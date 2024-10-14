@@ -4,13 +4,14 @@
 
 namespace Xray\App\Reverse;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 
 /**
  * Generated from protobuf message <code>xray.app.reverse.BridgeConfig</code>
  */
-class BridgeConfig extends Message
+class BridgeConfig extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>string tag = 1;</code>
@@ -27,12 +28,11 @@ class BridgeConfig extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $tag
-     * @type string $domain
+     *     @type string $tag
+     *     @type string $domain
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\App\Reverse\Config::initOnce();
         parent::__construct($data);
     }

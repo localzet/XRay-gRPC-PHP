@@ -5,15 +5,13 @@
 namespace Xray\Proxy\Vmess\Inbound;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 use Google\Protobuf\Internal\RepeatedField;
-use Xray\Common\Protocol\User;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * Generated from protobuf message <code>xray.proxy.vmess.inbound.Config</code>
  */
-class Config extends Message
+class Config extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>repeated .xray.common.protocol.User user = 1;</code>
@@ -36,21 +34,20 @@ class Config extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type array<User>|RepeatedField $user
-     * @type DefaultConfig $default
-     * @type DetourConfig $detour
+     *     @type array<\Xray\Common\Protocol\User>|\Google\Protobuf\Internal\RepeatedField $user
+     *     @type \Xray\Proxy\Vmess\Inbound\DefaultConfig $default
+     *     @type \Xray\Proxy\Vmess\Inbound\DetourConfig $detour
      *           4 is for legacy setting
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Proxy\Vmess\Inbound\Config::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>repeated .xray.common.protocol.User user = 1;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getUser()
     {
@@ -59,12 +56,12 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.common.protocol.User user = 1;</code>
-     * @param array<User>|RepeatedField $var
+     * @param array<\Xray\Common\Protocol\User>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setUser($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, User::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Xray\Common\Protocol\User::class);
         $this->user = $arr;
 
         return $this;
@@ -72,7 +69,7 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>.xray.proxy.vmess.inbound.DefaultConfig default = 2;</code>
-     * @return DefaultConfig|null
+     * @return \Xray\Proxy\Vmess\Inbound\DefaultConfig|null
      */
     public function getDefault()
     {
@@ -91,12 +88,12 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>.xray.proxy.vmess.inbound.DefaultConfig default = 2;</code>
-     * @param DefaultConfig $var
+     * @param \Xray\Proxy\Vmess\Inbound\DefaultConfig $var
      * @return $this
      */
     public function setDefault($var)
     {
-        GPBUtil::checkMessage($var, DefaultConfig::class);
+        GPBUtil::checkMessage($var, \Xray\Proxy\Vmess\Inbound\DefaultConfig::class);
         $this->default = $var;
 
         return $this;
@@ -106,7 +103,7 @@ class Config extends Message
      * 4 is for legacy setting
      *
      * Generated from protobuf field <code>.xray.proxy.vmess.inbound.DetourConfig detour = 3;</code>
-     * @return DetourConfig|null
+     * @return \Xray\Proxy\Vmess\Inbound\DetourConfig|null
      */
     public function getDetour()
     {
@@ -127,12 +124,12 @@ class Config extends Message
      * 4 is for legacy setting
      *
      * Generated from protobuf field <code>.xray.proxy.vmess.inbound.DetourConfig detour = 3;</code>
-     * @param DetourConfig $var
+     * @param \Xray\Proxy\Vmess\Inbound\DetourConfig $var
      * @return $this
      */
     public function setDetour($var)
     {
-        GPBUtil::checkMessage($var, DetourConfig::class);
+        GPBUtil::checkMessage($var, \Xray\Proxy\Vmess\Inbound\DetourConfig::class);
         $this->detour = $var;
 
         return $this;

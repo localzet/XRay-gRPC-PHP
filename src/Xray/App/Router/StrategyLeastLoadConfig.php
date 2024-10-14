@@ -5,14 +5,13 @@
 namespace Xray\App\Router;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 use Google\Protobuf\Internal\RepeatedField;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * Generated from protobuf message <code>xray.app.router.StrategyLeastLoadConfig</code>
  */
-class StrategyLeastLoadConfig extends Message
+class StrategyLeastLoadConfig extends \Google\Protobuf\Internal\Message
 {
     /**
      * weight settings
@@ -51,20 +50,19 @@ class StrategyLeastLoadConfig extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type array<StrategyWeight>|RepeatedField $costs
+     *     @type array<\Xray\App\Router\StrategyWeight>|\Google\Protobuf\Internal\RepeatedField $costs
      *           weight settings
-     * @type array<int>|array<string>|RepeatedField $baselines
+     *     @type array<int>|array<string>|\Google\Protobuf\Internal\RepeatedField $baselines
      *           RTT baselines for selecting, int64 values of time.Duration
-     * @type int $expected
+     *     @type int $expected
      *           expected nodes count to select
-     * @type int|string $maxRTT
+     *     @type int|string $maxRTT
      *           max acceptable rtt, filter away high delay nodes. default 0
-     * @type float $tolerance
+     *     @type float $tolerance
      *           acceptable failure rate
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\App\Router\Config::initOnce();
         parent::__construct($data);
     }
@@ -73,7 +71,7 @@ class StrategyLeastLoadConfig extends Message
      * weight settings
      *
      * Generated from protobuf field <code>repeated .xray.app.router.StrategyWeight costs = 2;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getCosts()
     {
@@ -84,12 +82,12 @@ class StrategyLeastLoadConfig extends Message
      * weight settings
      *
      * Generated from protobuf field <code>repeated .xray.app.router.StrategyWeight costs = 2;</code>
-     * @param array<StrategyWeight>|RepeatedField $var
+     * @param array<\Xray\App\Router\StrategyWeight>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setCosts($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, StrategyWeight::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Xray\App\Router\StrategyWeight::class);
         $this->costs = $arr;
 
         return $this;
@@ -99,7 +97,7 @@ class StrategyLeastLoadConfig extends Message
      * RTT baselines for selecting, int64 values of time.Duration
      *
      * Generated from protobuf field <code>repeated int64 baselines = 3;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getBaselines()
     {
@@ -110,12 +108,12 @@ class StrategyLeastLoadConfig extends Message
      * RTT baselines for selecting, int64 values of time.Duration
      *
      * Generated from protobuf field <code>repeated int64 baselines = 3;</code>
-     * @param array<int>|array<string>|RepeatedField $var
+     * @param array<int>|array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setBaselines($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::INT64);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::INT64);
         $this->baselines = $arr;
 
         return $this;

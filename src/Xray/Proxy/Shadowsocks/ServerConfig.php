@@ -5,17 +5,13 @@
 namespace Xray\Proxy\Shadowsocks;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 use Google\Protobuf\Internal\RepeatedField;
-use GPBMetadata\Proxy\Shadowsocks\Config;
-use Xray\Common\Net\Network;
-use Xray\Common\Protocol\User;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * Generated from protobuf message <code>xray.proxy.shadowsocks.ServerConfig</code>
  */
-class ServerConfig extends Message
+class ServerConfig extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>repeated .xray.common.protocol.User users = 1;</code>
@@ -32,19 +28,18 @@ class ServerConfig extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type array<User>|RepeatedField $users
-     * @type array<int>|RepeatedField $network
+     *     @type array<\Xray\Common\Protocol\User>|\Google\Protobuf\Internal\RepeatedField $users
+     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $network
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Config::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\Proxy\Shadowsocks\Config::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>repeated .xray.common.protocol.User users = 1;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getUsers()
     {
@@ -53,12 +48,12 @@ class ServerConfig extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.common.protocol.User users = 1;</code>
-     * @param array<User>|RepeatedField $var
+     * @param array<\Xray\Common\Protocol\User>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setUsers($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, User::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Xray\Common\Protocol\User::class);
         $this->users = $arr;
 
         return $this;
@@ -66,7 +61,7 @@ class ServerConfig extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.common.net.Network network = 2;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getNetwork()
     {
@@ -75,12 +70,12 @@ class ServerConfig extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.common.net.Network network = 2;</code>
-     * @param array<int>|RepeatedField $var
+     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setNetwork($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::ENUM, Network::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::ENUM, \Xray\Common\Net\Network::class);
         $this->network = $arr;
 
         return $this;

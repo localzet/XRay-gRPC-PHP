@@ -5,18 +5,15 @@
 namespace Xray\Transport\Internet;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 use Google\Protobuf\Internal\RepeatedField;
-use GPBMetadata\Transport\Internet\Config;
-use Xray\Transport\Internet\SocketConfig\TProxyMode;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * SocketConfig is options to be applied on network sockets.
  *
  * Generated from protobuf message <code>xray.transport.internet.SocketConfig</code>
  */
-class SocketConfig extends Message
+class SocketConfig extends \Google\Protobuf\Internal\Message
 {
     /**
      * Mark of the connection. If non-zero, the value will be set to SO_MARK.
@@ -114,36 +111,35 @@ class SocketConfig extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type int $mark
+     *     @type int $mark
      *           Mark of the connection. If non-zero, the value will be set to SO_MARK.
-     * @type int $tfo
+     *     @type int $tfo
      *           TFO is the state of TFO settings.
-     * @type int $tproxy
+     *     @type int $tproxy
      *           TProxy is for enabling TProxy socket option.
-     * @type bool $receive_original_dest_address
+     *     @type bool $receive_original_dest_address
      *           ReceiveOriginalDestAddress is for enabling IP_RECVORIGDSTADDR socket
      *           option. This option is for UDP only.
-     * @type string $bind_address
-     * @type int $bind_port
-     * @type bool $accept_proxy_protocol
-     * @type int $domain_strategy
-     * @type string $dialer_proxy
-     * @type int $tcp_keep_alive_interval
-     * @type int $tcp_keep_alive_idle
-     * @type string $tcp_congestion
-     * @type string $interface
-     * @type bool $v6only
-     * @type int $tcp_window_clamp
-     * @type int $tcp_user_timeout
-     * @type int $tcp_max_seg
-     * @type bool $tcp_no_delay
-     * @type bool $tcp_mptcp
-     * @type array<CustomSockopt>|RepeatedField $customSockopt
+     *     @type string $bind_address
+     *     @type int $bind_port
+     *     @type bool $accept_proxy_protocol
+     *     @type int $domain_strategy
+     *     @type string $dialer_proxy
+     *     @type int $tcp_keep_alive_interval
+     *     @type int $tcp_keep_alive_idle
+     *     @type string $tcp_congestion
+     *     @type string $interface
+     *     @type bool $v6only
+     *     @type int $tcp_window_clamp
+     *     @type int $tcp_user_timeout
+     *     @type int $tcp_max_seg
+     *     @type bool $tcp_no_delay
+     *     @type bool $tcp_mptcp
+     *     @type array<\Xray\Transport\Internet\CustomSockopt>|\Google\Protobuf\Internal\RepeatedField $customSockopt
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Config::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\Transport\Internet\Config::initOnce();
         parent::__construct($data);
     }
 
@@ -219,7 +215,7 @@ class SocketConfig extends Message
      */
     public function setTproxy($var)
     {
-        GPBUtil::checkEnum($var, TProxyMode::class);
+        GPBUtil::checkEnum($var, \Xray\Transport\Internet\SocketConfig\TProxyMode::class);
         $this->tproxy = $var;
 
         return $this;
@@ -335,7 +331,7 @@ class SocketConfig extends Message
      */
     public function setDomainStrategy($var)
     {
-        GPBUtil::checkEnum($var, DomainStrategy::class);
+        GPBUtil::checkEnum($var, \Xray\Transport\Internet\DomainStrategy::class);
         $this->domain_strategy = $var;
 
         return $this;
@@ -585,7 +581,7 @@ class SocketConfig extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.transport.internet.CustomSockopt customSockopt = 20;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getCustomSockopt()
     {
@@ -594,12 +590,12 @@ class SocketConfig extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.transport.internet.CustomSockopt customSockopt = 20;</code>
-     * @param array<CustomSockopt>|RepeatedField $var
+     * @param array<\Xray\Transport\Internet\CustomSockopt>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setCustomSockopt($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, CustomSockopt::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Xray\Transport\Internet\CustomSockopt::class);
         $this->customSockopt = $arr;
 
         return $this;

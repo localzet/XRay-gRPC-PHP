@@ -4,15 +4,14 @@
 
 namespace Xray\App\Proxyman\Command;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
-use GPBMetadata\App\Proxyman\Command\Command;
-use Xray\Common\Serial\TypedMessage;
 
 /**
  * Generated from protobuf message <code>xray.app.proxyman.command.AlterInboundRequest</code>
  */
-class AlterInboundRequest extends Message
+class AlterInboundRequest extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>string tag = 1;</code>
@@ -29,13 +28,12 @@ class AlterInboundRequest extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $tag
-     * @type TypedMessage $operation
+     *     @type string $tag
+     *     @type \Xray\Common\Serial\TypedMessage $operation
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Command::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\App\Proxyman\Command\Command::initOnce();
         parent::__construct($data);
     }
 
@@ -63,7 +61,7 @@ class AlterInboundRequest extends Message
 
     /**
      * Generated from protobuf field <code>.xray.common.serial.TypedMessage operation = 2;</code>
-     * @return TypedMessage|null
+     * @return \Xray\Common\Serial\TypedMessage|null
      */
     public function getOperation()
     {
@@ -82,12 +80,12 @@ class AlterInboundRequest extends Message
 
     /**
      * Generated from protobuf field <code>.xray.common.serial.TypedMessage operation = 2;</code>
-     * @param TypedMessage $var
+     * @param \Xray\Common\Serial\TypedMessage $var
      * @return $this
      */
     public function setOperation($var)
     {
-        GPBUtil::checkMessage($var, TypedMessage::class);
+        GPBUtil::checkMessage($var, \Xray\Common\Serial\TypedMessage::class);
         $this->operation = $var;
 
         return $this;

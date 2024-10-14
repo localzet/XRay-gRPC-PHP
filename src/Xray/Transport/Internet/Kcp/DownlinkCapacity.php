@@ -4,15 +4,16 @@
 
 namespace Xray\Transport\Internet\Kcp;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 
 /**
  * Downlink capacity, in MB.
  *
  * Generated from protobuf message <code>xray.transport.internet.kcp.DownlinkCapacity</code>
  */
-class DownlinkCapacity extends Message
+class DownlinkCapacity extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>uint32 value = 1;</code>
@@ -25,11 +26,10 @@ class DownlinkCapacity extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type int $value
+     *     @type int $value
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Transport\Internet\Kcp\Config::initOnce();
         parent::__construct($data);
     }

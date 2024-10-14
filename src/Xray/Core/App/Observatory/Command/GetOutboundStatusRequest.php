@@ -4,13 +4,14 @@
 
 namespace Xray\Core\App\Observatory\Command;
 
-use Google\Protobuf\Internal\Message;
-use GPBMetadata\App\Observatory\Command\Command;
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * Generated from protobuf message <code>xray.core.app.observatory.command.GetOutboundStatusRequest</code>
  */
-class GetOutboundStatusRequest extends Message
+class GetOutboundStatusRequest extends \Google\Protobuf\Internal\Message
 {
 
     /**
@@ -21,9 +22,8 @@ class GetOutboundStatusRequest extends Message
      *
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Command::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\App\Observatory\Command\Command::initOnce();
         parent::__construct($data);
     }
 

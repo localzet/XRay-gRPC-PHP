@@ -5,14 +5,13 @@
 namespace Xray\Transport\Internet\Headers\Http;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 use Google\Protobuf\Internal\RepeatedField;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * Generated from protobuf message <code>xray.transport.internet.headers.http.Header</code>
  */
-class Header extends Message
+class Header extends \Google\Protobuf\Internal\Message
 {
     /**
      * "Accept", "Cookie", etc
@@ -34,15 +33,14 @@ class Header extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $name
+     *     @type string $name
      *           "Accept", "Cookie", etc
-     * @type array<string>|RepeatedField $value
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $value
      *           Each entry must be valid in one piece. Random entry will be chosen if
      *           multiple entries present.
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Transport\Internet\Headers\Http\Config::initOnce();
         parent::__construct($data);
     }
@@ -78,7 +76,7 @@ class Header extends Message
      * multiple entries present.
      *
      * Generated from protobuf field <code>repeated string value = 2;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getValue()
     {
@@ -90,12 +88,12 @@ class Header extends Message
      * multiple entries present.
      *
      * Generated from protobuf field <code>repeated string value = 2;</code>
-     * @param array<string>|RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setValue($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::STRING);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->value = $arr;
 
         return $this;

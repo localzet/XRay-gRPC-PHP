@@ -4,15 +4,14 @@
 
 namespace Xray\Core\App\Observatory\Command;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
-use GPBMetadata\App\Observatory\Command\Command;
-use Xray\Core\App\Observatory\ObservationResult;
 
 /**
  * Generated from protobuf message <code>xray.core.app.observatory.command.GetOutboundStatusResponse</code>
  */
-class GetOutboundStatusResponse extends Message
+class GetOutboundStatusResponse extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>.xray.core.app.observatory.ObservationResult status = 1;</code>
@@ -25,18 +24,17 @@ class GetOutboundStatusResponse extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type ObservationResult $status
+     *     @type \Xray\Core\App\Observatory\ObservationResult $status
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Command::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\App\Observatory\Command\Command::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>.xray.core.app.observatory.ObservationResult status = 1;</code>
-     * @return ObservationResult|null
+     * @return \Xray\Core\App\Observatory\ObservationResult|null
      */
     public function getStatus()
     {
@@ -55,12 +53,12 @@ class GetOutboundStatusResponse extends Message
 
     /**
      * Generated from protobuf field <code>.xray.core.app.observatory.ObservationResult status = 1;</code>
-     * @param ObservationResult $var
+     * @param \Xray\Core\App\Observatory\ObservationResult $var
      * @return $this
      */
     public function setStatus($var)
     {
-        GPBUtil::checkMessage($var, ObservationResult::class);
+        GPBUtil::checkMessage($var, \Xray\Core\App\Observatory\ObservationResult::class);
         $this->status = $var;
 
         return $this;

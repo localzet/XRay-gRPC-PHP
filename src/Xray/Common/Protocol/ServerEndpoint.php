@@ -5,16 +5,13 @@
 namespace Xray\Common\Protocol;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 use Google\Protobuf\Internal\RepeatedField;
-use GPBMetadata\Common\Protocol\ServerSpec;
-use Xray\Common\Net\IPOrDomain;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * Generated from protobuf message <code>xray.common.protocol.ServerEndpoint</code>
  */
-class ServerEndpoint extends Message
+class ServerEndpoint extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>.xray.common.net.IPOrDomain address = 1;</code>
@@ -35,20 +32,19 @@ class ServerEndpoint extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type IPOrDomain $address
-     * @type int $port
-     * @type array<User>|RepeatedField $user
+     *     @type \Xray\Common\Net\IPOrDomain $address
+     *     @type int $port
+     *     @type array<\Xray\Common\Protocol\User>|\Google\Protobuf\Internal\RepeatedField $user
      * }
      */
-    public function __construct($data = NULL)
-    {
-        ServerSpec::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\Common\Protocol\ServerSpec::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>.xray.common.net.IPOrDomain address = 1;</code>
-     * @return IPOrDomain|null
+     * @return \Xray\Common\Net\IPOrDomain|null
      */
     public function getAddress()
     {
@@ -67,12 +63,12 @@ class ServerEndpoint extends Message
 
     /**
      * Generated from protobuf field <code>.xray.common.net.IPOrDomain address = 1;</code>
-     * @param IPOrDomain $var
+     * @param \Xray\Common\Net\IPOrDomain $var
      * @return $this
      */
     public function setAddress($var)
     {
-        GPBUtil::checkMessage($var, IPOrDomain::class);
+        GPBUtil::checkMessage($var, \Xray\Common\Net\IPOrDomain::class);
         $this->address = $var;
 
         return $this;
@@ -102,7 +98,7 @@ class ServerEndpoint extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.common.protocol.User user = 3;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getUser()
     {
@@ -111,12 +107,12 @@ class ServerEndpoint extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.common.protocol.User user = 3;</code>
-     * @param array<User>|RepeatedField $var
+     * @param array<\Xray\Common\Protocol\User>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setUser($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, User::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Xray\Common\Protocol\User::class);
         $this->user = $arr;
 
         return $this;

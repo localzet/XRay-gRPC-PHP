@@ -4,16 +4,16 @@
 
 namespace Xray\Common\Net;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
-use GPBMetadata\Common\Net\Port;
 
 /**
  * PortRange represents a range of ports.
  *
  * Generated from protobuf message <code>xray.common.net.PortRange</code>
  */
-class PortRange extends Message
+class PortRange extends \Google\Protobuf\Internal\Message
 {
     /**
      * The port that this range starts from.
@@ -34,15 +34,14 @@ class PortRange extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type int $From
+     *     @type int $From
      *           The port that this range starts from.
-     * @type int $To
+     *     @type int $To
      *           The port that this range ends with (inclusive).
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Port::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\Common\Net\Port::initOnce();
         parent::__construct($data);
     }
 

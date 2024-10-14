@@ -4,36 +4,32 @@
 
 namespace GPBMetadata\Transport\Internet\Websocket;
 
-use Google\Protobuf\Internal\DescriptorPool;
-
 class Config
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
-        $pool = DescriptorPool::getGeneratedPool();
+    public static function initOnce() {
+        $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
         if (static::$is_initialized == true) {
-            return;
+          return;
         }
         $pool->internalAddGeneratedFile(
             '
-ï¿½
-)transport/internet/websocket/config.proto!xray.transport.internet.websocket"ï¿½
+¦
+)transport/internet/websocket/config.proto!xray.transport.internet.websocket"Å
 Config
 host (	
 path (	E
 header (25.xray.transport.internet.websocket.Config.HeaderEntry
 accept_proxy_protocol (
 
-ed (
--
+ed (-
 HeaderEntry
 key (	
-value (	:8Bï¿½
-%com.xray.transport.internet.websocketPZ6github.com/xtls/xray-core/transport/internet/websocketï¿½!Xray.Transport.Internet.Websocketbproto3'
-            , true);
+value (	:8B…
+%com.xray.transport.internet.websocketPZ6github.com/xtls/xray-core/transport/internet/websocketª!Xray.Transport.Internet.Websocketbproto3'
+        , true);
 
         static::$is_initialized = true;
     }

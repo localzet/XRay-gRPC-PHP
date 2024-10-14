@@ -4,15 +4,14 @@
 
 namespace Xray\App\Router\Domain;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
-use GPBMetadata\App\Router\Config;
-use Xray\App\Router\Domain_Attribute;
 
 /**
  * Generated from protobuf message <code>xray.app.router.Domain.Attribute</code>
  */
-class Attribute extends Message
+class Attribute extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>string key = 1;</code>
@@ -26,14 +25,13 @@ class Attribute extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $key
-     * @type bool $bool_value
-     * @type int|string $int_value
+     *     @type string $key
+     *     @type bool $bool_value
+     *     @type int|string $int_value
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Config::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\App\Router\Config::initOnce();
         parent::__construct($data);
     }
 
@@ -124,5 +122,5 @@ class Attribute extends Message
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Attribute::class, Domain_Attribute::class);
+class_alias(Attribute::class, \Xray\App\Router\Domain_Attribute::class);
 

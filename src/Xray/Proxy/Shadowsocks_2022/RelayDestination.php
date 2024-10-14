@@ -4,15 +4,14 @@
 
 namespace Xray\Proxy\Shadowsocks_2022;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
-use GPBMetadata\Proxy\Shadowsocks2022\Config;
-use Xray\Common\Net\IPOrDomain;
 
 /**
  * Generated from protobuf message <code>xray.proxy.shadowsocks_2022.RelayDestination</code>
  */
-class RelayDestination extends Message
+class RelayDestination extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>string key = 1;</code>
@@ -41,16 +40,15 @@ class RelayDestination extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $key
-     * @type IPOrDomain $address
-     * @type int $port
-     * @type string $email
-     * @type int $level
+     *     @type string $key
+     *     @type \Xray\Common\Net\IPOrDomain $address
+     *     @type int $port
+     *     @type string $email
+     *     @type int $level
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Config::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\Proxy\Shadowsocks2022\Config::initOnce();
         parent::__construct($data);
     }
 
@@ -78,7 +76,7 @@ class RelayDestination extends Message
 
     /**
      * Generated from protobuf field <code>.xray.common.net.IPOrDomain address = 2;</code>
-     * @return IPOrDomain|null
+     * @return \Xray\Common\Net\IPOrDomain|null
      */
     public function getAddress()
     {
@@ -97,12 +95,12 @@ class RelayDestination extends Message
 
     /**
      * Generated from protobuf field <code>.xray.common.net.IPOrDomain address = 2;</code>
-     * @param IPOrDomain $var
+     * @param \Xray\Common\Net\IPOrDomain $var
      * @return $this
      */
     public function setAddress($var)
     {
-        GPBUtil::checkMessage($var, IPOrDomain::class);
+        GPBUtil::checkMessage($var, \Xray\Common\Net\IPOrDomain::class);
         $this->address = $var;
 
         return $this;

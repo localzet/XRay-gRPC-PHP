@@ -5,16 +5,13 @@
 namespace Xray\Proxy\Shadowsocks_2022;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 use Google\Protobuf\Internal\RepeatedField;
-use GPBMetadata\Proxy\Shadowsocks2022\Config;
-use Xray\Common\Net\Network;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * Generated from protobuf message <code>xray.proxy.shadowsocks_2022.MultiUserServerConfig</code>
  */
-class MultiUserServerConfig extends Message
+class MultiUserServerConfig extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>string method = 1;</code>
@@ -39,15 +36,14 @@ class MultiUserServerConfig extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $method
-     * @type string $key
-     * @type array<User>|RepeatedField $users
-     * @type array<int>|RepeatedField $network
+     *     @type string $method
+     *     @type string $key
+     *     @type array<\Xray\Proxy\Shadowsocks_2022\User>|\Google\Protobuf\Internal\RepeatedField $users
+     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $network
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Config::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\Proxy\Shadowsocks2022\Config::initOnce();
         parent::__construct($data);
     }
 
@@ -97,7 +93,7 @@ class MultiUserServerConfig extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.proxy.shadowsocks_2022.User users = 3;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getUsers()
     {
@@ -106,12 +102,12 @@ class MultiUserServerConfig extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.proxy.shadowsocks_2022.User users = 3;</code>
-     * @param array<User>|RepeatedField $var
+     * @param array<\Xray\Proxy\Shadowsocks_2022\User>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setUsers($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, User::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Xray\Proxy\Shadowsocks_2022\User::class);
         $this->users = $arr;
 
         return $this;
@@ -119,7 +115,7 @@ class MultiUserServerConfig extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.common.net.Network network = 4;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getNetwork()
     {
@@ -128,12 +124,12 @@ class MultiUserServerConfig extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.common.net.Network network = 4;</code>
-     * @param array<int>|RepeatedField $var
+     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setNetwork($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::ENUM, Network::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::ENUM, \Xray\Common\Net\Network::class);
         $this->network = $arr;
 
         return $this;

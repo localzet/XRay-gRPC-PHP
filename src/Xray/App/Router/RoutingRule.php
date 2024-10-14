@@ -5,17 +5,13 @@
 namespace Xray\App\Router;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\MapField;
-use Google\Protobuf\Internal\Message;
 use Google\Protobuf\Internal\RepeatedField;
-use Xray\Common\Net\Network;
-use Xray\Common\Net\PortList;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * Generated from protobuf message <code>xray.app.router.RoutingRule</code>
  */
-class RoutingRule extends Message
+class RoutingRule extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>string rule_tag = 18;</code>
@@ -89,36 +85,35 @@ class RoutingRule extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $tag
+     *     @type string $tag
      *           Tag of outbound that this rule is pointing to.
-     * @type string $balancing_tag
+     *     @type string $balancing_tag
      *           Tag of routing balancer.
-     * @type string $rule_tag
-     * @type array<Domain>|RepeatedField $domain
+     *     @type string $rule_tag
+     *     @type array<\Xray\App\Router\Domain>|\Google\Protobuf\Internal\RepeatedField $domain
      *           List of domains for target domain matching.
-     * @type array<GeoIP>|RepeatedField $geoip
+     *     @type array<\Xray\App\Router\GeoIP>|\Google\Protobuf\Internal\RepeatedField $geoip
      *           List of GeoIPs for target IP address matching. If this entry exists, the
      *           cidr above will have no effect. GeoIP fields with the same country code are
      *           supposed to contain exactly same content. They will be merged during
      *           runtime. For customized GeoIPs, please leave country code empty.
-     * @type PortList $port_list
+     *     @type \Xray\Common\Net\PortList $port_list
      *           List of ports.
-     * @type array<int>|RepeatedField $networks
+     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $networks
      *           List of networks for matching.
-     * @type array<GeoIP>|RepeatedField $source_geoip
+     *     @type array<\Xray\App\Router\GeoIP>|\Google\Protobuf\Internal\RepeatedField $source_geoip
      *           List of GeoIPs for source IP address matching. If this entry exists, the
      *           source_cidr above will have no effect.
-     * @type PortList $source_port_list
+     *     @type \Xray\Common\Net\PortList $source_port_list
      *           List of ports for source port matching.
-     * @type array<string>|RepeatedField $user_email
-     * @type array<string>|RepeatedField $inbound_tag
-     * @type array<string>|RepeatedField $protocol
-     * @type array|MapField $attributes
-     * @type string $domain_matcher
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $user_email
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $inbound_tag
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $protocol
+     *     @type array|\Google\Protobuf\Internal\MapField $attributes
+     *     @type string $domain_matcher
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\App\Router\Config::initOnce();
         parent::__construct($data);
     }
@@ -211,7 +206,7 @@ class RoutingRule extends Message
      * List of domains for target domain matching.
      *
      * Generated from protobuf field <code>repeated .xray.app.router.Domain domain = 2;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getDomain()
     {
@@ -222,12 +217,12 @@ class RoutingRule extends Message
      * List of domains for target domain matching.
      *
      * Generated from protobuf field <code>repeated .xray.app.router.Domain domain = 2;</code>
-     * @param array<Domain>|RepeatedField $var
+     * @param array<\Xray\App\Router\Domain>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setDomain($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, Domain::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Xray\App\Router\Domain::class);
         $this->domain = $arr;
 
         return $this;
@@ -240,7 +235,7 @@ class RoutingRule extends Message
      * runtime. For customized GeoIPs, please leave country code empty.
      *
      * Generated from protobuf field <code>repeated .xray.app.router.GeoIP geoip = 10;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getGeoip()
     {
@@ -254,12 +249,12 @@ class RoutingRule extends Message
      * runtime. For customized GeoIPs, please leave country code empty.
      *
      * Generated from protobuf field <code>repeated .xray.app.router.GeoIP geoip = 10;</code>
-     * @param array<GeoIP>|RepeatedField $var
+     * @param array<\Xray\App\Router\GeoIP>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setGeoip($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, GeoIP::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Xray\App\Router\GeoIP::class);
         $this->geoip = $arr;
 
         return $this;
@@ -269,7 +264,7 @@ class RoutingRule extends Message
      * List of ports.
      *
      * Generated from protobuf field <code>.xray.common.net.PortList port_list = 14;</code>
-     * @return PortList|null
+     * @return \Xray\Common\Net\PortList|null
      */
     public function getPortList()
     {
@@ -290,12 +285,12 @@ class RoutingRule extends Message
      * List of ports.
      *
      * Generated from protobuf field <code>.xray.common.net.PortList port_list = 14;</code>
-     * @param PortList $var
+     * @param \Xray\Common\Net\PortList $var
      * @return $this
      */
     public function setPortList($var)
     {
-        GPBUtil::checkMessage($var, PortList::class);
+        GPBUtil::checkMessage($var, \Xray\Common\Net\PortList::class);
         $this->port_list = $var;
 
         return $this;
@@ -305,7 +300,7 @@ class RoutingRule extends Message
      * List of networks for matching.
      *
      * Generated from protobuf field <code>repeated .xray.common.net.Network networks = 13;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getNetworks()
     {
@@ -316,12 +311,12 @@ class RoutingRule extends Message
      * List of networks for matching.
      *
      * Generated from protobuf field <code>repeated .xray.common.net.Network networks = 13;</code>
-     * @param array<int>|RepeatedField $var
+     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setNetworks($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::ENUM, Network::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::ENUM, \Xray\Common\Net\Network::class);
         $this->networks = $arr;
 
         return $this;
@@ -332,7 +327,7 @@ class RoutingRule extends Message
      * source_cidr above will have no effect.
      *
      * Generated from protobuf field <code>repeated .xray.app.router.GeoIP source_geoip = 11;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getSourceGeoip()
     {
@@ -344,12 +339,12 @@ class RoutingRule extends Message
      * source_cidr above will have no effect.
      *
      * Generated from protobuf field <code>repeated .xray.app.router.GeoIP source_geoip = 11;</code>
-     * @param array<GeoIP>|RepeatedField $var
+     * @param array<\Xray\App\Router\GeoIP>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setSourceGeoip($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, GeoIP::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Xray\App\Router\GeoIP::class);
         $this->source_geoip = $arr;
 
         return $this;
@@ -359,7 +354,7 @@ class RoutingRule extends Message
      * List of ports for source port matching.
      *
      * Generated from protobuf field <code>.xray.common.net.PortList source_port_list = 16;</code>
-     * @return PortList|null
+     * @return \Xray\Common\Net\PortList|null
      */
     public function getSourcePortList()
     {
@@ -380,12 +375,12 @@ class RoutingRule extends Message
      * List of ports for source port matching.
      *
      * Generated from protobuf field <code>.xray.common.net.PortList source_port_list = 16;</code>
-     * @param PortList $var
+     * @param \Xray\Common\Net\PortList $var
      * @return $this
      */
     public function setSourcePortList($var)
     {
-        GPBUtil::checkMessage($var, PortList::class);
+        GPBUtil::checkMessage($var, \Xray\Common\Net\PortList::class);
         $this->source_port_list = $var;
 
         return $this;
@@ -393,7 +388,7 @@ class RoutingRule extends Message
 
     /**
      * Generated from protobuf field <code>repeated string user_email = 7;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getUserEmail()
     {
@@ -402,12 +397,12 @@ class RoutingRule extends Message
 
     /**
      * Generated from protobuf field <code>repeated string user_email = 7;</code>
-     * @param array<string>|RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setUserEmail($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::STRING);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->user_email = $arr;
 
         return $this;
@@ -415,7 +410,7 @@ class RoutingRule extends Message
 
     /**
      * Generated from protobuf field <code>repeated string inbound_tag = 8;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getInboundTag()
     {
@@ -424,12 +419,12 @@ class RoutingRule extends Message
 
     /**
      * Generated from protobuf field <code>repeated string inbound_tag = 8;</code>
-     * @param array<string>|RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setInboundTag($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::STRING);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->inbound_tag = $arr;
 
         return $this;
@@ -437,7 +432,7 @@ class RoutingRule extends Message
 
     /**
      * Generated from protobuf field <code>repeated string protocol = 9;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getProtocol()
     {
@@ -446,12 +441,12 @@ class RoutingRule extends Message
 
     /**
      * Generated from protobuf field <code>repeated string protocol = 9;</code>
-     * @param array<string>|RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setProtocol($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::STRING);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->protocol = $arr;
 
         return $this;
@@ -459,7 +454,7 @@ class RoutingRule extends Message
 
     /**
      * Generated from protobuf field <code>map<string, string> attributes = 15;</code>
-     * @return MapField
+     * @return \Google\Protobuf\Internal\MapField
      */
     public function getAttributes()
     {
@@ -468,12 +463,12 @@ class RoutingRule extends Message
 
     /**
      * Generated from protobuf field <code>map<string, string> attributes = 15;</code>
-     * @param array|MapField $var
+     * @param array|\Google\Protobuf\Internal\MapField $var
      * @return $this
      */
     public function setAttributes($var)
     {
-        $arr = GPBUtil::checkMapField($var, GPBType::STRING, GPBType::STRING);
+        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::STRING);
         $this->attributes = $arr;
 
         return $this;

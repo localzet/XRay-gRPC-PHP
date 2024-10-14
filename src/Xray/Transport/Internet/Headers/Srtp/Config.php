@@ -4,13 +4,14 @@
 
 namespace Xray\Transport\Internet\Headers\Srtp;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 
 /**
  * Generated from protobuf message <code>xray.transport.internet.headers.srtp.Config</code>
  */
-class Config extends Message
+class Config extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>uint32 version = 1;</code>
@@ -43,16 +44,15 @@ class Config extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type int $version
-     * @type bool $padding
-     * @type bool $extension
-     * @type int $csrc_count
-     * @type bool $marker
-     * @type int $payload_type
+     *     @type int $version
+     *     @type bool $padding
+     *     @type bool $extension
+     *     @type int $csrc_count
+     *     @type bool $marker
+     *     @type int $payload_type
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Transport\Internet\Headers\Srtp\Config::initOnce();
         parent::__construct($data);
     }

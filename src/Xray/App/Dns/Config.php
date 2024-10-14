@@ -5,15 +5,13 @@
 namespace Xray\App\Dns;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 use Google\Protobuf\Internal\RepeatedField;
-use Xray\App\Dns\Config\HostMapping;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * Generated from protobuf message <code>xray.app.dns.Config</code>
  */
-class Config extends Message
+class Config extends \Google\Protobuf\Internal\Message
 {
     /**
      * NameServer list used by this DNS client.
@@ -64,24 +62,23 @@ class Config extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type array<NameServer>|RepeatedField $name_server
+     *     @type array<\Xray\App\Dns\NameServer>|\Google\Protobuf\Internal\RepeatedField $name_server
      *           NameServer list used by this DNS client.
      *           A special value 'localhost' as a domain address can be set to use DNS on local system.
-     * @type string $client_ip
+     *     @type string $client_ip
      *           Client IP for EDNS client subnet. Must be 4 bytes (IPv4) or 16 bytes
      *           (IPv6).
-     * @type array<HostMapping>|RepeatedField $static_hosts
-     * @type string $tag
+     *     @type array<\Xray\App\Dns\Config\HostMapping>|\Google\Protobuf\Internal\RepeatedField $static_hosts
+     *     @type string $tag
      *           Tag is the inbound tag of DNS client.
-     * @type bool $disableCache
+     *     @type bool $disableCache
      *           DisableCache disables DNS cache
-     * @type int $query_strategy
-     * @type bool $disableFallback
-     * @type bool $disableFallbackIfMatch
+     *     @type int $query_strategy
+     *     @type bool $disableFallback
+     *     @type bool $disableFallbackIfMatch
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\App\Dns\Config::initOnce();
         parent::__construct($data);
     }
@@ -91,7 +88,7 @@ class Config extends Message
      * A special value 'localhost' as a domain address can be set to use DNS on local system.
      *
      * Generated from protobuf field <code>repeated .xray.app.dns.NameServer name_server = 5;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getNameServer()
     {
@@ -103,12 +100,12 @@ class Config extends Message
      * A special value 'localhost' as a domain address can be set to use DNS on local system.
      *
      * Generated from protobuf field <code>repeated .xray.app.dns.NameServer name_server = 5;</code>
-     * @param array<NameServer>|RepeatedField $var
+     * @param array<\Xray\App\Dns\NameServer>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setNameServer($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, NameServer::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Xray\App\Dns\NameServer::class);
         $this->name_server = $arr;
 
         return $this;
@@ -144,7 +141,7 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.app.dns.Config.HostMapping static_hosts = 4;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getStaticHosts()
     {
@@ -153,12 +150,12 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.app.dns.Config.HostMapping static_hosts = 4;</code>
-     * @param array<HostMapping>|RepeatedField $var
+     * @param array<\Xray\App\Dns\Config\HostMapping>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setStaticHosts($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, HostMapping::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Xray\App\Dns\Config\HostMapping::class);
         $this->static_hosts = $arr;
 
         return $this;
@@ -232,7 +229,7 @@ class Config extends Message
      */
     public function setQueryStrategy($var)
     {
-        GPBUtil::checkEnum($var, QueryStrategy::class);
+        GPBUtil::checkEnum($var, \Xray\App\Dns\QueryStrategy::class);
         $this->query_strategy = $var;
 
         return $this;

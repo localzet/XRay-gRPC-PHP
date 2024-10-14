@@ -4,22 +4,19 @@
 
 namespace GPBMetadata\App\Observatory\Burst;
 
-use Google\Protobuf\Internal\DescriptorPool;
-
 class Config
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
-        $pool = DescriptorPool::getGeneratedPool();
+    public static function initOnce() {
+        $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
         if (static::$is_initialized == true) {
-            return;
+          return;
         }
         $pool->internalAddGeneratedFile(
             '
-ï¿½
+¤
 "app/observatory/burst/config.protoxray.core.app.observatory.burst"j
 Config
 subject_selector (	F
@@ -28,11 +25,10 @@ class Config
 destination (	
 connectivity (	
 interval (
-
-samplingCount (
+samplingCount (
 timeout (Bp
-com.xray.app.observatory.burstPZ/github.com/xtls/xray-core/app/observatory/burstï¿½Xray.App.Observatory.Burstbproto3'
-            , true);
+com.xray.app.observatory.burstPZ/github.com/xtls/xray-core/app/observatory/burstªXray.App.Observatory.Burstbproto3'
+        , true);
 
         static::$is_initialized = true;
     }

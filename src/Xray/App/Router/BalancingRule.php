@@ -5,15 +5,13 @@
 namespace Xray\App\Router;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 use Google\Protobuf\Internal\RepeatedField;
-use Xray\Common\Serial\TypedMessage;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * Generated from protobuf message <code>xray.app.router.BalancingRule</code>
  */
-class BalancingRule extends Message
+class BalancingRule extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>string tag = 1;</code>
@@ -42,15 +40,14 @@ class BalancingRule extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $tag
-     * @type array<string>|RepeatedField $outbound_selector
-     * @type string $strategy
-     * @type TypedMessage $strategy_settings
-     * @type string $fallback_tag
+     *     @type string $tag
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $outbound_selector
+     *     @type string $strategy
+     *     @type \Xray\Common\Serial\TypedMessage $strategy_settings
+     *     @type string $fallback_tag
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\App\Router\Config::initOnce();
         parent::__construct($data);
     }
@@ -79,7 +76,7 @@ class BalancingRule extends Message
 
     /**
      * Generated from protobuf field <code>repeated string outbound_selector = 2;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getOutboundSelector()
     {
@@ -88,12 +85,12 @@ class BalancingRule extends Message
 
     /**
      * Generated from protobuf field <code>repeated string outbound_selector = 2;</code>
-     * @param array<string>|RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setOutboundSelector($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::STRING);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->outbound_selector = $arr;
 
         return $this;
@@ -123,7 +120,7 @@ class BalancingRule extends Message
 
     /**
      * Generated from protobuf field <code>.xray.common.serial.TypedMessage strategy_settings = 4;</code>
-     * @return TypedMessage|null
+     * @return \Xray\Common\Serial\TypedMessage|null
      */
     public function getStrategySettings()
     {
@@ -142,12 +139,12 @@ class BalancingRule extends Message
 
     /**
      * Generated from protobuf field <code>.xray.common.serial.TypedMessage strategy_settings = 4;</code>
-     * @param TypedMessage $var
+     * @param \Xray\Common\Serial\TypedMessage $var
      * @return $this
      */
     public function setStrategySettings($var)
     {
-        GPBUtil::checkMessage($var, TypedMessage::class);
+        GPBUtil::checkMessage($var, \Xray\Common\Serial\TypedMessage::class);
         $this->strategy_settings = $var;
 
         return $this;

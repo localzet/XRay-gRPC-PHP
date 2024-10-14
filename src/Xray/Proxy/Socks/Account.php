@@ -4,16 +4,16 @@
 
 namespace Xray\Proxy\Socks;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
-use GPBMetadata\Proxy\Socks\Config;
 
 /**
  * Account represents a Socks account.
  *
  * Generated from protobuf message <code>xray.proxy.socks.Account</code>
  */
-class Account extends Message
+class Account extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>string username = 1;</code>
@@ -30,13 +30,12 @@ class Account extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $username
-     * @type string $password
+     *     @type string $username
+     *     @type string $password
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Config::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\Proxy\Socks\Config::initOnce();
         parent::__construct($data);
     }
 

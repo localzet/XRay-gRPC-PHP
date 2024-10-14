@@ -4,16 +4,16 @@
 
 namespace Xray\Common\Net;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
-use GPBMetadata\Common\Net\Destination;
 
 /**
  * Endpoint of a network connection.
  *
  * Generated from protobuf message <code>xray.common.net.Endpoint</code>
  */
-class Endpoint extends Message
+class Endpoint extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>.xray.common.net.Network network = 1;</code>
@@ -34,14 +34,13 @@ class Endpoint extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type int $network
-     * @type IPOrDomain $address
-     * @type int $port
+     *     @type int $network
+     *     @type \Xray\Common\Net\IPOrDomain $address
+     *     @type int $port
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Destination::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\Common\Net\Destination::initOnce();
         parent::__construct($data);
     }
 
@@ -61,7 +60,7 @@ class Endpoint extends Message
      */
     public function setNetwork($var)
     {
-        GPBUtil::checkEnum($var, Network::class);
+        GPBUtil::checkEnum($var, \Xray\Common\Net\Network::class);
         $this->network = $var;
 
         return $this;
@@ -69,7 +68,7 @@ class Endpoint extends Message
 
     /**
      * Generated from protobuf field <code>.xray.common.net.IPOrDomain address = 2;</code>
-     * @return IPOrDomain|null
+     * @return \Xray\Common\Net\IPOrDomain|null
      */
     public function getAddress()
     {
@@ -88,12 +87,12 @@ class Endpoint extends Message
 
     /**
      * Generated from protobuf field <code>.xray.common.net.IPOrDomain address = 2;</code>
-     * @param IPOrDomain $var
+     * @param \Xray\Common\Net\IPOrDomain $var
      * @return $this
      */
     public function setAddress($var)
     {
-        GPBUtil::checkMessage($var, IPOrDomain::class);
+        GPBUtil::checkMessage($var, \Xray\Common\Net\IPOrDomain::class);
         $this->address = $var;
 
         return $this;

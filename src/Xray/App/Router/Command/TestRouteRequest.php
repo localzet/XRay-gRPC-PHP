@@ -5,10 +5,8 @@
 namespace Xray\App\Router\Command;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 use Google\Protobuf\Internal\RepeatedField;
-use GPBMetadata\App\Router\Command\Command;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * TestRouteRequest manually tests a routing result according to the routing
@@ -21,7 +19,7 @@ use GPBMetadata\App\Router\Command\Command;
  *
  * Generated from protobuf message <code>xray.app.router.command.TestRouteRequest</code>
  */
-class TestRouteRequest extends Message
+class TestRouteRequest extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>.xray.app.router.command.RoutingContext RoutingContext = 1;</code>
@@ -42,20 +40,19 @@ class TestRouteRequest extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type RoutingContext $RoutingContext
-     * @type array<string>|RepeatedField $FieldSelectors
-     * @type bool $PublishResult
+     *     @type \Xray\App\Router\Command\RoutingContext $RoutingContext
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $FieldSelectors
+     *     @type bool $PublishResult
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Command::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\App\Router\Command\Command::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>.xray.app.router.command.RoutingContext RoutingContext = 1;</code>
-     * @return RoutingContext|null
+     * @return \Xray\App\Router\Command\RoutingContext|null
      */
     public function getRoutingContext()
     {
@@ -74,12 +71,12 @@ class TestRouteRequest extends Message
 
     /**
      * Generated from protobuf field <code>.xray.app.router.command.RoutingContext RoutingContext = 1;</code>
-     * @param RoutingContext $var
+     * @param \Xray\App\Router\Command\RoutingContext $var
      * @return $this
      */
     public function setRoutingContext($var)
     {
-        GPBUtil::checkMessage($var, RoutingContext::class);
+        GPBUtil::checkMessage($var, \Xray\App\Router\Command\RoutingContext::class);
         $this->RoutingContext = $var;
 
         return $this;
@@ -87,7 +84,7 @@ class TestRouteRequest extends Message
 
     /**
      * Generated from protobuf field <code>repeated string FieldSelectors = 2;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getFieldSelectors()
     {
@@ -96,12 +93,12 @@ class TestRouteRequest extends Message
 
     /**
      * Generated from protobuf field <code>repeated string FieldSelectors = 2;</code>
-     * @param array<string>|RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setFieldSelectors($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::STRING);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->FieldSelectors = $arr;
 
         return $this;

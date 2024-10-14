@@ -4,13 +4,14 @@
 
 namespace Xray\Proxy\Freedom;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 
 /**
  * Generated from protobuf message <code>xray.proxy.freedom.Fragment</code>
  */
-class Fragment extends Message
+class Fragment extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>uint64 packets_from = 1;</code>
@@ -43,16 +44,15 @@ class Fragment extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type int|string $packets_from
-     * @type int|string $packets_to
-     * @type int|string $length_min
-     * @type int|string $length_max
-     * @type int|string $interval_min
-     * @type int|string $interval_max
+     *     @type int|string $packets_from
+     *     @type int|string $packets_to
+     *     @type int|string $length_min
+     *     @type int|string $length_max
+     *     @type int|string $interval_min
+     *     @type int|string $interval_max
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Proxy\Freedom\Config::initOnce();
         parent::__construct($data);
     }

@@ -5,17 +5,13 @@
 namespace Xray\App\Dns\Config;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 use Google\Protobuf\Internal\RepeatedField;
-use GPBMetadata\App\Dns\Config;
-use Xray\App\Dns\Config_HostMapping;
-use Xray\App\Dns\DomainMatchingType;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * Generated from protobuf message <code>xray.app.dns.Config.HostMapping</code>
  */
-class HostMapping extends Message
+class HostMapping extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>.xray.app.dns.DomainMatchingType type = 1;</code>
@@ -43,17 +39,16 @@ class HostMapping extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type int $type
-     * @type string $domain
-     * @type array<string>|RepeatedField $ip
-     * @type string $proxied_domain
+     *     @type int $type
+     *     @type string $domain
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $ip
+     *     @type string $proxied_domain
      *           ProxiedDomain indicates the mapped domain has the same IP address on this
      *           domain. Xray will use this domain for IP queries.
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Config::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\App\Dns\Config::initOnce();
         parent::__construct($data);
     }
 
@@ -73,7 +68,7 @@ class HostMapping extends Message
      */
     public function setType($var)
     {
-        GPBUtil::checkEnum($var, DomainMatchingType::class);
+        GPBUtil::checkEnum($var, \Xray\App\Dns\DomainMatchingType::class);
         $this->type = $var;
 
         return $this;
@@ -103,7 +98,7 @@ class HostMapping extends Message
 
     /**
      * Generated from protobuf field <code>repeated bytes ip = 3;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getIp()
     {
@@ -112,12 +107,12 @@ class HostMapping extends Message
 
     /**
      * Generated from protobuf field <code>repeated bytes ip = 3;</code>
-     * @param array<string>|RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setIp($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::BYTES);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::BYTES);
         $this->ip = $arr;
 
         return $this;
@@ -154,5 +149,5 @@ class HostMapping extends Message
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(HostMapping::class, Config_HostMapping::class);
+class_alias(HostMapping::class, \Xray\App\Dns\Config_HostMapping::class);
 

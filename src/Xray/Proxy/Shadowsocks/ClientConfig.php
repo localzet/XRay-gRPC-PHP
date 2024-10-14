@@ -5,16 +5,13 @@
 namespace Xray\Proxy\Shadowsocks;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 use Google\Protobuf\Internal\RepeatedField;
-use GPBMetadata\Proxy\Shadowsocks\Config;
-use Xray\Common\Protocol\ServerEndpoint;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * Generated from protobuf message <code>xray.proxy.shadowsocks.ClientConfig</code>
  */
-class ClientConfig extends Message
+class ClientConfig extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>repeated .xray.common.protocol.ServerEndpoint server = 1;</code>
@@ -27,18 +24,17 @@ class ClientConfig extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type array<ServerEndpoint>|RepeatedField $server
+     *     @type array<\Xray\Common\Protocol\ServerEndpoint>|\Google\Protobuf\Internal\RepeatedField $server
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Config::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\Proxy\Shadowsocks\Config::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>repeated .xray.common.protocol.ServerEndpoint server = 1;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getServer()
     {
@@ -47,12 +43,12 @@ class ClientConfig extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.common.protocol.ServerEndpoint server = 1;</code>
-     * @param array<ServerEndpoint>|RepeatedField $var
+     * @param array<\Xray\Common\Protocol\ServerEndpoint>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setServer($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, ServerEndpoint::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Xray\Common\Protocol\ServerEndpoint::class);
         $this->server = $arr;
 
         return $this;

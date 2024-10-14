@@ -4,14 +4,14 @@
 
 namespace Xray\Transport\Internet;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
-use GPBMetadata\Transport\Internet\Config;
 
 /**
  * Generated from protobuf message <code>xray.transport.internet.ProxyConfig</code>
  */
-class ProxyConfig extends Message
+class ProxyConfig extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>string tag = 1;</code>
@@ -28,13 +28,12 @@ class ProxyConfig extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $tag
-     * @type bool $transportLayerProxy
+     *     @type string $tag
+     *     @type bool $transportLayerProxy
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Config::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\Transport\Internet\Config::initOnce();
         parent::__construct($data);
     }
 

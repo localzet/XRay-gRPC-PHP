@@ -4,16 +4,16 @@
 
 namespace Xray\Core;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
-use Xray\Common\Serial\TypedMessage;
 
 /**
  * InboundHandlerConfig is the configuration for inbound handler.
  *
  * Generated from protobuf message <code>xray.core.InboundHandlerConfig</code>
  */
-class InboundHandlerConfig extends Message
+class InboundHandlerConfig extends \Google\Protobuf\Internal\Message
 {
     /**
      * Tag of the inbound handler. The tag must be unique among all inbound
@@ -41,17 +41,16 @@ class InboundHandlerConfig extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $tag
+     *     @type string $tag
      *           Tag of the inbound handler. The tag must be unique among all inbound
      *           handlers
-     * @type TypedMessage $receiver_settings
+     *     @type \Xray\Common\Serial\TypedMessage $receiver_settings
      *           Settings for how this inbound proxy is handled.
-     * @type TypedMessage $proxy_settings
+     *     @type \Xray\Common\Serial\TypedMessage $proxy_settings
      *           Settings for inbound proxy. Must be one of the inbound proxies.
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Config::initOnce();
         parent::__construct($data);
     }
@@ -88,7 +87,7 @@ class InboundHandlerConfig extends Message
      * Settings for how this inbound proxy is handled.
      *
      * Generated from protobuf field <code>.xray.common.serial.TypedMessage receiver_settings = 2;</code>
-     * @return TypedMessage|null
+     * @return \Xray\Common\Serial\TypedMessage|null
      */
     public function getReceiverSettings()
     {
@@ -109,12 +108,12 @@ class InboundHandlerConfig extends Message
      * Settings for how this inbound proxy is handled.
      *
      * Generated from protobuf field <code>.xray.common.serial.TypedMessage receiver_settings = 2;</code>
-     * @param TypedMessage $var
+     * @param \Xray\Common\Serial\TypedMessage $var
      * @return $this
      */
     public function setReceiverSettings($var)
     {
-        GPBUtil::checkMessage($var, TypedMessage::class);
+        GPBUtil::checkMessage($var, \Xray\Common\Serial\TypedMessage::class);
         $this->receiver_settings = $var;
 
         return $this;
@@ -124,7 +123,7 @@ class InboundHandlerConfig extends Message
      * Settings for inbound proxy. Must be one of the inbound proxies.
      *
      * Generated from protobuf field <code>.xray.common.serial.TypedMessage proxy_settings = 3;</code>
-     * @return TypedMessage|null
+     * @return \Xray\Common\Serial\TypedMessage|null
      */
     public function getProxySettings()
     {
@@ -145,12 +144,12 @@ class InboundHandlerConfig extends Message
      * Settings for inbound proxy. Must be one of the inbound proxies.
      *
      * Generated from protobuf field <code>.xray.common.serial.TypedMessage proxy_settings = 3;</code>
-     * @param TypedMessage $var
+     * @param \Xray\Common\Serial\TypedMessage $var
      * @return $this
      */
     public function setProxySettings($var)
     {
-        GPBUtil::checkMessage($var, TypedMessage::class);
+        GPBUtil::checkMessage($var, \Xray\Common\Serial\TypedMessage::class);
         $this->proxy_settings = $var;
 
         return $this;

@@ -5,18 +5,15 @@
 namespace Xray\Proxy\Socks;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 use Google\Protobuf\Internal\RepeatedField;
-use GPBMetadata\Proxy\Socks\Config;
-use Xray\Common\Protocol\ServerEndpoint;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * ClientConfig is the protobuf config for Socks client.
  *
  * Generated from protobuf message <code>xray.proxy.socks.ClientConfig</code>
  */
-class ClientConfig extends Message
+class ClientConfig extends \Google\Protobuf\Internal\Message
 {
     /**
      * Sever is a list of Socks server addresses.
@@ -31,13 +28,12 @@ class ClientConfig extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type array<ServerEndpoint>|RepeatedField $server
+     *     @type array<\Xray\Common\Protocol\ServerEndpoint>|\Google\Protobuf\Internal\RepeatedField $server
      *           Sever is a list of Socks server addresses.
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Config::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\Proxy\Socks\Config::initOnce();
         parent::__construct($data);
     }
 
@@ -45,7 +41,7 @@ class ClientConfig extends Message
      * Sever is a list of Socks server addresses.
      *
      * Generated from protobuf field <code>repeated .xray.common.protocol.ServerEndpoint server = 1;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getServer()
     {
@@ -56,12 +52,12 @@ class ClientConfig extends Message
      * Sever is a list of Socks server addresses.
      *
      * Generated from protobuf field <code>repeated .xray.common.protocol.ServerEndpoint server = 1;</code>
-     * @param array<ServerEndpoint>|RepeatedField $var
+     * @param array<\Xray\Common\Protocol\ServerEndpoint>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setServer($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, ServerEndpoint::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Xray\Common\Protocol\ServerEndpoint::class);
         $this->server = $arr;
 
         return $this;

@@ -4,14 +4,14 @@
 
 namespace Xray\App\Router\Command;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
-use GPBMetadata\App\Router\Command\Command;
 
 /**
  * Generated from protobuf message <code>xray.app.router.command.GetBalancerInfoResponse</code>
  */
-class GetBalancerInfoResponse extends Message
+class GetBalancerInfoResponse extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>.xray.app.router.command.BalancerMsg balancer = 1;</code>
@@ -24,18 +24,17 @@ class GetBalancerInfoResponse extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type BalancerMsg $balancer
+     *     @type \Xray\App\Router\Command\BalancerMsg $balancer
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Command::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\App\Router\Command\Command::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>.xray.app.router.command.BalancerMsg balancer = 1;</code>
-     * @return BalancerMsg|null
+     * @return \Xray\App\Router\Command\BalancerMsg|null
      */
     public function getBalancer()
     {
@@ -54,12 +53,12 @@ class GetBalancerInfoResponse extends Message
 
     /**
      * Generated from protobuf field <code>.xray.app.router.command.BalancerMsg balancer = 1;</code>
-     * @param BalancerMsg $var
+     * @param \Xray\App\Router\Command\BalancerMsg $var
      * @return $this
      */
     public function setBalancer($var)
     {
-        GPBUtil::checkMessage($var, BalancerMsg::class);
+        GPBUtil::checkMessage($var, \Xray\App\Router\Command\BalancerMsg::class);
         $this->balancer = $var;
 
         return $this;

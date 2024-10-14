@@ -4,14 +4,14 @@
 
 namespace Xray\Transport\Internet\Tls;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
-use Xray\Transport\Internet\Tls\Certificate\Usage;
 
 /**
  * Generated from protobuf message <code>xray.transport.internet.tls.Certificate</code>
  */
-class Certificate extends Message
+class Certificate extends \Google\Protobuf\Internal\Message
 {
     /**
      * TLS certificate in x509 format.
@@ -62,23 +62,22 @@ class Certificate extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $certificate
+     *     @type string $certificate
      *           TLS certificate in x509 format.
-     * @type string $key
+     *     @type string $key
      *           TLS key in x509 format.
-     * @type int $usage
-     * @type int|string $ocsp_stapling
-     * @type string $certificate_path
+     *     @type int $usage
+     *     @type int|string $ocsp_stapling
+     *     @type string $certificate_path
      *           TLS certificate path
-     * @type string $key_path
+     *     @type string $key_path
      *           TLS Key path
-     * @type bool $One_time_loading
+     *     @type bool $One_time_loading
      *           If true, one-Time Loading
-     * @type bool $build_chain
+     *     @type bool $build_chain
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Transport\Internet\Tls\Config::initOnce();
         parent::__construct($data);
     }
@@ -151,7 +150,7 @@ class Certificate extends Message
      */
     public function setUsage($var)
     {
-        GPBUtil::checkEnum($var, Usage::class);
+        GPBUtil::checkEnum($var, \Xray\Transport\Internet\Tls\Certificate\Usage::class);
         $this->usage = $var;
 
         return $this;

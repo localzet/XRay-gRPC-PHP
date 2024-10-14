@@ -4,29 +4,25 @@
 
 namespace GPBMetadata\App\Dispatcher;
 
-use Google\Protobuf\Internal\DescriptorPool;
-
 class Config
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
-        $pool = DescriptorPool::getGeneratedPool();
+    public static function initOnce() {
+        $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
         if (static::$is_initialized == true) {
-            return;
+          return;
         }
         $pool->internalAddGeneratedFile(
             '
-ï¿½
+î
 app/dispatcher/config.protoxray.app.dispatcher"
-
-SessionConfigJ">
+SessionConfigJ">
 Config4
 settings (2".xray.app.dispatcher.SessionConfigB[
-com.xray.app.dispatcherPZ(github.com/xtls/xray-core/app/dispatcherï¿½Xray.App.Dispatcherbproto3'
-            , true);
+com.xray.app.dispatcherPZ(github.com/xtls/xray-core/app/dispatcherªXray.App.Dispatcherbproto3'
+        , true);
 
         static::$is_initialized = true;
     }

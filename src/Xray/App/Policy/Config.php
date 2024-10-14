@@ -5,14 +5,13 @@
 namespace Xray\App\Policy;
 
 use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\MapField;
-use Google\Protobuf\Internal\Message;
 
 /**
  * Generated from protobuf message <code>xray.app.policy.Config</code>
  */
-class Config extends Message
+class Config extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>map<uint32, .xray.app.policy.Policy> level = 1;</code>
@@ -29,19 +28,18 @@ class Config extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type array|MapField $level
-     * @type SystemPolicy $system
+     *     @type array|\Google\Protobuf\Internal\MapField $level
+     *     @type \Xray\App\Policy\SystemPolicy $system
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\App\Policy\Config::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>map<uint32, .xray.app.policy.Policy> level = 1;</code>
-     * @return MapField
+     * @return \Google\Protobuf\Internal\MapField
      */
     public function getLevel()
     {
@@ -50,12 +48,12 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>map<uint32, .xray.app.policy.Policy> level = 1;</code>
-     * @param array|MapField $var
+     * @param array|\Google\Protobuf\Internal\MapField $var
      * @return $this
      */
     public function setLevel($var)
     {
-        $arr = GPBUtil::checkMapField($var, GPBType::UINT32, GPBType::MESSAGE, Policy::class);
+        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::UINT32, \Google\Protobuf\Internal\GPBType::MESSAGE, \Xray\App\Policy\Policy::class);
         $this->level = $arr;
 
         return $this;
@@ -63,7 +61,7 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>.xray.app.policy.SystemPolicy system = 2;</code>
-     * @return SystemPolicy|null
+     * @return \Xray\App\Policy\SystemPolicy|null
      */
     public function getSystem()
     {
@@ -82,12 +80,12 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>.xray.app.policy.SystemPolicy system = 2;</code>
-     * @param SystemPolicy $var
+     * @param \Xray\App\Policy\SystemPolicy $var
      * @return $this
      */
     public function setSystem($var)
     {
-        GPBUtil::checkMessage($var, SystemPolicy::class);
+        GPBUtil::checkMessage($var, \Xray\App\Policy\SystemPolicy::class);
         $this->system = $var;
 
         return $this;

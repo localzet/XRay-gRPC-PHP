@@ -4,28 +4,24 @@
 
 namespace GPBMetadata\Transport\Internet\Headers\Utp;
 
-use Google\Protobuf\Internal\DescriptorPool;
-
 class Config
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
-        $pool = DescriptorPool::getGeneratedPool();
+    public static function initOnce() {
+        $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
         if (static::$is_initialized == true) {
-            return;
+          return;
         }
         $pool->internalAddGeneratedFile(
             '
-ï¿½
+ƒ
 +transport/internet/headers/utp/config.proto#xray.transport.internet.headers.utp"
 Config
-version (
-Bï¿½
-\'com.xray.transport.internet.headers.utpPZ8github.com/xtls/xray-core/transport/internet/headers/utpï¿½#Xray.Transport.Internet.Headers.Utpbproto3'
-            , true);
+version (B‹
+\'com.xray.transport.internet.headers.utpPZ8github.com/xtls/xray-core/transport/internet/headers/utpª#Xray.Transport.Internet.Headers.Utpbproto3'
+        , true);
 
         static::$is_initialized = true;
     }

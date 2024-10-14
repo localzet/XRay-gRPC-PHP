@@ -4,17 +4,14 @@
 
 namespace Xray\App\Proxyman;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
-use GPBMetadata\App\Proxyman\Config;
-use Xray\App\Proxyman\AllocationStrategy\AllocationStrategyConcurrency;
-use Xray\App\Proxyman\AllocationStrategy\AllocationStrategyRefresh;
-use Xray\App\Proxyman\AllocationStrategy\Type;
 
 /**
  * Generated from protobuf message <code>xray.app.proxyman.AllocationStrategy</code>
  */
-class AllocationStrategy extends Message
+class AllocationStrategy extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>.xray.app.proxyman.AllocationStrategy.Type type = 1;</code>
@@ -41,18 +38,17 @@ class AllocationStrategy extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type int $type
-     * @type AllocationStrategyConcurrency $concurrency
+     *     @type int $type
+     *     @type \Xray\App\Proxyman\AllocationStrategy\AllocationStrategyConcurrency $concurrency
      *           Number of handlers (ports) running in parallel.
      *           Default value is 3 if unset.
-     * @type AllocationStrategyRefresh $refresh
+     *     @type \Xray\App\Proxyman\AllocationStrategy\AllocationStrategyRefresh $refresh
      *           Number of minutes before a handler is regenerated.
      *           Default value is 5 if unset.
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Config::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\App\Proxyman\Config::initOnce();
         parent::__construct($data);
     }
 
@@ -72,7 +68,7 @@ class AllocationStrategy extends Message
      */
     public function setType($var)
     {
-        GPBUtil::checkEnum($var, Type::class);
+        GPBUtil::checkEnum($var, \Xray\App\Proxyman\AllocationStrategy\Type::class);
         $this->type = $var;
 
         return $this;
@@ -83,7 +79,7 @@ class AllocationStrategy extends Message
      * Default value is 3 if unset.
      *
      * Generated from protobuf field <code>.xray.app.proxyman.AllocationStrategy.AllocationStrategyConcurrency concurrency = 2;</code>
-     * @return AllocationStrategyConcurrency|null
+     * @return \Xray\App\Proxyman\AllocationStrategy\AllocationStrategyConcurrency|null
      */
     public function getConcurrency()
     {
@@ -105,12 +101,12 @@ class AllocationStrategy extends Message
      * Default value is 3 if unset.
      *
      * Generated from protobuf field <code>.xray.app.proxyman.AllocationStrategy.AllocationStrategyConcurrency concurrency = 2;</code>
-     * @param AllocationStrategyConcurrency $var
+     * @param \Xray\App\Proxyman\AllocationStrategy\AllocationStrategyConcurrency $var
      * @return $this
      */
     public function setConcurrency($var)
     {
-        GPBUtil::checkMessage($var, AllocationStrategyConcurrency::class);
+        GPBUtil::checkMessage($var, \Xray\App\Proxyman\AllocationStrategy\AllocationStrategyConcurrency::class);
         $this->concurrency = $var;
 
         return $this;
@@ -121,7 +117,7 @@ class AllocationStrategy extends Message
      * Default value is 5 if unset.
      *
      * Generated from protobuf field <code>.xray.app.proxyman.AllocationStrategy.AllocationStrategyRefresh refresh = 3;</code>
-     * @return AllocationStrategyRefresh|null
+     * @return \Xray\App\Proxyman\AllocationStrategy\AllocationStrategyRefresh|null
      */
     public function getRefresh()
     {
@@ -143,12 +139,12 @@ class AllocationStrategy extends Message
      * Default value is 5 if unset.
      *
      * Generated from protobuf field <code>.xray.app.proxyman.AllocationStrategy.AllocationStrategyRefresh refresh = 3;</code>
-     * @param AllocationStrategyRefresh $var
+     * @param \Xray\App\Proxyman\AllocationStrategy\AllocationStrategyRefresh $var
      * @return $this
      */
     public function setRefresh($var)
     {
-        GPBUtil::checkMessage($var, AllocationStrategyRefresh::class);
+        GPBUtil::checkMessage($var, \Xray\App\Proxyman\AllocationStrategy\AllocationStrategyRefresh::class);
         $this->refresh = $var;
 
         return $this;

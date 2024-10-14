@@ -5,14 +5,13 @@
 namespace Xray\Transport\Internet\Httpupgrade;
 
 use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\MapField;
-use Google\Protobuf\Internal\Message;
 
 /**
  * Generated from protobuf message <code>xray.transport.internet.httpupgrade.Config</code>
  */
-class Config extends Message
+class Config extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>string host = 1;</code>
@@ -41,15 +40,14 @@ class Config extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $host
-     * @type string $path
-     * @type array|MapField $header
-     * @type bool $accept_proxy_protocol
-     * @type int $ed
+     *     @type string $host
+     *     @type string $path
+     *     @type array|\Google\Protobuf\Internal\MapField $header
+     *     @type bool $accept_proxy_protocol
+     *     @type int $ed
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Transport\Internet\Httpupgrade\Config::initOnce();
         parent::__construct($data);
     }
@@ -100,7 +98,7 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>map<string, string> header = 3;</code>
-     * @return MapField
+     * @return \Google\Protobuf\Internal\MapField
      */
     public function getHeader()
     {
@@ -109,12 +107,12 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>map<string, string> header = 3;</code>
-     * @param array|MapField $var
+     * @param array|\Google\Protobuf\Internal\MapField $var
      * @return $this
      */
     public function setHeader($var)
     {
-        $arr = GPBUtil::checkMapField($var, GPBType::STRING, GPBType::STRING);
+        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::STRING);
         $this->header = $arr;
 
         return $this;

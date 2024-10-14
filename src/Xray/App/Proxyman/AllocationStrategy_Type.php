@@ -9,9 +9,7 @@ if (false) {
      * This class is deprecated. Use Xray\App\Proxyman\AllocationStrategy\Type instead.
      * @deprecated
      */
-    class AllocationStrategy_Type
-    {
-    }
+    class AllocationStrategy_Type {}
 }
 class_exists(AllocationStrategy\Type::class);
 @trigger_error('Xray\App\Proxyman\AllocationStrategy_Type is deprecated and will be removed in the next major release. Use Xray\App\Proxyman\AllocationStrategy\Type instead', E_USER_DEPRECATED);

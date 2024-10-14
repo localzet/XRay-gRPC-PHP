@@ -5,15 +5,13 @@
 namespace Xray\Proxy\Vless\Outbound;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 use Google\Protobuf\Internal\RepeatedField;
-use Xray\Common\Protocol\ServerEndpoint;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * Generated from protobuf message <code>xray.proxy.vless.outbound.Config</code>
  */
-class Config extends Message
+class Config extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>repeated .xray.common.protocol.ServerEndpoint vnext = 1;</code>
@@ -26,18 +24,17 @@ class Config extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type array<ServerEndpoint>|RepeatedField $vnext
+     *     @type array<\Xray\Common\Protocol\ServerEndpoint>|\Google\Protobuf\Internal\RepeatedField $vnext
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Proxy\Vless\Outbound\Config::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>repeated .xray.common.protocol.ServerEndpoint vnext = 1;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getVnext()
     {
@@ -46,12 +43,12 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.common.protocol.ServerEndpoint vnext = 1;</code>
-     * @param array<ServerEndpoint>|RepeatedField $var
+     * @param array<\Xray\Common\Protocol\ServerEndpoint>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setVnext($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, ServerEndpoint::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Xray\Common\Protocol\ServerEndpoint::class);
         $this->vnext = $arr;
 
         return $this;

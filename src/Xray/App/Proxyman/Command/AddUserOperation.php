@@ -4,15 +4,14 @@
 
 namespace Xray\App\Proxyman\Command;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
-use GPBMetadata\App\Proxyman\Command\Command;
-use Xray\Common\Protocol\User;
 
 /**
  * Generated from protobuf message <code>xray.app.proxyman.command.AddUserOperation</code>
  */
-class AddUserOperation extends Message
+class AddUserOperation extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>.xray.common.protocol.User user = 1;</code>
@@ -25,18 +24,17 @@ class AddUserOperation extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type User $user
+     *     @type \Xray\Common\Protocol\User $user
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Command::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\App\Proxyman\Command\Command::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>.xray.common.protocol.User user = 1;</code>
-     * @return User|null
+     * @return \Xray\Common\Protocol\User|null
      */
     public function getUser()
     {
@@ -55,12 +53,12 @@ class AddUserOperation extends Message
 
     /**
      * Generated from protobuf field <code>.xray.common.protocol.User user = 1;</code>
-     * @param User $var
+     * @param \Xray\Common\Protocol\User $var
      * @return $this
      */
     public function setUser($var)
     {
-        GPBUtil::checkMessage($var, User::class);
+        GPBUtil::checkMessage($var, \Xray\Common\Protocol\User::class);
         $this->user = $var;
 
         return $this;

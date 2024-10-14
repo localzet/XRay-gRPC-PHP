@@ -4,15 +4,14 @@
 
 namespace Xray\Transport\Internet;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
-use GPBMetadata\Transport\Internet\Config;
-use Xray\Common\Serial\TypedMessage;
 
 /**
  * Generated from protobuf message <code>xray.transport.internet.TransportConfig</code>
  */
-class TransportConfig extends Message
+class TransportConfig extends \Google\Protobuf\Internal\Message
 {
     /**
      * Type of network that this settings supports.
@@ -33,15 +32,14 @@ class TransportConfig extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $protocol_name
+     *     @type string $protocol_name
      *           Type of network that this settings supports.
-     * @type TypedMessage $settings
+     *     @type \Xray\Common\Serial\TypedMessage $settings
      *           Specific settings. Must be of the transports.
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Config::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\Transport\Internet\Config::initOnce();
         parent::__construct($data);
     }
 
@@ -75,7 +73,7 @@ class TransportConfig extends Message
      * Specific settings. Must be of the transports.
      *
      * Generated from protobuf field <code>.xray.common.serial.TypedMessage settings = 2;</code>
-     * @return TypedMessage|null
+     * @return \Xray\Common\Serial\TypedMessage|null
      */
     public function getSettings()
     {
@@ -96,12 +94,12 @@ class TransportConfig extends Message
      * Specific settings. Must be of the transports.
      *
      * Generated from protobuf field <code>.xray.common.serial.TypedMessage settings = 2;</code>
-     * @param TypedMessage $var
+     * @param \Xray\Common\Serial\TypedMessage $var
      * @return $this
      */
     public function setSettings($var)
     {
-        GPBUtil::checkMessage($var, TypedMessage::class);
+        GPBUtil::checkMessage($var, \Xray\Common\Serial\TypedMessage::class);
         $this->settings = $var;
 
         return $this;

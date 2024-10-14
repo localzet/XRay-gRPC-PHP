@@ -4,15 +4,14 @@
 
 namespace Xray\App\Proxyman\Command;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
-use GPBMetadata\App\Proxyman\Command\Command;
-use Xray\Core\OutboundHandlerConfig;
 
 /**
  * Generated from protobuf message <code>xray.app.proxyman.command.AddOutboundRequest</code>
  */
-class AddOutboundRequest extends Message
+class AddOutboundRequest extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>.xray.core.OutboundHandlerConfig outbound = 1;</code>
@@ -25,18 +24,17 @@ class AddOutboundRequest extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type OutboundHandlerConfig $outbound
+     *     @type \Xray\Core\OutboundHandlerConfig $outbound
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Command::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\App\Proxyman\Command\Command::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>.xray.core.OutboundHandlerConfig outbound = 1;</code>
-     * @return OutboundHandlerConfig|null
+     * @return \Xray\Core\OutboundHandlerConfig|null
      */
     public function getOutbound()
     {
@@ -55,12 +53,12 @@ class AddOutboundRequest extends Message
 
     /**
      * Generated from protobuf field <code>.xray.core.OutboundHandlerConfig outbound = 1;</code>
-     * @param OutboundHandlerConfig $var
+     * @param \Xray\Core\OutboundHandlerConfig $var
      * @return $this
      */
     public function setOutbound($var)
     {
-        GPBUtil::checkMessage($var, OutboundHandlerConfig::class);
+        GPBUtil::checkMessage($var, \Xray\Core\OutboundHandlerConfig::class);
         $this->outbound = $var;
 
         return $this;

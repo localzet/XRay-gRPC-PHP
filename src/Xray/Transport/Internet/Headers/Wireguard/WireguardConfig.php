@@ -4,13 +4,14 @@
 
 namespace Xray\Transport\Internet\Headers\Wireguard;
 
-use Google\Protobuf\Internal\Message;
-use GPBMetadata\Transport\Internet\Headers\Wireguard\Config;
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * Generated from protobuf message <code>xray.transport.internet.headers.wireguard.WireguardConfig</code>
  */
-class WireguardConfig extends Message
+class WireguardConfig extends \Google\Protobuf\Internal\Message
 {
 
     /**
@@ -21,9 +22,8 @@ class WireguardConfig extends Message
      *
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Config::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\Transport\Internet\Headers\Wireguard\Config::initOnce();
         parent::__construct($data);
     }
 

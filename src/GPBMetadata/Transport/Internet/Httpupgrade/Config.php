@@ -4,36 +4,32 @@
 
 namespace GPBMetadata\Transport\Internet\Httpupgrade;
 
-use Google\Protobuf\Internal\DescriptorPool;
-
 class Config
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
-        $pool = DescriptorPool::getGeneratedPool();
+    public static function initOnce() {
+        $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
         if (static::$is_initialized == true) {
-            return;
+          return;
         }
         $pool->internalAddGeneratedFile(
             '
-ï¿½
-+transport/internet/httpupgrade/config.proto#xray.transport.internet.httpupgrade"ï¿½
+²
++transport/internet/httpupgrade/config.proto#xray.transport.internet.httpupgrade"Ç
 Config
 host (	
 path (	G
 header (27.xray.transport.internet.httpupgrade.Config.HeaderEntry
 accept_proxy_protocol (
 
-ed (
--
+ed (-
 HeaderEntry
 key (	
-value (	:8Bï¿½
-\'com.xray.transport.internet.httpupgradePZ8github.com/xtls/xray-core/transport/internet/httpupgradeï¿½#Xray.Transport.Internet.HttpUpgradebproto3'
-            , true);
+value (	:8B‹
+\'com.xray.transport.internet.httpupgradePZ8github.com/xtls/xray-core/transport/internet/httpupgradeª#Xray.Transport.Internet.HttpUpgradebproto3'
+        , true);
 
         static::$is_initialized = true;
     }

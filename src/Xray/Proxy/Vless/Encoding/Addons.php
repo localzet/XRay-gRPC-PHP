@@ -4,13 +4,14 @@
 
 namespace Xray\Proxy\Vless\Encoding;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 
 /**
  * Generated from protobuf message <code>xray.proxy.vless.encoding.Addons</code>
  */
-class Addons extends Message
+class Addons extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>string Flow = 1;</code>
@@ -27,12 +28,11 @@ class Addons extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $Flow
-     * @type string $Seed
+     *     @type string $Flow
+     *     @type string $Seed
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Proxy\Vless\Encoding\Addons::initOnce();
         parent::__construct($data);
     }

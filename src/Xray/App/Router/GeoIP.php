@@ -5,14 +5,13 @@
 namespace Xray\App\Router;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 use Google\Protobuf\Internal\RepeatedField;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * Generated from protobuf message <code>xray.app.router.GeoIP</code>
  */
-class GeoIP extends Message
+class GeoIP extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>string country_code = 1;</code>
@@ -33,13 +32,12 @@ class GeoIP extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $country_code
-     * @type array<CIDR>|RepeatedField $cidr
-     * @type bool $reverse_match
+     *     @type string $country_code
+     *     @type array<\Xray\App\Router\CIDR>|\Google\Protobuf\Internal\RepeatedField $cidr
+     *     @type bool $reverse_match
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\App\Router\Config::initOnce();
         parent::__construct($data);
     }
@@ -68,7 +66,7 @@ class GeoIP extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.app.router.CIDR cidr = 2;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getCidr()
     {
@@ -77,12 +75,12 @@ class GeoIP extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.app.router.CIDR cidr = 2;</code>
-     * @param array<CIDR>|RepeatedField $var
+     * @param array<\Xray\App\Router\CIDR>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setCidr($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, CIDR::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Xray\App\Router\CIDR::class);
         $this->cidr = $arr;
 
         return $this;

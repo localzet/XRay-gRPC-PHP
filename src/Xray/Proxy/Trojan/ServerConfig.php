@@ -5,16 +5,13 @@
 namespace Xray\Proxy\Trojan;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 use Google\Protobuf\Internal\RepeatedField;
-use GPBMetadata\Proxy\Trojan\Config;
-use Xray\Common\Protocol\User;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * Generated from protobuf message <code>xray.proxy.trojan.ServerConfig</code>
  */
-class ServerConfig extends Message
+class ServerConfig extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>repeated .xray.common.protocol.User users = 1;</code>
@@ -31,19 +28,18 @@ class ServerConfig extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type array<User>|RepeatedField $users
-     * @type array<Fallback>|RepeatedField $fallbacks
+     *     @type array<\Xray\Common\Protocol\User>|\Google\Protobuf\Internal\RepeatedField $users
+     *     @type array<\Xray\Proxy\Trojan\Fallback>|\Google\Protobuf\Internal\RepeatedField $fallbacks
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Config::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\Proxy\Trojan\Config::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>repeated .xray.common.protocol.User users = 1;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getUsers()
     {
@@ -52,12 +48,12 @@ class ServerConfig extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.common.protocol.User users = 1;</code>
-     * @param array<User>|RepeatedField $var
+     * @param array<\Xray\Common\Protocol\User>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setUsers($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, User::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Xray\Common\Protocol\User::class);
         $this->users = $arr;
 
         return $this;
@@ -65,7 +61,7 @@ class ServerConfig extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.proxy.trojan.Fallback fallbacks = 2;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getFallbacks()
     {
@@ -74,12 +70,12 @@ class ServerConfig extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.proxy.trojan.Fallback fallbacks = 2;</code>
-     * @param array<Fallback>|RepeatedField $var
+     * @param array<\Xray\Proxy\Trojan\Fallback>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setFallbacks($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, Fallback::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Xray\Proxy\Trojan\Fallback::class);
         $this->fallbacks = $arr;
 
         return $this;

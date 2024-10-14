@@ -4,14 +4,14 @@
 
 namespace Xray\Common\Protocol;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
-use GPBMetadata\Common\Protocol\Headers;
 
 /**
  * Generated from protobuf message <code>xray.common.protocol.SecurityConfig</code>
  */
-class SecurityConfig extends Message
+class SecurityConfig extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>.xray.common.protocol.SecurityType type = 1;</code>
@@ -24,12 +24,11 @@ class SecurityConfig extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type int $type
+     *     @type int $type
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Headers::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\Common\Protocol\Headers::initOnce();
         parent::__construct($data);
     }
 
@@ -49,7 +48,7 @@ class SecurityConfig extends Message
      */
     public function setType($var)
     {
-        GPBUtil::checkEnum($var, SecurityType::class);
+        GPBUtil::checkEnum($var, \Xray\Common\Protocol\SecurityType::class);
         $this->type = $var;
 
         return $this;

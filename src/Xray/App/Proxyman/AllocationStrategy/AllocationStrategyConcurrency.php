@@ -4,15 +4,14 @@
 
 namespace Xray\App\Proxyman\AllocationStrategy;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
-use GPBMetadata\App\Proxyman\Config;
-use Xray\App\Proxyman\AllocationStrategy_AllocationStrategyConcurrency;
 
 /**
  * Generated from protobuf message <code>xray.app.proxyman.AllocationStrategy.AllocationStrategyConcurrency</code>
  */
-class AllocationStrategyConcurrency extends Message
+class AllocationStrategyConcurrency extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>uint32 value = 1;</code>
@@ -25,12 +24,11 @@ class AllocationStrategyConcurrency extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type int $value
+     *     @type int $value
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Config::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\App\Proxyman\Config::initOnce();
         parent::__construct($data);
     }
 
@@ -59,5 +57,5 @@ class AllocationStrategyConcurrency extends Message
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AllocationStrategyConcurrency::class, AllocationStrategy_AllocationStrategyConcurrency::class);
+class_alias(AllocationStrategyConcurrency::class, \Xray\App\Proxyman\AllocationStrategy_AllocationStrategyConcurrency::class);
 

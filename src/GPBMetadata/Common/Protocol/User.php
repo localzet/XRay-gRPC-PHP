@@ -4,32 +4,27 @@
 
 namespace GPBMetadata\Common\Protocol;
 
-use Google\Protobuf\Internal\DescriptorPool;
-use GPBMetadata\Common\Serial\TypedMessage;
-
 class User
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
-        $pool = DescriptorPool::getGeneratedPool();
+    public static function initOnce() {
+        $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
         if (static::$is_initialized == true) {
-            return;
+          return;
         }
-        TypedMessage::initOnce();
+        \GPBMetadata\Common\Serial\TypedMessage::initOnce();
         $pool->internalAddGeneratedFile(
             '
-ï¿½
+ó
 common/protocol/user.protoxray.common.protocol"W
 User
-level (
-
+level (
 email (	1
 account (2 .xray.common.serial.TypedMessageB^
-com.xray.common.protocolPZ)github.com/xtls/xray-core/common/protocolï¿½Xray.Common.Protocolbproto3'
-            , true);
+com.xray.common.protocolPZ)github.com/xtls/xray-core/common/protocolªXray.Common.Protocolbproto3'
+        , true);
 
         static::$is_initialized = true;
     }

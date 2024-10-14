@@ -9,9 +9,7 @@ if (false) {
      * This class is deprecated. Use Xray\App\Policy\Policy\Buffer instead.
      * @deprecated
      */
-    class Policy_Buffer
-    {
-    }
+    class Policy_Buffer {}
 }
 class_exists(Policy\Buffer::class);
 @trigger_error('Xray\App\Policy\Policy_Buffer is deprecated and will be removed in the next major release. Use Xray\App\Policy\Policy\Buffer instead', E_USER_DEPRECATED);

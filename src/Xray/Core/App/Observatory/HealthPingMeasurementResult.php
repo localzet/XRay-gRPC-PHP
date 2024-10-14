@@ -4,13 +4,14 @@
 
 namespace Xray\Core\App\Observatory;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 
 /**
  * Generated from protobuf message <code>xray.core.app.observatory.HealthPingMeasurementResult</code>
  */
-class HealthPingMeasurementResult extends Message
+class HealthPingMeasurementResult extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>int64 all = 1;</code>
@@ -43,16 +44,15 @@ class HealthPingMeasurementResult extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type int|string $all
-     * @type int|string $fail
-     * @type int|string $deviation
-     * @type int|string $average
-     * @type int|string $max
-     * @type int|string $min
+     *     @type int|string $all
+     *     @type int|string $fail
+     *     @type int|string $deviation
+     *     @type int|string $average
+     *     @type int|string $max
+     *     @type int|string $min
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\App\Observatory\Config::initOnce();
         parent::__construct($data);
     }

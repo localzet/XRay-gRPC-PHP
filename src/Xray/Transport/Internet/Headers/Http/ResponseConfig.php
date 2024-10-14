@@ -5,14 +5,13 @@
 namespace Xray\Transport\Internet\Headers\Http;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 use Google\Protobuf\Internal\RepeatedField;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * Generated from protobuf message <code>xray.transport.internet.headers.http.ResponseConfig</code>
  */
-class ResponseConfig extends Message
+class ResponseConfig extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>.xray.transport.internet.headers.http.Version version = 1;</code>
@@ -33,20 +32,19 @@ class ResponseConfig extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type Version $version
-     * @type Status $status
-     * @type array<Header>|RepeatedField $header
+     *     @type \Xray\Transport\Internet\Headers\Http\Version $version
+     *     @type \Xray\Transport\Internet\Headers\Http\Status $status
+     *     @type array<\Xray\Transport\Internet\Headers\Http\Header>|\Google\Protobuf\Internal\RepeatedField $header
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Transport\Internet\Headers\Http\Config::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>.xray.transport.internet.headers.http.Version version = 1;</code>
-     * @return Version|null
+     * @return \Xray\Transport\Internet\Headers\Http\Version|null
      */
     public function getVersion()
     {
@@ -65,12 +63,12 @@ class ResponseConfig extends Message
 
     /**
      * Generated from protobuf field <code>.xray.transport.internet.headers.http.Version version = 1;</code>
-     * @param Version $var
+     * @param \Xray\Transport\Internet\Headers\Http\Version $var
      * @return $this
      */
     public function setVersion($var)
     {
-        GPBUtil::checkMessage($var, Version::class);
+        GPBUtil::checkMessage($var, \Xray\Transport\Internet\Headers\Http\Version::class);
         $this->version = $var;
 
         return $this;
@@ -78,7 +76,7 @@ class ResponseConfig extends Message
 
     /**
      * Generated from protobuf field <code>.xray.transport.internet.headers.http.Status status = 2;</code>
-     * @return Status|null
+     * @return \Xray\Transport\Internet\Headers\Http\Status|null
      */
     public function getStatus()
     {
@@ -97,12 +95,12 @@ class ResponseConfig extends Message
 
     /**
      * Generated from protobuf field <code>.xray.transport.internet.headers.http.Status status = 2;</code>
-     * @param Status $var
+     * @param \Xray\Transport\Internet\Headers\Http\Status $var
      * @return $this
      */
     public function setStatus($var)
     {
-        GPBUtil::checkMessage($var, Status::class);
+        GPBUtil::checkMessage($var, \Xray\Transport\Internet\Headers\Http\Status::class);
         $this->status = $var;
 
         return $this;
@@ -110,7 +108,7 @@ class ResponseConfig extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.transport.internet.headers.http.Header header = 3;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getHeader()
     {
@@ -119,12 +117,12 @@ class ResponseConfig extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.transport.internet.headers.http.Header header = 3;</code>
-     * @param array<Header>|RepeatedField $var
+     * @param array<\Xray\Transport\Internet\Headers\Http\Header>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setHeader($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, Header::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Xray\Transport\Internet\Headers\Http\Header::class);
         $this->header = $arr;
 
         return $this;

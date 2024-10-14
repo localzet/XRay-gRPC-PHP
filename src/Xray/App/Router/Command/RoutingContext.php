@@ -5,12 +5,8 @@
 namespace Xray\App\Router\Command;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\MapField;
-use Google\Protobuf\Internal\Message;
 use Google\Protobuf\Internal\RepeatedField;
-use GPBMetadata\App\Router\Command\Command;
-use Xray\Common\Net\Network;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * RoutingContext is the context with information relative to routing process.
@@ -19,7 +15,7 @@ use Xray\Common\Net\Network;
  *
  * Generated from protobuf message <code>xray.app.router.command.RoutingContext</code>
  */
-class RoutingContext extends Message
+class RoutingContext extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>string InboundTag = 1;</code>
@@ -76,23 +72,22 @@ class RoutingContext extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $InboundTag
-     * @type int $Network
-     * @type array<string>|RepeatedField $SourceIPs
-     * @type array<string>|RepeatedField $TargetIPs
-     * @type int $SourcePort
-     * @type int $TargetPort
-     * @type string $TargetDomain
-     * @type string $Protocol
-     * @type string $User
-     * @type array|MapField $Attributes
-     * @type array<string>|RepeatedField $OutboundGroupTags
-     * @type string $OutboundTag
+     *     @type string $InboundTag
+     *     @type int $Network
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $SourceIPs
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $TargetIPs
+     *     @type int $SourcePort
+     *     @type int $TargetPort
+     *     @type string $TargetDomain
+     *     @type string $Protocol
+     *     @type string $User
+     *     @type array|\Google\Protobuf\Internal\MapField $Attributes
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $OutboundGroupTags
+     *     @type string $OutboundTag
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Command::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\App\Router\Command\Command::initOnce();
         parent::__construct($data);
     }
 
@@ -134,7 +129,7 @@ class RoutingContext extends Message
      */
     public function setNetwork($var)
     {
-        GPBUtil::checkEnum($var, Network::class);
+        GPBUtil::checkEnum($var, \Xray\Common\Net\Network::class);
         $this->Network = $var;
 
         return $this;
@@ -142,7 +137,7 @@ class RoutingContext extends Message
 
     /**
      * Generated from protobuf field <code>repeated bytes SourceIPs = 3;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getSourceIPs()
     {
@@ -151,12 +146,12 @@ class RoutingContext extends Message
 
     /**
      * Generated from protobuf field <code>repeated bytes SourceIPs = 3;</code>
-     * @param array<string>|RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setSourceIPs($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::BYTES);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::BYTES);
         $this->SourceIPs = $arr;
 
         return $this;
@@ -164,7 +159,7 @@ class RoutingContext extends Message
 
     /**
      * Generated from protobuf field <code>repeated bytes TargetIPs = 4;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getTargetIPs()
     {
@@ -173,12 +168,12 @@ class RoutingContext extends Message
 
     /**
      * Generated from protobuf field <code>repeated bytes TargetIPs = 4;</code>
-     * @param array<string>|RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setTargetIPs($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::BYTES);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::BYTES);
         $this->TargetIPs = $arr;
 
         return $this;
@@ -296,7 +291,7 @@ class RoutingContext extends Message
 
     /**
      * Generated from protobuf field <code>map<string, string> Attributes = 10;</code>
-     * @return MapField
+     * @return \Google\Protobuf\Internal\MapField
      */
     public function getAttributes()
     {
@@ -305,12 +300,12 @@ class RoutingContext extends Message
 
     /**
      * Generated from protobuf field <code>map<string, string> Attributes = 10;</code>
-     * @param array|MapField $var
+     * @param array|\Google\Protobuf\Internal\MapField $var
      * @return $this
      */
     public function setAttributes($var)
     {
-        $arr = GPBUtil::checkMapField($var, GPBType::STRING, GPBType::STRING);
+        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::STRING);
         $this->Attributes = $arr;
 
         return $this;
@@ -318,7 +313,7 @@ class RoutingContext extends Message
 
     /**
      * Generated from protobuf field <code>repeated string OutboundGroupTags = 11;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getOutboundGroupTags()
     {
@@ -327,12 +322,12 @@ class RoutingContext extends Message
 
     /**
      * Generated from protobuf field <code>repeated string OutboundGroupTags = 11;</code>
-     * @param array<string>|RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setOutboundGroupTags($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::STRING);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->OutboundGroupTags = $arr;
 
         return $this;

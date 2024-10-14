@@ -4,15 +4,16 @@
 
 namespace Xray\App\Metrics;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 
 /**
  * Config is the settings for metrics.
  *
  * Generated from protobuf message <code>xray.app.metrics.Config</code>
  */
-class Config extends Message
+class Config extends \Google\Protobuf\Internal\Message
 {
     /**
      * Tag of the outbound handler that handles metrics http connections.
@@ -27,12 +28,11 @@ class Config extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $tag
+     *     @type string $tag
      *           Tag of the outbound handler that handles metrics http connections.
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\App\Metrics\Config::initOnce();
         parent::__construct($data);
     }

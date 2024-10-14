@@ -4,22 +4,19 @@
 
 namespace GPBMetadata\Proxy\Vless;
 
-use Google\Protobuf\Internal\DescriptorPool;
-
 class Account
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
-        $pool = DescriptorPool::getGeneratedPool();
+    public static function initOnce() {
+        $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
         if (static::$is_initialized == true) {
-            return;
+          return;
         }
         $pool->internalAddGeneratedFile(
             '
-ï¿½
+Â
 proxy/vless/account.protoxray.proxy.vless"7
 Account
 
@@ -27,8 +24,8 @@ class Account
 flow (	
 
 encryption (	BR
-com.xray.proxy.vlessPZ%github.com/xtls/xray-core/proxy/vlessï¿½Xray.Proxy.Vlessbproto3'
-            , true);
+com.xray.proxy.vlessPZ%github.com/xtls/xray-core/proxy/vlessªXray.Proxy.Vlessbproto3'
+        , true);
 
         static::$is_initialized = true;
     }

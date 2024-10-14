@@ -4,28 +4,25 @@
 
 namespace GPBMetadata\Proxy\Vless\Encoding;
 
-use Google\Protobuf\Internal\DescriptorPool;
-
 class Addons
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
-        $pool = DescriptorPool::getGeneratedPool();
+    public static function initOnce() {
+        $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
         if (static::$is_initialized == true) {
-            return;
+          return;
         }
         $pool->internalAddGeneratedFile(
             '
-ï¿½
+Û
 !proxy/vless/encoding/addons.protoxray.proxy.vless.encoding"$
 Addons
 Flow (	
 Seed (Bm
-com.xray.proxy.vless.encodingPZ.github.com/xtls/xray-core/proxy/vless/encodingï¿½Xray.Proxy.Vless.Encodingbproto3'
-            , true);
+com.xray.proxy.vless.encodingPZ.github.com/xtls/xray-core/proxy/vless/encodingªXray.Proxy.Vless.Encodingbproto3'
+        , true);
 
         static::$is_initialized = true;
     }

@@ -4,13 +4,14 @@
 
 namespace Xray\Proxy\Vless\Inbound;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 
 /**
  * Generated from protobuf message <code>xray.proxy.vless.inbound.Fallback</code>
  */
-class Fallback extends Message
+class Fallback extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>string name = 1;</code>
@@ -43,16 +44,15 @@ class Fallback extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $name
-     * @type string $alpn
-     * @type string $path
-     * @type string $type
-     * @type string $dest
-     * @type int|string $xver
+     *     @type string $name
+     *     @type string $alpn
+     *     @type string $path
+     *     @type string $type
+     *     @type string $dest
+     *     @type int|string $xver
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Proxy\Vless\Inbound\Config::initOnce();
         parent::__construct($data);
     }

@@ -4,43 +4,38 @@
 
 namespace GPBMetadata\Core;
 
-use Google\Protobuf\Internal\DescriptorPool;
-use GPBMetadata\Common\Serial\TypedMessage;
-
 class Config
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
-        $pool = DescriptorPool::getGeneratedPool();
+    public static function initOnce() {
+        $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
         if (static::$is_initialized == true) {
-            return;
+          return;
         }
-        TypedMessage::initOnce();
+        \GPBMetadata\Common\Serial\TypedMessage::initOnce();
         $pool->internalAddGeneratedFile(
             '
-ï¿½
-core/config.proto	xray.core"ï¿½
+š
+core/config.proto	xray.core"Ø
 Config0
 inbound (2.xray.core.InboundHandlerConfig2
 outbound (2 .xray.core.OutboundHandlerConfig-
 app (2 .xray.common.serial.TypedMessage3
-	extension (2 .xray.common.serial.TypedMessageJ"ï¿½
+	extension (2 .xray.common.serial.TypedMessageJ"š
 InboundHandlerConfig
 tag (	;
 receiver_settings (2 .xray.common.serial.TypedMessage8
-proxy_settings (2 .xray.common.serial.TypedMessage"ï¿½
+proxy_settings (2 .xray.common.serial.TypedMessage"º
 OutboundHandlerConfig
 tag (	9
 sender_settings (2 .xray.common.serial.TypedMessage8
 proxy_settings (2 .xray.common.serial.TypedMessage
 expire (
 comment (	B=
-
-com.xray.corePZgithub.com/xtls/xray-core/coreï¿½	Xray.Corebproto3'
-            , true);
+com.xray.corePZgithub.com/xtls/xray-core/coreª	Xray.Corebproto3'
+        , true);
 
         static::$is_initialized = true;
     }

@@ -5,16 +5,13 @@
 namespace Xray\Proxy\Dokodemo;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 use Google\Protobuf\Internal\RepeatedField;
-use Xray\Common\Net\IPOrDomain;
-use Xray\Common\Net\Network;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * Generated from protobuf message <code>xray.proxy.dokodemo.Config</code>
  */
-class Config extends Message
+class Config extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>.xray.common.net.IPOrDomain address = 1;</code>
@@ -45,23 +42,22 @@ class Config extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type IPOrDomain $address
-     * @type int $port
-     * @type array<int>|RepeatedField $networks
+     *     @type \Xray\Common\Net\IPOrDomain $address
+     *     @type int $port
+     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $networks
      *           List of networks that the Dokodemo accepts.
-     * @type bool $follow_redirect
-     * @type int $user_level
+     *     @type bool $follow_redirect
+     *     @type int $user_level
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Proxy\Dokodemo\Config::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>.xray.common.net.IPOrDomain address = 1;</code>
-     * @return IPOrDomain|null
+     * @return \Xray\Common\Net\IPOrDomain|null
      */
     public function getAddress()
     {
@@ -80,12 +76,12 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>.xray.common.net.IPOrDomain address = 1;</code>
-     * @param IPOrDomain $var
+     * @param \Xray\Common\Net\IPOrDomain $var
      * @return $this
      */
     public function setAddress($var)
     {
-        GPBUtil::checkMessage($var, IPOrDomain::class);
+        GPBUtil::checkMessage($var, \Xray\Common\Net\IPOrDomain::class);
         $this->address = $var;
 
         return $this;
@@ -117,7 +113,7 @@ class Config extends Message
      * List of networks that the Dokodemo accepts.
      *
      * Generated from protobuf field <code>repeated .xray.common.net.Network networks = 7;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getNetworks()
     {
@@ -128,12 +124,12 @@ class Config extends Message
      * List of networks that the Dokodemo accepts.
      *
      * Generated from protobuf field <code>repeated .xray.common.net.Network networks = 7;</code>
-     * @param array<int>|RepeatedField $var
+     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setNetworks($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::ENUM, Network::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::ENUM, \Xray\Common\Net\Network::class);
         $this->networks = $arr;
 
         return $this;

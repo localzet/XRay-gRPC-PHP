@@ -5,17 +5,15 @@
 namespace Xray\App\Commander;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 use Google\Protobuf\Internal\RepeatedField;
-use Xray\Common\Serial\TypedMessage;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * Config is the settings for Commander.
  *
  * Generated from protobuf message <code>xray.app.commander.Config</code>
  */
-class Config extends Message
+class Config extends \Google\Protobuf\Internal\Message
 {
     /**
      * Tag of the outbound handler that handles grpc connections.
@@ -43,17 +41,16 @@ class Config extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $tag
+     *     @type string $tag
      *           Tag of the outbound handler that handles grpc connections.
-     * @type string $listen
+     *     @type string $listen
      *           Network address of commander grpc service.
-     * @type array<TypedMessage>|RepeatedField $service
+     *     @type array<\Xray\Common\Serial\TypedMessage>|\Google\Protobuf\Internal\RepeatedField $service
      *           Services that supported by this server. All services must implement Service
      *           interface.
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\App\Commander\Config::initOnce();
         parent::__construct($data);
     }
@@ -115,7 +112,7 @@ class Config extends Message
      * interface.
      *
      * Generated from protobuf field <code>repeated .xray.common.serial.TypedMessage service = 2;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getService()
     {
@@ -127,12 +124,12 @@ class Config extends Message
      * interface.
      *
      * Generated from protobuf field <code>repeated .xray.common.serial.TypedMessage service = 2;</code>
-     * @param array<TypedMessage>|RepeatedField $var
+     * @param array<\Xray\Common\Serial\TypedMessage>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setService($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, TypedMessage::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Xray\Common\Serial\TypedMessage::class);
         $this->service = $arr;
 
         return $this;

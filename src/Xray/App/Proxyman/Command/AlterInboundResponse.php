@@ -4,13 +4,14 @@
 
 namespace Xray\App\Proxyman\Command;
 
-use Google\Protobuf\Internal\Message;
-use GPBMetadata\App\Proxyman\Command\Command;
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * Generated from protobuf message <code>xray.app.proxyman.command.AlterInboundResponse</code>
  */
-class AlterInboundResponse extends Message
+class AlterInboundResponse extends \Google\Protobuf\Internal\Message
 {
 
     /**
@@ -21,9 +22,8 @@ class AlterInboundResponse extends Message
      *
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Command::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\App\Proxyman\Command\Command::initOnce();
         parent::__construct($data);
     }
 

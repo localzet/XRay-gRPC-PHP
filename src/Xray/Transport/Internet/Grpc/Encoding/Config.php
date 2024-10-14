@@ -4,13 +4,14 @@
 
 namespace Xray\Transport\Internet\Grpc\Encoding;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 
 /**
  * Generated from protobuf message <code>xray.transport.internet.grpc.encoding.Config</code>
  */
-class Config extends Message
+class Config extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>string authority = 1;</code>
@@ -51,18 +52,17 @@ class Config extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $authority
-     * @type string $service_name
-     * @type bool $multi_mode
-     * @type int $idle_timeout
-     * @type int $health_check_timeout
-     * @type bool $permit_without_stream
-     * @type int $initial_windows_size
-     * @type string $user_agent
+     *     @type string $authority
+     *     @type string $service_name
+     *     @type bool $multi_mode
+     *     @type int $idle_timeout
+     *     @type int $health_check_timeout
+     *     @type bool $permit_without_stream
+     *     @type int $initial_windows_size
+     *     @type string $user_agent
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Transport\Internet\Grpc\Config::initOnce();
         parent::__construct($data);
     }

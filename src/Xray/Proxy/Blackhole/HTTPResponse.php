@@ -4,12 +4,14 @@
 
 namespace Xray\Proxy\Blackhole;
 
-use Google\Protobuf\Internal\Message;
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * Generated from protobuf message <code>xray.proxy.blackhole.HTTPResponse</code>
  */
-class HTTPResponse extends Message
+class HTTPResponse extends \Google\Protobuf\Internal\Message
 {
 
     /**
@@ -20,8 +22,7 @@ class HTTPResponse extends Message
      *
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Proxy\Blackhole\Config::initOnce();
         parent::__construct($data);
     }

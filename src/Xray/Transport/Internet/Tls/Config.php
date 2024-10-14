@@ -5,14 +5,13 @@
 namespace Xray\Transport\Internet\Tls;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 use Google\Protobuf\Internal\RepeatedField;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * Generated from protobuf message <code>xray.transport.internet.tls.Config</code>
  */
-class Config extends Message
+class Config extends \Google\Protobuf\Internal\Message
 {
     /**
      * Whether or not to allow self-signed certificates.
@@ -108,43 +107,42 @@ class Config extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type bool $allow_insecure
+     *     @type bool $allow_insecure
      *           Whether or not to allow self-signed certificates.
-     * @type array<Certificate>|RepeatedField $certificate
+     *     @type array<\Xray\Transport\Internet\Tls\Certificate>|\Google\Protobuf\Internal\RepeatedField $certificate
      *           List of certificates to be served on server.
-     * @type string $server_name
+     *     @type string $server_name
      *           Override server name.
-     * @type array<string>|RepeatedField $next_protocol
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $next_protocol
      *           Lists of string as ALPN values.
-     * @type bool $enable_session_resumption
+     *     @type bool $enable_session_resumption
      *           Whether or not to enable session (ticket) resumption.
-     * @type bool $disable_system_root
+     *     @type bool $disable_system_root
      *           If true, root certificates on the system will not be loaded for
      *           verification.
-     * @type string $min_version
+     *     @type string $min_version
      *           The minimum TLS version.
-     * @type string $max_version
+     *     @type string $max_version
      *           The maximum TLS version.
-     * @type string $cipher_suites
+     *     @type string $cipher_suites
      *           Specify cipher suites, except for TLS 1.3.
-     * @type string $fingerprint
+     *     @type string $fingerprint
      *           TLS Client Hello fingerprint (uTLS).
-     * @type bool $reject_unknown_sni
-     * @type array<string>|RepeatedField $pinned_peer_certificate_chain_sha256
+     *     @type bool $reject_unknown_sni
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $pinned_peer_certificate_chain_sha256
      *           &#64;Document A pinned certificate chain sha256 hash.
      *          &#64;Document If the server's hash does not match this value, the connection will be aborted.
      *          &#64;Document This value replace allow_insecure.
      *          &#64;Critical
-     * @type array<string>|RepeatedField $pinned_peer_certificate_public_key_sha256
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $pinned_peer_certificate_public_key_sha256
      *           &#64;Document A pinned certificate public key sha256 hash.
      *          &#64;Document If the server's public key hash does not match this value, the connection will be aborted.
      *          &#64;Document This value replace allow_insecure.
      *          &#64;Critical
-     * @type string $master_key_log
+     *     @type string $master_key_log
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Transport\Internet\Tls\Config::initOnce();
         parent::__construct($data);
     }
@@ -179,7 +177,7 @@ class Config extends Message
      * List of certificates to be served on server.
      *
      * Generated from protobuf field <code>repeated .xray.transport.internet.tls.Certificate certificate = 2;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getCertificate()
     {
@@ -190,12 +188,12 @@ class Config extends Message
      * List of certificates to be served on server.
      *
      * Generated from protobuf field <code>repeated .xray.transport.internet.tls.Certificate certificate = 2;</code>
-     * @param array<Certificate>|RepeatedField $var
+     * @param array<\Xray\Transport\Internet\Tls\Certificate>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setCertificate($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, Certificate::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Xray\Transport\Internet\Tls\Certificate::class);
         $this->certificate = $arr;
 
         return $this;
@@ -231,7 +229,7 @@ class Config extends Message
      * Lists of string as ALPN values.
      *
      * Generated from protobuf field <code>repeated string next_protocol = 4;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getNextProtocol()
     {
@@ -242,12 +240,12 @@ class Config extends Message
      * Lists of string as ALPN values.
      *
      * Generated from protobuf field <code>repeated string next_protocol = 4;</code>
-     * @param array<string>|RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setNextProtocol($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::STRING);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->next_protocol = $arr;
 
         return $this;
@@ -440,7 +438,7 @@ class Config extends Message
      *&#64;Critical
      *
      * Generated from protobuf field <code>repeated bytes pinned_peer_certificate_chain_sha256 = 13;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getPinnedPeerCertificateChainSha256()
     {
@@ -454,12 +452,12 @@ class Config extends Message
      *&#64;Critical
      *
      * Generated from protobuf field <code>repeated bytes pinned_peer_certificate_chain_sha256 = 13;</code>
-     * @param array<string>|RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setPinnedPeerCertificateChainSha256($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::BYTES);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::BYTES);
         $this->pinned_peer_certificate_chain_sha256 = $arr;
 
         return $this;
@@ -472,7 +470,7 @@ class Config extends Message
      *&#64;Critical
      *
      * Generated from protobuf field <code>repeated bytes pinned_peer_certificate_public_key_sha256 = 14;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getPinnedPeerCertificatePublicKeySha256()
     {
@@ -486,12 +484,12 @@ class Config extends Message
      *&#64;Critical
      *
      * Generated from protobuf field <code>repeated bytes pinned_peer_certificate_public_key_sha256 = 14;</code>
-     * @param array<string>|RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setPinnedPeerCertificatePublicKeySha256($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::BYTES);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::BYTES);
         $this->pinned_peer_certificate_public_key_sha256 = $arr;
 
         return $this;

@@ -5,17 +5,15 @@
 namespace Xray\Common\Net;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 use Google\Protobuf\Internal\RepeatedField;
-use GPBMetadata\Common\Net\Port;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * PortList is a list of ports.
  *
  * Generated from protobuf message <code>xray.common.net.PortList</code>
  */
-class PortList extends Message
+class PortList extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>repeated .xray.common.net.PortRange range = 1;</code>
@@ -28,18 +26,17 @@ class PortList extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type array<PortRange>|RepeatedField $range
+     *     @type array<\Xray\Common\Net\PortRange>|\Google\Protobuf\Internal\RepeatedField $range
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Port::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\Common\Net\Port::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>repeated .xray.common.net.PortRange range = 1;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getRange()
     {
@@ -48,12 +45,12 @@ class PortList extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.common.net.PortRange range = 1;</code>
-     * @param array<PortRange>|RepeatedField $var
+     * @param array<\Xray\Common\Net\PortRange>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setRange($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, PortRange::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Xray\Common\Net\PortRange::class);
         $this->range = $arr;
 
         return $this;

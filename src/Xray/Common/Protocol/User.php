@@ -4,16 +4,16 @@
 
 namespace Xray\Common\Protocol;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
-use Xray\Common\Serial\TypedMessage;
 
 /**
  * User is a generic user for all protocols.
  *
  * Generated from protobuf message <code>xray.common.protocol.User</code>
  */
-class User extends Message
+class User extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>uint32 level = 1;</code>
@@ -37,15 +37,14 @@ class User extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type int $level
-     * @type string $email
-     * @type TypedMessage $account
+     *     @type int $level
+     *     @type string $email
+     *     @type \Xray\Common\Serial\TypedMessage $account
      *           Protocol specific account information. Must be the account proto in one of
      *           the proxies.
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Common\Protocol\User::initOnce();
         parent::__construct($data);
     }
@@ -99,7 +98,7 @@ class User extends Message
      * the proxies.
      *
      * Generated from protobuf field <code>.xray.common.serial.TypedMessage account = 3;</code>
-     * @return TypedMessage|null
+     * @return \Xray\Common\Serial\TypedMessage|null
      */
     public function getAccount()
     {
@@ -121,12 +120,12 @@ class User extends Message
      * the proxies.
      *
      * Generated from protobuf field <code>.xray.common.serial.TypedMessage account = 3;</code>
-     * @param TypedMessage $var
+     * @param \Xray\Common\Serial\TypedMessage $var
      * @return $this
      */
     public function setAccount($var)
     {
-        GPBUtil::checkMessage($var, TypedMessage::class);
+        GPBUtil::checkMessage($var, \Xray\Common\Serial\TypedMessage::class);
         $this->account = $var;
 
         return $this;

@@ -4,15 +4,14 @@
 
 namespace Xray\App\Dns\NameServer;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
-use GPBMetadata\App\Dns\Config;
-use Xray\App\Dns\NameServer_OriginalRule;
 
 /**
  * Generated from protobuf message <code>xray.app.dns.NameServer.OriginalRule</code>
  */
-class OriginalRule extends Message
+class OriginalRule extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>string rule = 1;</code>
@@ -29,13 +28,12 @@ class OriginalRule extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $rule
-     * @type int $size
+     *     @type string $rule
+     *     @type int $size
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Config::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\App\Dns\Config::initOnce();
         parent::__construct($data);
     }
 
@@ -86,5 +84,5 @@ class OriginalRule extends Message
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(OriginalRule::class, NameServer_OriginalRule::class);
+class_alias(OriginalRule::class, \Xray\App\Dns\NameServer_OriginalRule::class);
 

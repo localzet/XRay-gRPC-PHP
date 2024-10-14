@@ -4,24 +4,21 @@
 
 namespace GPBMetadata\Transport\Internet\Http;
 
-use Google\Protobuf\Internal\DescriptorPool;
-
 class Config
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
-        $pool = DescriptorPool::getGeneratedPool();
+    public static function initOnce() {
+        $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
         if (static::$is_initialized == true) {
-            return;
+          return;
         }
         \GPBMetadata\Transport\Internet\Headers\Http\Config::initOnce();
         $pool->internalAddGeneratedFile(
             '
-ï¿½
-$transport/internet/http/config.protoxray.transport.internet.http"ï¿½
+í
+$transport/internet/http/config.protoxray.transport.internet.http"¦
 Config
 host (	
 path (	
@@ -29,8 +26,8 @@ $transport/internet/http/config.protoxray.transport.internet.http"ï¿½
 health_check_timeout (
 method (	<
 header (2,.xray.transport.internet.headers.http.HeaderBv
- com.xray.transport.internet.httpPZ1github.com/xtls/xray-core/transport/internet/httpï¿½Xray.Transport.Internet.Httpbproto3'
-            , true);
+ com.xray.transport.internet.httpPZ1github.com/xtls/xray-core/transport/internet/httpªXray.Transport.Internet.Httpbproto3'
+        , true);
 
         static::$is_initialized = true;
     }

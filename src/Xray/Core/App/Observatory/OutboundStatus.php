@@ -4,13 +4,14 @@
 
 namespace Xray\Core\App\Observatory;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 
 /**
  * Generated from protobuf message <code>xray.core.app.observatory.OutboundStatus</code>
  */
-class OutboundStatus extends Message
+class OutboundStatus extends \Google\Protobuf\Internal\Message
 {
     /**
      * &#64;Document Whether this outbound is usable
@@ -66,30 +67,29 @@ class OutboundStatus extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type bool $alive
+     *     @type bool $alive
      *           &#64;Document Whether this outbound is usable
      *          &#64;Restriction ReadOnlyForUser
-     * @type int|string $delay
+     *     @type int|string $delay
      *           &#64;Document The time for probe request to finish.
      *          &#64;Type time.ms
      *          &#64;Restriction ReadOnlyForUser
-     * @type string $last_error_reason
+     *     @type string $last_error_reason
      *           &#64;Document The last error caused this outbound failed to relay probe request
      *          &#64;Restriction NotMachineReadable
-     * @type string $outbound_tag
+     *     @type string $outbound_tag
      *           &#64;Document The outbound tag for this Server
      *          &#64;Type id.outboundTag
-     * @type int|string $last_seen_time
+     *     @type int|string $last_seen_time
      *           &#64;Document The time this outbound is known to be alive
      *          &#64;Type id.outboundTag
-     * @type int|string $last_try_time
+     *     @type int|string $last_try_time
      *           &#64;Document The time this outbound is tried
      *          &#64;Type id.outboundTag
-     * @type HealthPingMeasurementResult $health_ping
+     *     @type \Xray\Core\App\Observatory\HealthPingMeasurementResult $health_ping
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\App\Observatory\Config::initOnce();
         parent::__construct($data);
     }
@@ -266,7 +266,7 @@ class OutboundStatus extends Message
 
     /**
      * Generated from protobuf field <code>.xray.core.app.observatory.HealthPingMeasurementResult health_ping = 7;</code>
-     * @return HealthPingMeasurementResult|null
+     * @return \Xray\Core\App\Observatory\HealthPingMeasurementResult|null
      */
     public function getHealthPing()
     {
@@ -285,12 +285,12 @@ class OutboundStatus extends Message
 
     /**
      * Generated from protobuf field <code>.xray.core.app.observatory.HealthPingMeasurementResult health_ping = 7;</code>
-     * @param HealthPingMeasurementResult $var
+     * @param \Xray\Core\App\Observatory\HealthPingMeasurementResult $var
      * @return $this
      */
     public function setHealthPing($var)
     {
-        GPBUtil::checkMessage($var, HealthPingMeasurementResult::class);
+        GPBUtil::checkMessage($var, \Xray\Core\App\Observatory\HealthPingMeasurementResult::class);
         $this->health_ping = $var;
 
         return $this;

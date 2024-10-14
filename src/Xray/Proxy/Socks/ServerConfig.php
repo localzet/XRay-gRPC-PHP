@@ -5,18 +5,15 @@
 namespace Xray\Proxy\Socks;
 
 use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\MapField;
-use Google\Protobuf\Internal\Message;
-use GPBMetadata\Proxy\Socks\Config;
-use Xray\Common\Net\IPOrDomain;
 
 /**
  * ServerConfig is the protobuf config for Socks server.
  *
  * Generated from protobuf message <code>xray.proxy.socks.ServerConfig</code>
  */
-class ServerConfig extends Message
+class ServerConfig extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>.xray.proxy.socks.AuthType auth_type = 1;</code>
@@ -45,16 +42,15 @@ class ServerConfig extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type int $auth_type
-     * @type array|MapField $accounts
-     * @type IPOrDomain $address
-     * @type bool $udp_enabled
-     * @type int $user_level
+     *     @type int $auth_type
+     *     @type array|\Google\Protobuf\Internal\MapField $accounts
+     *     @type \Xray\Common\Net\IPOrDomain $address
+     *     @type bool $udp_enabled
+     *     @type int $user_level
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Config::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\Proxy\Socks\Config::initOnce();
         parent::__construct($data);
     }
 
@@ -74,7 +70,7 @@ class ServerConfig extends Message
      */
     public function setAuthType($var)
     {
-        GPBUtil::checkEnum($var, AuthType::class);
+        GPBUtil::checkEnum($var, \Xray\Proxy\Socks\AuthType::class);
         $this->auth_type = $var;
 
         return $this;
@@ -82,7 +78,7 @@ class ServerConfig extends Message
 
     /**
      * Generated from protobuf field <code>map<string, string> accounts = 2;</code>
-     * @return MapField
+     * @return \Google\Protobuf\Internal\MapField
      */
     public function getAccounts()
     {
@@ -91,12 +87,12 @@ class ServerConfig extends Message
 
     /**
      * Generated from protobuf field <code>map<string, string> accounts = 2;</code>
-     * @param array|MapField $var
+     * @param array|\Google\Protobuf\Internal\MapField $var
      * @return $this
      */
     public function setAccounts($var)
     {
-        $arr = GPBUtil::checkMapField($var, GPBType::STRING, GPBType::STRING);
+        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::STRING);
         $this->accounts = $arr;
 
         return $this;
@@ -104,7 +100,7 @@ class ServerConfig extends Message
 
     /**
      * Generated from protobuf field <code>.xray.common.net.IPOrDomain address = 3;</code>
-     * @return IPOrDomain|null
+     * @return \Xray\Common\Net\IPOrDomain|null
      */
     public function getAddress()
     {
@@ -123,12 +119,12 @@ class ServerConfig extends Message
 
     /**
      * Generated from protobuf field <code>.xray.common.net.IPOrDomain address = 3;</code>
-     * @param IPOrDomain $var
+     * @param \Xray\Common\Net\IPOrDomain $var
      * @return $this
      */
     public function setAddress($var)
     {
-        GPBUtil::checkMessage($var, IPOrDomain::class);
+        GPBUtil::checkMessage($var, \Xray\Common\Net\IPOrDomain::class);
         $this->address = $var;
 
         return $this;

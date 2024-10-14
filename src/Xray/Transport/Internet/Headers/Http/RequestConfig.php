@@ -5,14 +5,13 @@
 namespace Xray\Transport\Internet\Headers\Http;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 use Google\Protobuf\Internal\RepeatedField;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * Generated from protobuf message <code>xray.transport.internet.headers.http.RequestConfig</code>
  */
-class RequestConfig extends Message
+class RequestConfig extends \Google\Protobuf\Internal\Message
 {
     /**
      * Full HTTP version like "1.1".
@@ -43,17 +42,16 @@ class RequestConfig extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type Version $version
+     *     @type \Xray\Transport\Internet\Headers\Http\Version $version
      *           Full HTTP version like "1.1".
-     * @type Method $method
+     *     @type \Xray\Transport\Internet\Headers\Http\Method $method
      *           GET, POST, CONNECT etc
-     * @type array<string>|RepeatedField $uri
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $uri
      *           URI like "/login.php"
-     * @type array<Header>|RepeatedField $header
+     *     @type array<\Xray\Transport\Internet\Headers\Http\Header>|\Google\Protobuf\Internal\RepeatedField $header
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Transport\Internet\Headers\Http\Config::initOnce();
         parent::__construct($data);
     }
@@ -62,7 +60,7 @@ class RequestConfig extends Message
      * Full HTTP version like "1.1".
      *
      * Generated from protobuf field <code>.xray.transport.internet.headers.http.Version version = 1;</code>
-     * @return Version|null
+     * @return \Xray\Transport\Internet\Headers\Http\Version|null
      */
     public function getVersion()
     {
@@ -83,12 +81,12 @@ class RequestConfig extends Message
      * Full HTTP version like "1.1".
      *
      * Generated from protobuf field <code>.xray.transport.internet.headers.http.Version version = 1;</code>
-     * @param Version $var
+     * @param \Xray\Transport\Internet\Headers\Http\Version $var
      * @return $this
      */
     public function setVersion($var)
     {
-        GPBUtil::checkMessage($var, Version::class);
+        GPBUtil::checkMessage($var, \Xray\Transport\Internet\Headers\Http\Version::class);
         $this->version = $var;
 
         return $this;
@@ -98,7 +96,7 @@ class RequestConfig extends Message
      * GET, POST, CONNECT etc
      *
      * Generated from protobuf field <code>.xray.transport.internet.headers.http.Method method = 2;</code>
-     * @return Method|null
+     * @return \Xray\Transport\Internet\Headers\Http\Method|null
      */
     public function getMethod()
     {
@@ -119,12 +117,12 @@ class RequestConfig extends Message
      * GET, POST, CONNECT etc
      *
      * Generated from protobuf field <code>.xray.transport.internet.headers.http.Method method = 2;</code>
-     * @param Method $var
+     * @param \Xray\Transport\Internet\Headers\Http\Method $var
      * @return $this
      */
     public function setMethod($var)
     {
-        GPBUtil::checkMessage($var, Method::class);
+        GPBUtil::checkMessage($var, \Xray\Transport\Internet\Headers\Http\Method::class);
         $this->method = $var;
 
         return $this;
@@ -134,7 +132,7 @@ class RequestConfig extends Message
      * URI like "/login.php"
      *
      * Generated from protobuf field <code>repeated string uri = 3;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getUri()
     {
@@ -145,12 +143,12 @@ class RequestConfig extends Message
      * URI like "/login.php"
      *
      * Generated from protobuf field <code>repeated string uri = 3;</code>
-     * @param array<string>|RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setUri($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::STRING);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->uri = $arr;
 
         return $this;
@@ -158,7 +156,7 @@ class RequestConfig extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.transport.internet.headers.http.Header header = 4;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getHeader()
     {
@@ -167,12 +165,12 @@ class RequestConfig extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.transport.internet.headers.http.Header header = 4;</code>
-     * @param array<Header>|RepeatedField $var
+     * @param array<\Xray\Transport\Internet\Headers\Http\Header>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setHeader($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, Header::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Xray\Transport\Internet\Headers\Http\Header::class);
         $this->header = $arr;
 
         return $this;

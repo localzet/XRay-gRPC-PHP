@@ -5,15 +5,13 @@
 namespace Xray\Transport\Internet\Http;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 use Google\Protobuf\Internal\RepeatedField;
-use Xray\Transport\Internet\Headers\Http\Header;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * Generated from protobuf message <code>xray.transport.internet.http.Config</code>
  */
-class Config extends Message
+class Config extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>repeated string host = 1;</code>
@@ -46,23 +44,22 @@ class Config extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type array<string>|RepeatedField $host
-     * @type string $path
-     * @type int $idle_timeout
-     * @type int $health_check_timeout
-     * @type string $method
-     * @type array<Header>|RepeatedField $header
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $host
+     *     @type string $path
+     *     @type int $idle_timeout
+     *     @type int $health_check_timeout
+     *     @type string $method
+     *     @type array<\Xray\Transport\Internet\Headers\Http\Header>|\Google\Protobuf\Internal\RepeatedField $header
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Transport\Internet\Http\Config::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>repeated string host = 1;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getHost()
     {
@@ -71,12 +68,12 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>repeated string host = 1;</code>
-     * @param array<string>|RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setHost($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::STRING);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->host = $arr;
 
         return $this;
@@ -172,7 +169,7 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.transport.internet.headers.http.Header header = 6;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getHeader()
     {
@@ -181,12 +178,12 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.transport.internet.headers.http.Header header = 6;</code>
-     * @param array<Header>|RepeatedField $var
+     * @param array<\Xray\Transport\Internet\Headers\Http\Header>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setHeader($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, Header::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Xray\Transport\Internet\Headers\Http\Header::class);
         $this->header = $arr;
 
         return $this;

@@ -4,23 +4,20 @@
 
 namespace GPBMetadata\Transport\Internet\Splithttp;
 
-use Google\Protobuf\Internal\DescriptorPool;
-
 class Config
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
-        $pool = DescriptorPool::getGeneratedPool();
+    public static function initOnce() {
+        $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
         if (static::$is_initialized == true) {
-            return;
+          return;
         }
         $pool->internalAddGeneratedFile(
             '
-ï¿½
-)transport/internet/splithttp/config.proto!xray.transport.internet.splithttp"ï¿½
+ü
+)transport/internet/splithttp/config.proto!xray.transport.internet.splithttp"­
 Config
 host (	
 path (	E
@@ -29,8 +26,7 @@ class Config
 scMaxEachPostBytes (22.xray.transport.internet.splithttp.RandRangeConfigP
 scMinPostsIntervalMs (22.xray.transport.internet.splithttp.RandRangeConfig
 noSSEHeader (I
-
-xPaddingBytes (22.xray.transport.internet.splithttp.RandRangeConfig=
+xPaddingBytes (22.xray.transport.internet.splithttp.RandRangeConfig=
 xmux	 (2/.xray.transport.internet.splithttp.Multiplexing-
 HeaderEntry
 key (	
@@ -38,14 +34,14 @@ xPaddingBytes (22.xray.transport.internet.splithttp.RandRangeConfig=
 RandRangeConfig
 from (
 
-to ("ï¿½
+to ("¾
 MultiplexingJ
 maxConcurrency (22.xray.transport.internet.splithttp.RandRangeConfigJ
 maxConnections (22.xray.transport.internet.splithttp.RandRangeConfigJ
 cMaxReuseTimes (22.xray.transport.internet.splithttp.RandRangeConfigJ
-cMaxLifetimeMs (22.xray.transport.internet.splithttp.RandRangeConfigBï¿½
-%com.xray.transport.internet.splithttpPZ6github.com/xtls/xray-core/transport/internet/splithttpï¿½!Xray.Transport.Internet.SplitHttpbproto3'
-            , true);
+cMaxLifetimeMs (22.xray.transport.internet.splithttp.RandRangeConfigB…
+%com.xray.transport.internet.splithttpPZ6github.com/xtls/xray-core/transport/internet/splithttpª!Xray.Transport.Internet.SplitHttpbproto3'
+        , true);
 
         static::$is_initialized = true;
     }

@@ -5,15 +5,13 @@
 namespace Xray\Proxy\Dns;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 use Google\Protobuf\Internal\RepeatedField;
-use Xray\Common\Net\Endpoint;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * Generated from protobuf message <code>xray.proxy.dns.Config</code>
  */
-class Config extends Message
+class Config extends \Google\Protobuf\Internal\Message
 {
     /**
      * Server is the DNS server address. If specified, this address overrides the
@@ -41,16 +39,15 @@ class Config extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type Endpoint $server
+     *     @type \Xray\Common\Net\Endpoint $server
      *           Server is the DNS server address. If specified, this address overrides the
      *           original one.
-     * @type int $user_level
-     * @type string $non_IP_query
-     * @type array<int>|RepeatedField $block_types
+     *     @type int $user_level
+     *     @type string $non_IP_query
+     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $block_types
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Proxy\Dns\Config::initOnce();
         parent::__construct($data);
     }
@@ -60,7 +57,7 @@ class Config extends Message
      * original one.
      *
      * Generated from protobuf field <code>.xray.common.net.Endpoint server = 1;</code>
-     * @return Endpoint|null
+     * @return \Xray\Common\Net\Endpoint|null
      */
     public function getServer()
     {
@@ -82,12 +79,12 @@ class Config extends Message
      * original one.
      *
      * Generated from protobuf field <code>.xray.common.net.Endpoint server = 1;</code>
-     * @param Endpoint $var
+     * @param \Xray\Common\Net\Endpoint $var
      * @return $this
      */
     public function setServer($var)
     {
-        GPBUtil::checkMessage($var, Endpoint::class);
+        GPBUtil::checkMessage($var, \Xray\Common\Net\Endpoint::class);
         $this->server = $var;
 
         return $this;
@@ -139,7 +136,7 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>repeated int32 block_types = 4;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getBlockTypes()
     {
@@ -148,12 +145,12 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>repeated int32 block_types = 4;</code>
-     * @param array<int>|RepeatedField $var
+     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setBlockTypes($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::INT32);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::INT32);
         $this->block_types = $arr;
 
         return $this;

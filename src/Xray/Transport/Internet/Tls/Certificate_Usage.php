@@ -9,9 +9,7 @@ if (false) {
      * This class is deprecated. Use Xray\Transport\Internet\Tls\Certificate\Usage instead.
      * @deprecated
      */
-    class Certificate_Usage
-    {
-    }
+    class Certificate_Usage {}
 }
 class_exists(Certificate\Usage::class);
 @trigger_error('Xray\Transport\Internet\Tls\Certificate_Usage is deprecated and will be removed in the next major release. Use Xray\Transport\Internet\Tls\Certificate\Usage instead', E_USER_DEPRECATED);

@@ -4,15 +4,14 @@
 
 namespace Xray\App\Policy\Policy;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
-use GPBMetadata\App\Policy\Config;
-use Xray\App\Policy\Policy_Stats;
 
 /**
  * Generated from protobuf message <code>xray.app.policy.Policy.Stats</code>
  */
-class Stats extends Message
+class Stats extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>bool user_uplink = 1;</code>
@@ -29,13 +28,12 @@ class Stats extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type bool $user_uplink
-     * @type bool $user_downlink
+     *     @type bool $user_uplink
+     *     @type bool $user_downlink
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Config::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\App\Policy\Config::initOnce();
         parent::__construct($data);
     }
 
@@ -86,5 +84,5 @@ class Stats extends Message
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Stats::class, Policy_Stats::class);
+class_alias(Stats::class, \Xray\App\Policy\Policy_Stats::class);
 

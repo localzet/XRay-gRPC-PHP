@@ -4,15 +4,16 @@
 
 namespace Xray\App\Router;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 
 /**
  * IP for routing decision, in CIDR form.
  *
  * Generated from protobuf message <code>xray.app.router.CIDR</code>
  */
-class CIDR extends Message
+class CIDR extends \Google\Protobuf\Internal\Message
 {
     /**
      * IP address, should be either 4 or 16 bytes.
@@ -33,14 +34,13 @@ class CIDR extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $ip
+     *     @type string $ip
      *           IP address, should be either 4 or 16 bytes.
-     * @type int $prefix
+     *     @type int $prefix
      *           Number of leading ones in the network mask.
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\App\Router\Config::initOnce();
         parent::__construct($data);
     }

@@ -4,38 +4,32 @@
 
 namespace GPBMetadata\Proxy\Vmess\Inbound;
 
-use Google\Protobuf\Internal\DescriptorPool;
-use GPBMetadata\Common\Protocol\User;
-
 class Config
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
-        $pool = DescriptorPool::getGeneratedPool();
+    public static function initOnce() {
+        $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
         if (static::$is_initialized == true) {
-            return;
+          return;
         }
-        User::initOnce();
+        \GPBMetadata\Common\Protocol\User::initOnce();
         $pool->internalAddGeneratedFile(
             '
-ï¿½
+“
  proxy/vmess/inbound/config.protoxray.proxy.vmess.inbound"
 DetourConfig
 
 to (	"
-
-DefaultConfig
-level (
-"ï¿½
+DefaultConfig
+level ("¤
 Config(
 user (2.xray.common.protocol.User8
 default (2\'.xray.proxy.vmess.inbound.DefaultConfig6
 detour (2&.xray.proxy.vmess.inbound.DetourConfigBj
-com.xray.proxy.vmess.inboundPZ-github.com/xtls/xray-core/proxy/vmess/inboundï¿½Xray.Proxy.Vmess.Inboundbproto3'
-            , true);
+com.xray.proxy.vmess.inboundPZ-github.com/xtls/xray-core/proxy/vmess/inboundªXray.Proxy.Vmess.Inboundbproto3'
+        , true);
 
         static::$is_initialized = true;
     }

@@ -5,10 +5,8 @@
 namespace Xray\Core;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 use Google\Protobuf\Internal\RepeatedField;
-use Xray\Common\Serial\TypedMessage;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * Config is the master config of Xray. Xray takes this config as input and
@@ -16,7 +14,7 @@ use Xray\Common\Serial\TypedMessage;
  *
  * Generated from protobuf message <code>xray.core.Config</code>
  */
-class Config extends Message
+class Config extends \Google\Protobuf\Internal\Message
 {
     /**
      * Inbound handler configurations. Must have at least one item.
@@ -54,23 +52,22 @@ class Config extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type array<InboundHandlerConfig>|RepeatedField $inbound
+     *     @type array<\Xray\Core\InboundHandlerConfig>|\Google\Protobuf\Internal\RepeatedField $inbound
      *           Inbound handler configurations. Must have at least one item.
-     * @type array<OutboundHandlerConfig>|RepeatedField $outbound
+     *     @type array<\Xray\Core\OutboundHandlerConfig>|\Google\Protobuf\Internal\RepeatedField $outbound
      *           Outbound handler configurations. Must have at least one item. The first
      *           item is used as default for routing.
-     * @type array<TypedMessage>|RepeatedField $app
+     *     @type array<\Xray\Common\Serial\TypedMessage>|\Google\Protobuf\Internal\RepeatedField $app
      *           App is for configurations of all features in Xray. A feature must
      *           implement the Feature interface, and its config type must be registered
      *           through common.RegisterConfig.
-     * @type array<TypedMessage>|RepeatedField $extension
+     *     @type array<\Xray\Common\Serial\TypedMessage>|\Google\Protobuf\Internal\RepeatedField $extension
      *           Configuration for extensions. The config may not work if corresponding
      *           extension is not loaded into Xray. Xray will ignore such config during
      *           initialization.
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Config::initOnce();
         parent::__construct($data);
     }
@@ -79,7 +76,7 @@ class Config extends Message
      * Inbound handler configurations. Must have at least one item.
      *
      * Generated from protobuf field <code>repeated .xray.core.InboundHandlerConfig inbound = 1;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getInbound()
     {
@@ -90,12 +87,12 @@ class Config extends Message
      * Inbound handler configurations. Must have at least one item.
      *
      * Generated from protobuf field <code>repeated .xray.core.InboundHandlerConfig inbound = 1;</code>
-     * @param array<InboundHandlerConfig>|RepeatedField $var
+     * @param array<\Xray\Core\InboundHandlerConfig>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setInbound($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, InboundHandlerConfig::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Xray\Core\InboundHandlerConfig::class);
         $this->inbound = $arr;
 
         return $this;
@@ -106,7 +103,7 @@ class Config extends Message
      * item is used as default for routing.
      *
      * Generated from protobuf field <code>repeated .xray.core.OutboundHandlerConfig outbound = 2;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getOutbound()
     {
@@ -118,12 +115,12 @@ class Config extends Message
      * item is used as default for routing.
      *
      * Generated from protobuf field <code>repeated .xray.core.OutboundHandlerConfig outbound = 2;</code>
-     * @param array<OutboundHandlerConfig>|RepeatedField $var
+     * @param array<\Xray\Core\OutboundHandlerConfig>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setOutbound($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, OutboundHandlerConfig::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Xray\Core\OutboundHandlerConfig::class);
         $this->outbound = $arr;
 
         return $this;
@@ -135,7 +132,7 @@ class Config extends Message
      * through common.RegisterConfig.
      *
      * Generated from protobuf field <code>repeated .xray.common.serial.TypedMessage app = 4;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getApp()
     {
@@ -148,12 +145,12 @@ class Config extends Message
      * through common.RegisterConfig.
      *
      * Generated from protobuf field <code>repeated .xray.common.serial.TypedMessage app = 4;</code>
-     * @param array<TypedMessage>|RepeatedField $var
+     * @param array<\Xray\Common\Serial\TypedMessage>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setApp($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, TypedMessage::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Xray\Common\Serial\TypedMessage::class);
         $this->app = $arr;
 
         return $this;
@@ -165,7 +162,7 @@ class Config extends Message
      * initialization.
      *
      * Generated from protobuf field <code>repeated .xray.common.serial.TypedMessage extension = 6;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getExtension()
     {
@@ -178,12 +175,12 @@ class Config extends Message
      * initialization.
      *
      * Generated from protobuf field <code>repeated .xray.common.serial.TypedMessage extension = 6;</code>
-     * @param array<TypedMessage>|RepeatedField $var
+     * @param array<\Xray\Common\Serial\TypedMessage>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setExtension($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, TypedMessage::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Xray\Common\Serial\TypedMessage::class);
         $this->extension = $arr;
 
         return $this;

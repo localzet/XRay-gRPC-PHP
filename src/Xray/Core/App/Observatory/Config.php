@@ -5,14 +5,13 @@
 namespace Xray\Core\App\Observatory;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 use Google\Protobuf\Internal\RepeatedField;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * Generated from protobuf message <code>xray.core.app.observatory.Config</code>
  */
-class Config extends Message
+class Config extends \Google\Protobuf\Internal\Message
 {
     /**
      * &#64;Document The selectors for outbound under observation
@@ -39,15 +38,14 @@ class Config extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type array<string>|RepeatedField $subject_selector
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $subject_selector
      *           &#64;Document The selectors for outbound under observation
-     * @type string $probe_url
-     * @type int|string $probe_interval
-     * @type bool $enable_concurrency
+     *     @type string $probe_url
+     *     @type int|string $probe_interval
+     *     @type bool $enable_concurrency
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\App\Observatory\Config::initOnce();
         parent::__construct($data);
     }
@@ -56,7 +54,7 @@ class Config extends Message
      * &#64;Document The selectors for outbound under observation
      *
      * Generated from protobuf field <code>repeated string subject_selector = 2;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getSubjectSelector()
     {
@@ -67,12 +65,12 @@ class Config extends Message
      * &#64;Document The selectors for outbound under observation
      *
      * Generated from protobuf field <code>repeated string subject_selector = 2;</code>
-     * @param array<string>|RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setSubjectSelector($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::STRING);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->subject_selector = $arr;
 
         return $this;

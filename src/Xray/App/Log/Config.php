@@ -4,14 +4,14 @@
 
 namespace Xray\App\Log;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
-use Xray\Common\Log\Severity;
 
 /**
  * Generated from protobuf message <code>xray.app.log.Config</code>
  */
-class Config extends Message
+class Config extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>.xray.app.log.LogType error_log_type = 1;</code>
@@ -48,17 +48,16 @@ class Config extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type int $error_log_type
-     * @type int $error_log_level
-     * @type string $error_log_path
-     * @type int $access_log_type
-     * @type string $access_log_path
-     * @type bool $enable_dns_log
-     * @type string $mask_address
+     *     @type int $error_log_type
+     *     @type int $error_log_level
+     *     @type string $error_log_path
+     *     @type int $access_log_type
+     *     @type string $access_log_path
+     *     @type bool $enable_dns_log
+     *     @type string $mask_address
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\App\Log\Config::initOnce();
         parent::__construct($data);
     }
@@ -79,7 +78,7 @@ class Config extends Message
      */
     public function setErrorLogType($var)
     {
-        GPBUtil::checkEnum($var, LogType::class);
+        GPBUtil::checkEnum($var, \Xray\App\Log\LogType::class);
         $this->error_log_type = $var;
 
         return $this;
@@ -101,7 +100,7 @@ class Config extends Message
      */
     public function setErrorLogLevel($var)
     {
-        GPBUtil::checkEnum($var, Severity::class);
+        GPBUtil::checkEnum($var, \Xray\Common\Log\Severity::class);
         $this->error_log_level = $var;
 
         return $this;
@@ -145,7 +144,7 @@ class Config extends Message
      */
     public function setAccessLogType($var)
     {
-        GPBUtil::checkEnum($var, LogType::class);
+        GPBUtil::checkEnum($var, \Xray\App\Log\LogType::class);
         $this->access_log_type = $var;
 
         return $this;

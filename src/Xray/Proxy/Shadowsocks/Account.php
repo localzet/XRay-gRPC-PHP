@@ -4,14 +4,14 @@
 
 namespace Xray\Proxy\Shadowsocks;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
-use GPBMetadata\Proxy\Shadowsocks\Config;
 
 /**
  * Generated from protobuf message <code>xray.proxy.shadowsocks.Account</code>
  */
-class Account extends Message
+class Account extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>string password = 1;</code>
@@ -32,14 +32,13 @@ class Account extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $password
-     * @type int $cipher_type
-     * @type bool $iv_check
+     *     @type string $password
+     *     @type int $cipher_type
+     *     @type bool $iv_check
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Config::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\Proxy\Shadowsocks\Config::initOnce();
         parent::__construct($data);
     }
 
@@ -81,7 +80,7 @@ class Account extends Message
      */
     public function setCipherType($var)
     {
-        GPBUtil::checkEnum($var, CipherType::class);
+        GPBUtil::checkEnum($var, \Xray\Proxy\Shadowsocks\CipherType::class);
         $this->cipher_type = $var;
 
         return $this;

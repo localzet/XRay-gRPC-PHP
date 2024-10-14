@@ -4,14 +4,14 @@
 
 namespace Xray\Transport\Internet\Kcp;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
-use Xray\Common\Serial\TypedMessage;
 
 /**
  * Generated from protobuf message <code>xray.transport.internet.kcp.Config</code>
  */
-class Config extends Message
+class Config extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>.xray.transport.internet.kcp.MTU mtu = 1;</code>
@@ -56,26 +56,25 @@ class Config extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type MTU $mtu
-     * @type TTI $tti
-     * @type UplinkCapacity $uplink_capacity
-     * @type DownlinkCapacity $downlink_capacity
-     * @type bool $congestion
-     * @type WriteBuffer $write_buffer
-     * @type ReadBuffer $read_buffer
-     * @type TypedMessage $header_config
-     * @type EncryptionSeed $seed
+     *     @type \Xray\Transport\Internet\Kcp\MTU $mtu
+     *     @type \Xray\Transport\Internet\Kcp\TTI $tti
+     *     @type \Xray\Transport\Internet\Kcp\UplinkCapacity $uplink_capacity
+     *     @type \Xray\Transport\Internet\Kcp\DownlinkCapacity $downlink_capacity
+     *     @type bool $congestion
+     *     @type \Xray\Transport\Internet\Kcp\WriteBuffer $write_buffer
+     *     @type \Xray\Transport\Internet\Kcp\ReadBuffer $read_buffer
+     *     @type \Xray\Common\Serial\TypedMessage $header_config
+     *     @type \Xray\Transport\Internet\Kcp\EncryptionSeed $seed
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Transport\Internet\Kcp\Config::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>.xray.transport.internet.kcp.MTU mtu = 1;</code>
-     * @return MTU|null
+     * @return \Xray\Transport\Internet\Kcp\MTU|null
      */
     public function getMtu()
     {
@@ -94,12 +93,12 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>.xray.transport.internet.kcp.MTU mtu = 1;</code>
-     * @param MTU $var
+     * @param \Xray\Transport\Internet\Kcp\MTU $var
      * @return $this
      */
     public function setMtu($var)
     {
-        GPBUtil::checkMessage($var, MTU::class);
+        GPBUtil::checkMessage($var, \Xray\Transport\Internet\Kcp\MTU::class);
         $this->mtu = $var;
 
         return $this;
@@ -107,7 +106,7 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>.xray.transport.internet.kcp.TTI tti = 2;</code>
-     * @return TTI|null
+     * @return \Xray\Transport\Internet\Kcp\TTI|null
      */
     public function getTti()
     {
@@ -126,12 +125,12 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>.xray.transport.internet.kcp.TTI tti = 2;</code>
-     * @param TTI $var
+     * @param \Xray\Transport\Internet\Kcp\TTI $var
      * @return $this
      */
     public function setTti($var)
     {
-        GPBUtil::checkMessage($var, TTI::class);
+        GPBUtil::checkMessage($var, \Xray\Transport\Internet\Kcp\TTI::class);
         $this->tti = $var;
 
         return $this;
@@ -139,7 +138,7 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>.xray.transport.internet.kcp.UplinkCapacity uplink_capacity = 3;</code>
-     * @return UplinkCapacity|null
+     * @return \Xray\Transport\Internet\Kcp\UplinkCapacity|null
      */
     public function getUplinkCapacity()
     {
@@ -158,12 +157,12 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>.xray.transport.internet.kcp.UplinkCapacity uplink_capacity = 3;</code>
-     * @param UplinkCapacity $var
+     * @param \Xray\Transport\Internet\Kcp\UplinkCapacity $var
      * @return $this
      */
     public function setUplinkCapacity($var)
     {
-        GPBUtil::checkMessage($var, UplinkCapacity::class);
+        GPBUtil::checkMessage($var, \Xray\Transport\Internet\Kcp\UplinkCapacity::class);
         $this->uplink_capacity = $var;
 
         return $this;
@@ -171,7 +170,7 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>.xray.transport.internet.kcp.DownlinkCapacity downlink_capacity = 4;</code>
-     * @return DownlinkCapacity|null
+     * @return \Xray\Transport\Internet\Kcp\DownlinkCapacity|null
      */
     public function getDownlinkCapacity()
     {
@@ -190,12 +189,12 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>.xray.transport.internet.kcp.DownlinkCapacity downlink_capacity = 4;</code>
-     * @param DownlinkCapacity $var
+     * @param \Xray\Transport\Internet\Kcp\DownlinkCapacity $var
      * @return $this
      */
     public function setDownlinkCapacity($var)
     {
-        GPBUtil::checkMessage($var, DownlinkCapacity::class);
+        GPBUtil::checkMessage($var, \Xray\Transport\Internet\Kcp\DownlinkCapacity::class);
         $this->downlink_capacity = $var;
 
         return $this;
@@ -225,7 +224,7 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>.xray.transport.internet.kcp.WriteBuffer write_buffer = 6;</code>
-     * @return WriteBuffer|null
+     * @return \Xray\Transport\Internet\Kcp\WriteBuffer|null
      */
     public function getWriteBuffer()
     {
@@ -244,12 +243,12 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>.xray.transport.internet.kcp.WriteBuffer write_buffer = 6;</code>
-     * @param WriteBuffer $var
+     * @param \Xray\Transport\Internet\Kcp\WriteBuffer $var
      * @return $this
      */
     public function setWriteBuffer($var)
     {
-        GPBUtil::checkMessage($var, WriteBuffer::class);
+        GPBUtil::checkMessage($var, \Xray\Transport\Internet\Kcp\WriteBuffer::class);
         $this->write_buffer = $var;
 
         return $this;
@@ -257,7 +256,7 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>.xray.transport.internet.kcp.ReadBuffer read_buffer = 7;</code>
-     * @return ReadBuffer|null
+     * @return \Xray\Transport\Internet\Kcp\ReadBuffer|null
      */
     public function getReadBuffer()
     {
@@ -276,12 +275,12 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>.xray.transport.internet.kcp.ReadBuffer read_buffer = 7;</code>
-     * @param ReadBuffer $var
+     * @param \Xray\Transport\Internet\Kcp\ReadBuffer $var
      * @return $this
      */
     public function setReadBuffer($var)
     {
-        GPBUtil::checkMessage($var, ReadBuffer::class);
+        GPBUtil::checkMessage($var, \Xray\Transport\Internet\Kcp\ReadBuffer::class);
         $this->read_buffer = $var;
 
         return $this;
@@ -289,7 +288,7 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>.xray.common.serial.TypedMessage header_config = 8;</code>
-     * @return TypedMessage|null
+     * @return \Xray\Common\Serial\TypedMessage|null
      */
     public function getHeaderConfig()
     {
@@ -308,12 +307,12 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>.xray.common.serial.TypedMessage header_config = 8;</code>
-     * @param TypedMessage $var
+     * @param \Xray\Common\Serial\TypedMessage $var
      * @return $this
      */
     public function setHeaderConfig($var)
     {
-        GPBUtil::checkMessage($var, TypedMessage::class);
+        GPBUtil::checkMessage($var, \Xray\Common\Serial\TypedMessage::class);
         $this->header_config = $var;
 
         return $this;
@@ -321,7 +320,7 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>.xray.transport.internet.kcp.EncryptionSeed seed = 10;</code>
-     * @return EncryptionSeed|null
+     * @return \Xray\Transport\Internet\Kcp\EncryptionSeed|null
      */
     public function getSeed()
     {
@@ -340,12 +339,12 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>.xray.transport.internet.kcp.EncryptionSeed seed = 10;</code>
-     * @param EncryptionSeed $var
+     * @param \Xray\Transport\Internet\Kcp\EncryptionSeed $var
      * @return $this
      */
     public function setSeed($var)
     {
-        GPBUtil::checkMessage($var, EncryptionSeed::class);
+        GPBUtil::checkMessage($var, \Xray\Transport\Internet\Kcp\EncryptionSeed::class);
         $this->seed = $var;
 
         return $this;

@@ -4,14 +4,14 @@
 
 namespace Xray\App\Router\Command;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
-use GPBMetadata\App\Router\Command\Command;
 
 /**
  * Generated from protobuf message <code>xray.app.router.command.OverrideInfo</code>
  */
-class OverrideInfo extends Message
+class OverrideInfo extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>string target = 2;</code>
@@ -24,12 +24,11 @@ class OverrideInfo extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $target
+     *     @type string $target
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Command::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\App\Router\Command\Command::initOnce();
         parent::__construct($data);
     }
 

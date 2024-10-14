@@ -4,36 +4,30 @@
 
 namespace GPBMetadata\Transport\Internet\Headers\Srtp;
 
-use Google\Protobuf\Internal\DescriptorPool;
-
 class Config
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
-        $pool = DescriptorPool::getGeneratedPool();
+    public static function initOnce() {
+        $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
         if (static::$is_initialized == true) {
-            return;
+          return;
         }
         $pool->internalAddGeneratedFile(
             '
-ï¿½
+æ
 ,transport/internet/headers/srtp/config.proto$xray.transport.internet.headers.srtp"w
 Config
-version (
-
+version (
 padding (
 	extension (
 
-csrc_count (
-
+csrc_count (
 marker (
-payload_type (
-Bï¿½
-(com.xray.transport.internet.headers.srtpPZ9github.com/xtls/xray-core/transport/internet/headers/srtpï¿½$Xray.Transport.Internet.Headers.Srtpbproto3'
-            , true);
+payload_type (B
+(com.xray.transport.internet.headers.srtpPZ9github.com/xtls/xray-core/transport/internet/headers/srtpª$Xray.Transport.Internet.Headers.Srtpbproto3'
+        , true);
 
         static::$is_initialized = true;
     }

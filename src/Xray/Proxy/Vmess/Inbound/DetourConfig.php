@@ -4,13 +4,14 @@
 
 namespace Xray\Proxy\Vmess\Inbound;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 
 /**
  * Generated from protobuf message <code>xray.proxy.vmess.inbound.DetourConfig</code>
  */
-class DetourConfig extends Message
+class DetourConfig extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>string to = 1;</code>
@@ -23,11 +24,10 @@ class DetourConfig extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $to
+     *     @type string $to
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Proxy\Vmess\Inbound\Config::initOnce();
         parent::__construct($data);
     }

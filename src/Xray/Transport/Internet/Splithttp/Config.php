@@ -5,14 +5,13 @@
 namespace Xray\Transport\Internet\Splithttp;
 
 use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\MapField;
-use Google\Protobuf\Internal\Message;
 
 /**
  * Generated from protobuf message <code>xray.transport.internet.splithttp.Config</code>
  */
-class Config extends Message
+class Config extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>string host = 1;</code>
@@ -57,19 +56,18 @@ class Config extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $host
-     * @type string $path
-     * @type array|MapField $header
-     * @type RandRangeConfig $scMaxConcurrentPosts
-     * @type RandRangeConfig $scMaxEachPostBytes
-     * @type RandRangeConfig $scMinPostsIntervalMs
-     * @type bool $noSSEHeader
-     * @type RandRangeConfig $xPaddingBytes
-     * @type Multiplexing $xmux
+     *     @type string $host
+     *     @type string $path
+     *     @type array|\Google\Protobuf\Internal\MapField $header
+     *     @type \Xray\Transport\Internet\Splithttp\RandRangeConfig $scMaxConcurrentPosts
+     *     @type \Xray\Transport\Internet\Splithttp\RandRangeConfig $scMaxEachPostBytes
+     *     @type \Xray\Transport\Internet\Splithttp\RandRangeConfig $scMinPostsIntervalMs
+     *     @type bool $noSSEHeader
+     *     @type \Xray\Transport\Internet\Splithttp\RandRangeConfig $xPaddingBytes
+     *     @type \Xray\Transport\Internet\Splithttp\Multiplexing $xmux
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Transport\Internet\Splithttp\Config::initOnce();
         parent::__construct($data);
     }
@@ -120,7 +118,7 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>map<string, string> header = 3;</code>
-     * @return MapField
+     * @return \Google\Protobuf\Internal\MapField
      */
     public function getHeader()
     {
@@ -129,12 +127,12 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>map<string, string> header = 3;</code>
-     * @param array|MapField $var
+     * @param array|\Google\Protobuf\Internal\MapField $var
      * @return $this
      */
     public function setHeader($var)
     {
-        $arr = GPBUtil::checkMapField($var, GPBType::STRING, GPBType::STRING);
+        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::STRING);
         $this->header = $arr;
 
         return $this;
@@ -142,7 +140,7 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>.xray.transport.internet.splithttp.RandRangeConfig scMaxConcurrentPosts = 4;</code>
-     * @return RandRangeConfig|null
+     * @return \Xray\Transport\Internet\Splithttp\RandRangeConfig|null
      */
     public function getScMaxConcurrentPosts()
     {
@@ -161,12 +159,12 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>.xray.transport.internet.splithttp.RandRangeConfig scMaxConcurrentPosts = 4;</code>
-     * @param RandRangeConfig $var
+     * @param \Xray\Transport\Internet\Splithttp\RandRangeConfig $var
      * @return $this
      */
     public function setScMaxConcurrentPosts($var)
     {
-        GPBUtil::checkMessage($var, RandRangeConfig::class);
+        GPBUtil::checkMessage($var, \Xray\Transport\Internet\Splithttp\RandRangeConfig::class);
         $this->scMaxConcurrentPosts = $var;
 
         return $this;
@@ -174,7 +172,7 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>.xray.transport.internet.splithttp.RandRangeConfig scMaxEachPostBytes = 5;</code>
-     * @return RandRangeConfig|null
+     * @return \Xray\Transport\Internet\Splithttp\RandRangeConfig|null
      */
     public function getScMaxEachPostBytes()
     {
@@ -193,12 +191,12 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>.xray.transport.internet.splithttp.RandRangeConfig scMaxEachPostBytes = 5;</code>
-     * @param RandRangeConfig $var
+     * @param \Xray\Transport\Internet\Splithttp\RandRangeConfig $var
      * @return $this
      */
     public function setScMaxEachPostBytes($var)
     {
-        GPBUtil::checkMessage($var, RandRangeConfig::class);
+        GPBUtil::checkMessage($var, \Xray\Transport\Internet\Splithttp\RandRangeConfig::class);
         $this->scMaxEachPostBytes = $var;
 
         return $this;
@@ -206,7 +204,7 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>.xray.transport.internet.splithttp.RandRangeConfig scMinPostsIntervalMs = 6;</code>
-     * @return RandRangeConfig|null
+     * @return \Xray\Transport\Internet\Splithttp\RandRangeConfig|null
      */
     public function getScMinPostsIntervalMs()
     {
@@ -225,12 +223,12 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>.xray.transport.internet.splithttp.RandRangeConfig scMinPostsIntervalMs = 6;</code>
-     * @param RandRangeConfig $var
+     * @param \Xray\Transport\Internet\Splithttp\RandRangeConfig $var
      * @return $this
      */
     public function setScMinPostsIntervalMs($var)
     {
-        GPBUtil::checkMessage($var, RandRangeConfig::class);
+        GPBUtil::checkMessage($var, \Xray\Transport\Internet\Splithttp\RandRangeConfig::class);
         $this->scMinPostsIntervalMs = $var;
 
         return $this;
@@ -260,7 +258,7 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>.xray.transport.internet.splithttp.RandRangeConfig xPaddingBytes = 8;</code>
-     * @return RandRangeConfig|null
+     * @return \Xray\Transport\Internet\Splithttp\RandRangeConfig|null
      */
     public function getXPaddingBytes()
     {
@@ -279,12 +277,12 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>.xray.transport.internet.splithttp.RandRangeConfig xPaddingBytes = 8;</code>
-     * @param RandRangeConfig $var
+     * @param \Xray\Transport\Internet\Splithttp\RandRangeConfig $var
      * @return $this
      */
     public function setXPaddingBytes($var)
     {
-        GPBUtil::checkMessage($var, RandRangeConfig::class);
+        GPBUtil::checkMessage($var, \Xray\Transport\Internet\Splithttp\RandRangeConfig::class);
         $this->xPaddingBytes = $var;
 
         return $this;
@@ -292,7 +290,7 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>.xray.transport.internet.splithttp.Multiplexing xmux = 9;</code>
-     * @return Multiplexing|null
+     * @return \Xray\Transport\Internet\Splithttp\Multiplexing|null
      */
     public function getXmux()
     {
@@ -311,12 +309,12 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>.xray.transport.internet.splithttp.Multiplexing xmux = 9;</code>
-     * @param Multiplexing $var
+     * @param \Xray\Transport\Internet\Splithttp\Multiplexing $var
      * @return $this
      */
     public function setXmux($var)
     {
-        GPBUtil::checkMessage($var, Multiplexing::class);
+        GPBUtil::checkMessage($var, \Xray\Transport\Internet\Splithttp\Multiplexing::class);
         $this->xmux = $var;
 
         return $this;

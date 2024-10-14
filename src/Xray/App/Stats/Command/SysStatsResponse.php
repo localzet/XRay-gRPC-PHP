@@ -4,14 +4,14 @@
 
 namespace Xray\App\Stats\Command;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
-use GPBMetadata\App\Stats\Command\Command;
 
 /**
  * Generated from protobuf message <code>xray.app.stats.command.SysStatsResponse</code>
  */
-class SysStatsResponse extends Message
+class SysStatsResponse extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>uint32 NumGoroutine = 1;</code>
@@ -60,21 +60,20 @@ class SysStatsResponse extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type int $NumGoroutine
-     * @type int $NumGC
-     * @type int|string $Alloc
-     * @type int|string $TotalAlloc
-     * @type int|string $Sys
-     * @type int|string $Mallocs
-     * @type int|string $Frees
-     * @type int|string $LiveObjects
-     * @type int|string $PauseTotalNs
-     * @type int $Uptime
+     *     @type int $NumGoroutine
+     *     @type int $NumGC
+     *     @type int|string $Alloc
+     *     @type int|string $TotalAlloc
+     *     @type int|string $Sys
+     *     @type int|string $Mallocs
+     *     @type int|string $Frees
+     *     @type int|string $LiveObjects
+     *     @type int|string $PauseTotalNs
+     *     @type int $Uptime
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Command::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\App\Stats\Command\Command::initOnce();
         parent::__construct($data);
     }
 

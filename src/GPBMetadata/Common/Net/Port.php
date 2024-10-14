@@ -4,33 +4,28 @@
 
 namespace GPBMetadata\Common\Net;
 
-use Google\Protobuf\Internal\DescriptorPool;
-
 class Port
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
-        $pool = DescriptorPool::getGeneratedPool();
+    public static function initOnce() {
+        $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
         if (static::$is_initialized == true) {
-            return;
+          return;
         }
         $pool->internalAddGeneratedFile(
             '
-ï¿½
+ß
 common/net/port.protoxray.common.net"%
 	PortRange
-From (
-
+From (
 
-To (
-"5
+To ("5
 PortList)
 range (2.xray.common.net.PortRangeBO
-com.xray.common.netPZ$github.com/xtls/xray-core/common/netï¿½Xray.Common.Netbproto3'
-            , true);
+com.xray.common.netPZ$github.com/xtls/xray-core/common/netªXray.Common.Netbproto3'
+        , true);
 
         static::$is_initialized = true;
     }

@@ -4,14 +4,14 @@
 
 namespace Xray\Proxy\Shadowsocks_2022;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
-use GPBMetadata\Proxy\Shadowsocks2022\Config;
 
 /**
  * Generated from protobuf message <code>xray.proxy.shadowsocks_2022.User</code>
  */
-class User extends Message
+class User extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>string key = 1;</code>
@@ -32,14 +32,13 @@ class User extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $key
-     * @type string $email
-     * @type int $level
+     *     @type string $key
+     *     @type string $email
+     *     @type int $level
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Config::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\Proxy\Shadowsocks2022\Config::initOnce();
         parent::__construct($data);
     }
 

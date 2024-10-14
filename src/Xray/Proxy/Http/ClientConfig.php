@@ -5,18 +5,15 @@
 namespace Xray\Proxy\Http;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 use Google\Protobuf\Internal\RepeatedField;
-use GPBMetadata\Proxy\Http\Config;
-use Xray\Common\Protocol\ServerEndpoint;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * ClientConfig is the protobuf config for HTTP proxy client.
  *
  * Generated from protobuf message <code>xray.proxy.http.ClientConfig</code>
  */
-class ClientConfig extends Message
+class ClientConfig extends \Google\Protobuf\Internal\Message
 {
     /**
      * Sever is a list of HTTP server addresses.
@@ -35,14 +32,13 @@ class ClientConfig extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type array<ServerEndpoint>|RepeatedField $server
+     *     @type array<\Xray\Common\Protocol\ServerEndpoint>|\Google\Protobuf\Internal\RepeatedField $server
      *           Sever is a list of HTTP server addresses.
-     * @type array<Header>|RepeatedField $header
+     *     @type array<\Xray\Proxy\Http\Header>|\Google\Protobuf\Internal\RepeatedField $header
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Config::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\Proxy\Http\Config::initOnce();
         parent::__construct($data);
     }
 
@@ -50,7 +46,7 @@ class ClientConfig extends Message
      * Sever is a list of HTTP server addresses.
      *
      * Generated from protobuf field <code>repeated .xray.common.protocol.ServerEndpoint server = 1;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getServer()
     {
@@ -61,12 +57,12 @@ class ClientConfig extends Message
      * Sever is a list of HTTP server addresses.
      *
      * Generated from protobuf field <code>repeated .xray.common.protocol.ServerEndpoint server = 1;</code>
-     * @param array<ServerEndpoint>|RepeatedField $var
+     * @param array<\Xray\Common\Protocol\ServerEndpoint>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setServer($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, ServerEndpoint::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Xray\Common\Protocol\ServerEndpoint::class);
         $this->server = $arr;
 
         return $this;
@@ -74,7 +70,7 @@ class ClientConfig extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.proxy.http.Header header = 2;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getHeader()
     {
@@ -83,12 +79,12 @@ class ClientConfig extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.proxy.http.Header header = 2;</code>
-     * @param array<Header>|RepeatedField $var
+     * @param array<\Xray\Proxy\Http\Header>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setHeader($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, Header::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Xray\Proxy\Http\Header::class);
         $this->header = $arr;
 
         return $this;

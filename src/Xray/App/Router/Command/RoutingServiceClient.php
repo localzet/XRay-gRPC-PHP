@@ -3,114 +3,101 @@
 
 namespace Xray\App\Router\Command;
 
-use Grpc\BaseStub;
-use Grpc\Channel;
-use Grpc\ServerStreamingCall;
-use Grpc\UnaryCall;
-
 /**
  */
-class RoutingServiceClient extends BaseStub
-{
+class RoutingServiceClient extends \Grpc\BaseStub {
 
     /**
      * @param string $hostname hostname
      * @param array $opts channel options
-     * @param Channel $channel (optional) re-use channel object
+     * @param \Grpc\Channel $channel (optional) re-use channel object
      */
-    public function __construct($hostname, $opts, $channel = null)
-    {
+    public function __construct($hostname, $opts, $channel = null) {
         parent::__construct($hostname, $opts, $channel);
     }
 
     /**
-     * @param SubscribeRoutingStatsRequest $argument input argument
+     * @param \Xray\App\Router\Command\SubscribeRoutingStatsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return ServerStreamingCall
+     * @return \Grpc\ServerStreamingCall
      */
-    public function SubscribeRoutingStats(SubscribeRoutingStatsRequest $argument,
-                                                                       $metadata = [], $options = [])
-    {
+    public function SubscribeRoutingStats(\Xray\App\Router\Command\SubscribeRoutingStatsRequest $argument,
+      $metadata = [], $options = []) {
         return $this->_serverStreamRequest('/xray.app.router.command.RoutingService/SubscribeRoutingStats',
-            $argument,
-            ['\Xray\App\Router\Command\RoutingContext', 'decode'],
-            $metadata, $options);
+        $argument,
+        ['\Xray\App\Router\Command\RoutingContext', 'decode'],
+        $metadata, $options);
     }
 
     /**
-     * @param TestRouteRequest $argument input argument
+     * @param \Xray\App\Router\Command\TestRouteRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return UnaryCall
+     * @return \Grpc\UnaryCall
      */
-    public function TestRoute(TestRouteRequest $argument,
-                                               $metadata = [], $options = [])
-    {
+    public function TestRoute(\Xray\App\Router\Command\TestRouteRequest $argument,
+      $metadata = [], $options = []) {
         return $this->_simpleRequest('/xray.app.router.command.RoutingService/TestRoute',
-            $argument,
-            ['\Xray\App\Router\Command\RoutingContext', 'decode'],
-            $metadata, $options);
+        $argument,
+        ['\Xray\App\Router\Command\RoutingContext', 'decode'],
+        $metadata, $options);
     }
 
     /**
-     * @param GetBalancerInfoRequest $argument input argument
+     * @param \Xray\App\Router\Command\GetBalancerInfoRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return UnaryCall
+     * @return \Grpc\UnaryCall
      */
-    public function GetBalancerInfo(GetBalancerInfoRequest $argument,
-                                                           $metadata = [], $options = [])
-    {
+    public function GetBalancerInfo(\Xray\App\Router\Command\GetBalancerInfoRequest $argument,
+      $metadata = [], $options = []) {
         return $this->_simpleRequest('/xray.app.router.command.RoutingService/GetBalancerInfo',
-            $argument,
-            ['\Xray\App\Router\Command\GetBalancerInfoResponse', 'decode'],
-            $metadata, $options);
+        $argument,
+        ['\Xray\App\Router\Command\GetBalancerInfoResponse', 'decode'],
+        $metadata, $options);
     }
 
     /**
-     * @param OverrideBalancerTargetRequest $argument input argument
+     * @param \Xray\App\Router\Command\OverrideBalancerTargetRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return UnaryCall
+     * @return \Grpc\UnaryCall
      */
-    public function OverrideBalancerTarget(OverrideBalancerTargetRequest $argument,
-                                                                         $metadata = [], $options = [])
-    {
+    public function OverrideBalancerTarget(\Xray\App\Router\Command\OverrideBalancerTargetRequest $argument,
+      $metadata = [], $options = []) {
         return $this->_simpleRequest('/xray.app.router.command.RoutingService/OverrideBalancerTarget',
-            $argument,
-            ['\Xray\App\Router\Command\OverrideBalancerTargetResponse', 'decode'],
-            $metadata, $options);
+        $argument,
+        ['\Xray\App\Router\Command\OverrideBalancerTargetResponse', 'decode'],
+        $metadata, $options);
     }
 
     /**
-     * @param AddRuleRequest $argument input argument
+     * @param \Xray\App\Router\Command\AddRuleRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return UnaryCall
+     * @return \Grpc\UnaryCall
      */
-    public function AddRule(AddRuleRequest $argument,
-                                           $metadata = [], $options = [])
-    {
+    public function AddRule(\Xray\App\Router\Command\AddRuleRequest $argument,
+      $metadata = [], $options = []) {
         return $this->_simpleRequest('/xray.app.router.command.RoutingService/AddRule',
-            $argument,
-            ['\Xray\App\Router\Command\AddRuleResponse', 'decode'],
-            $metadata, $options);
+        $argument,
+        ['\Xray\App\Router\Command\AddRuleResponse', 'decode'],
+        $metadata, $options);
     }
 
     /**
-     * @param RemoveRuleRequest $argument input argument
+     * @param \Xray\App\Router\Command\RemoveRuleRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return UnaryCall
+     * @return \Grpc\UnaryCall
      */
-    public function RemoveRule(RemoveRuleRequest $argument,
-                                                 $metadata = [], $options = [])
-    {
+    public function RemoveRule(\Xray\App\Router\Command\RemoveRuleRequest $argument,
+      $metadata = [], $options = []) {
         return $this->_simpleRequest('/xray.app.router.command.RoutingService/RemoveRule',
-            $argument,
-            ['\Xray\App\Router\Command\RemoveRuleResponse', 'decode'],
-            $metadata, $options);
+        $argument,
+        ['\Xray\App\Router\Command\RemoveRuleResponse', 'decode'],
+        $metadata, $options);
     }
 
 }

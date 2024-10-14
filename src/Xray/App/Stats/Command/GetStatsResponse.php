@@ -4,14 +4,14 @@
 
 namespace Xray\App\Stats\Command;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
-use GPBMetadata\App\Stats\Command\Command;
 
 /**
  * Generated from protobuf message <code>xray.app.stats.command.GetStatsResponse</code>
  */
-class GetStatsResponse extends Message
+class GetStatsResponse extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>.xray.app.stats.command.Stat stat = 1;</code>
@@ -24,18 +24,17 @@ class GetStatsResponse extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type Stat $stat
+     *     @type \Xray\App\Stats\Command\Stat $stat
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Command::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\App\Stats\Command\Command::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>.xray.app.stats.command.Stat stat = 1;</code>
-     * @return Stat|null
+     * @return \Xray\App\Stats\Command\Stat|null
      */
     public function getStat()
     {
@@ -54,12 +53,12 @@ class GetStatsResponse extends Message
 
     /**
      * Generated from protobuf field <code>.xray.app.stats.command.Stat stat = 1;</code>
-     * @param Stat $var
+     * @param \Xray\App\Stats\Command\Stat $var
      * @return $this
      */
     public function setStat($var)
     {
-        GPBUtil::checkMessage($var, Stat::class);
+        GPBUtil::checkMessage($var, \Xray\App\Stats\Command\Stat::class);
         $this->stat = $var;
 
         return $this;

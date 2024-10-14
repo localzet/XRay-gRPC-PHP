@@ -4,24 +4,20 @@
 
 namespace GPBMetadata\Proxy\Vless\Inbound;
 
-use Google\Protobuf\Internal\DescriptorPool;
-use GPBMetadata\Common\Protocol\User;
-
 class Config
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
-        $pool = DescriptorPool::getGeneratedPool();
+    public static function initOnce() {
+        $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
         if (static::$is_initialized == true) {
-            return;
+          return;
         }
-        User::initOnce();
+        \GPBMetadata\Common\Protocol\User::initOnce();
         $pool->internalAddGeneratedFile(
             '
-ï¿½
+“
  proxy/vless/inbound/config.protoxray.proxy.vless.inbound"^
 Fallback
 name (	
@@ -29,14 +25,14 @@ class Config
 path (	
 type (	
 dest (	
-xver ("ï¿½
+xver ("€
 Config+
 clients (2.xray.common.protocol.User
 
 decryption (	5
 	fallbacks (2".xray.proxy.vless.inbound.FallbackBj
-com.xray.proxy.vless.inboundPZ-github.com/xtls/xray-core/proxy/vless/inboundï¿½Xray.Proxy.Vless.Inboundbproto3'
-            , true);
+com.xray.proxy.vless.inboundPZ-github.com/xtls/xray-core/proxy/vless/inboundªXray.Proxy.Vless.Inboundbproto3'
+        , true);
 
         static::$is_initialized = true;
     }

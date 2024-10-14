@@ -5,14 +5,13 @@
 namespace Xray\App\Router;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 use Google\Protobuf\Internal\RepeatedField;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * Generated from protobuf message <code>xray.app.router.GeoSite</code>
  */
-class GeoSite extends Message
+class GeoSite extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>string country_code = 1;</code>
@@ -29,12 +28,11 @@ class GeoSite extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $country_code
-     * @type array<Domain>|RepeatedField $domain
+     *     @type string $country_code
+     *     @type array<\Xray\App\Router\Domain>|\Google\Protobuf\Internal\RepeatedField $domain
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\App\Router\Config::initOnce();
         parent::__construct($data);
     }
@@ -63,7 +61,7 @@ class GeoSite extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.app.router.Domain domain = 2;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getDomain()
     {
@@ -72,12 +70,12 @@ class GeoSite extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.app.router.Domain domain = 2;</code>
-     * @param array<Domain>|RepeatedField $var
+     * @param array<\Xray\App\Router\Domain>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setDomain($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, Domain::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Xray\App\Router\Domain::class);
         $this->domain = $arr;
 
         return $this;

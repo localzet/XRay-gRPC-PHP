@@ -4,48 +4,38 @@
 
 namespace GPBMetadata\Transport\Internet\Kcp;
 
-use Google\Protobuf\Internal\DescriptorPool;
-use GPBMetadata\Common\Serial\TypedMessage;
-
 class Config
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
-        $pool = DescriptorPool::getGeneratedPool();
+    public static function initOnce() {
+        $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
         if (static::$is_initialized == true) {
-            return;
+          return;
         }
-        TypedMessage::initOnce();
+        \GPBMetadata\Common\Serial\TypedMessage::initOnce();
         $pool->internalAddGeneratedFile(
             '
-ï¿½
+°
 #transport/internet/kcp/config.protoxray.transport.internet.kcp"
 MTU
-value (
-"
+value ("
 TTI
-value (
-"
+value ("
 UplinkCapacity
-value (
-"!
+value ("!
 DownlinkCapacity
-value (
-"
+value ("
 WriteBuffer
-size (
-"
+size ("
 
 ReadBuffer
-size (
-"!
+size ("!
 ConnectionReuse
 enable ("
 EncryptionSeed
-seed (	"ï¿½
+seed (	"‚
 Config-
 mtu (2 .xray.transport.internet.kcp.MTU-
 tti (2 .xray.transport.internet.kcp.TTID
@@ -55,13 +45,12 @@ ReadBuffer
 congestion (>
 write_buffer (2(.xray.transport.internet.kcp.WriteBuffer<
 read_buffer (2\'.xray.transport.internet.kcp.ReadBuffer7
-
-header_config (2 .xray.common.serial.TypedMessage9
+header_config (2 .xray.common.serial.TypedMessage9
 seed
  (2+.xray.transport.internet.kcp.EncryptionSeedJ	
 Bs
-com.xray.transport.internet.kcpPZ0github.com/xtls/xray-core/transport/internet/kcpï¿½Xray.Transport.Internet.Kcpbproto3'
-            , true);
+com.xray.transport.internet.kcpPZ0github.com/xtls/xray-core/transport/internet/kcpªXray.Transport.Internet.Kcpbproto3'
+        , true);
 
         static::$is_initialized = true;
     }

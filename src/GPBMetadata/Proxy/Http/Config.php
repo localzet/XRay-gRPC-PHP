@@ -4,36 +4,30 @@
 
 namespace GPBMetadata\Proxy\Http;
 
-use Google\Protobuf\Internal\DescriptorPool;
-use GPBMetadata\Common\Protocol\ServerSpec;
-
 class Config
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
-        $pool = DescriptorPool::getGeneratedPool();
+    public static function initOnce() {
+        $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
         if (static::$is_initialized == true) {
-            return;
+          return;
         }
-        ServerSpec::initOnce();
+        \GPBMetadata\Common\Protocol\ServerSpec::initOnce();
         $pool->internalAddGeneratedFile(
             '
-ï¿½
+÷
 proxy/http/config.protoxray.proxy.http"-
 Account
 username (	
-password (	"ï¿½
+password (	"­
 ServerConfig=
 accounts (2+.xray.proxy.http.ServerConfig.AccountsEntry
 allow_transparent (
 
-user_level (
-/
-
-AccountsEntry
+user_level (/
+AccountsEntry
 key (	
 value (	:8"$
 Header
@@ -42,8 +36,8 @@ AccountsEntry
 ClientConfig4
 server (2$.xray.common.protocol.ServerEndpoint\'
 header (2.xray.proxy.http.HeaderBO
-com.xray.proxy.httpPZ$github.com/xtls/xray-core/proxy/httpï¿½Xray.Proxy.Httpbproto3'
-            , true);
+com.xray.proxy.httpPZ$github.com/xtls/xray-core/proxy/httpªXray.Proxy.Httpbproto3'
+        , true);
 
         static::$is_initialized = true;
     }

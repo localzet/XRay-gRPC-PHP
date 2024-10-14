@@ -4,27 +4,24 @@
 
 namespace GPBMetadata\App\Metrics;
 
-use Google\Protobuf\Internal\DescriptorPool;
-
 class Config
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
-        $pool = DescriptorPool::getGeneratedPool();
+    public static function initOnce() {
+        $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
         if (static::$is_initialized == true) {
-            return;
+          return;
         }
         $pool->internalAddGeneratedFile(
             '
-ï¿½
+Ÿ
 app/metrics/config.protoxray.app.metrics"
 Config
 tag (	BR
-com.xray.app.metricsPZ%github.com/xtls/xray-core/app/metricsï¿½Xray.App.Metricsbproto3'
-            , true);
+com.xray.app.metricsPZ%github.com/xtls/xray-core/app/metricsªXray.App.Metricsbproto3'
+        , true);
 
         static::$is_initialized = true;
     }

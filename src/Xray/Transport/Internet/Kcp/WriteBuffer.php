@@ -4,13 +4,14 @@
 
 namespace Xray\Transport\Internet\Kcp;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 
 /**
  * Generated from protobuf message <code>xray.transport.internet.kcp.WriteBuffer</code>
  */
-class WriteBuffer extends Message
+class WriteBuffer extends \Google\Protobuf\Internal\Message
 {
     /**
      * Buffer size in bytes.
@@ -25,12 +26,11 @@ class WriteBuffer extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type int $size
+     *     @type int $size
      *           Buffer size in bytes.
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Transport\Internet\Kcp\Config::initOnce();
         parent::__construct($data);
     }

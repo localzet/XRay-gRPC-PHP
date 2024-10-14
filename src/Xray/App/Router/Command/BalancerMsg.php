@@ -4,14 +4,14 @@
 
 namespace Xray\App\Router\Command;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
-use GPBMetadata\App\Router\Command\Command;
 
 /**
  * Generated from protobuf message <code>xray.app.router.command.BalancerMsg</code>
  */
-class BalancerMsg extends Message
+class BalancerMsg extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>.xray.app.router.command.OverrideInfo override = 5;</code>
@@ -28,19 +28,18 @@ class BalancerMsg extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type OverrideInfo $override
-     * @type PrincipleTargetInfo $principle_target
+     *     @type \Xray\App\Router\Command\OverrideInfo $override
+     *     @type \Xray\App\Router\Command\PrincipleTargetInfo $principle_target
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Command::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\App\Router\Command\Command::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>.xray.app.router.command.OverrideInfo override = 5;</code>
-     * @return OverrideInfo|null
+     * @return \Xray\App\Router\Command\OverrideInfo|null
      */
     public function getOverride()
     {
@@ -59,12 +58,12 @@ class BalancerMsg extends Message
 
     /**
      * Generated from protobuf field <code>.xray.app.router.command.OverrideInfo override = 5;</code>
-     * @param OverrideInfo $var
+     * @param \Xray\App\Router\Command\OverrideInfo $var
      * @return $this
      */
     public function setOverride($var)
     {
-        GPBUtil::checkMessage($var, OverrideInfo::class);
+        GPBUtil::checkMessage($var, \Xray\App\Router\Command\OverrideInfo::class);
         $this->override = $var;
 
         return $this;
@@ -72,7 +71,7 @@ class BalancerMsg extends Message
 
     /**
      * Generated from protobuf field <code>.xray.app.router.command.PrincipleTargetInfo principle_target = 6;</code>
-     * @return PrincipleTargetInfo|null
+     * @return \Xray\App\Router\Command\PrincipleTargetInfo|null
      */
     public function getPrincipleTarget()
     {
@@ -91,12 +90,12 @@ class BalancerMsg extends Message
 
     /**
      * Generated from protobuf field <code>.xray.app.router.command.PrincipleTargetInfo principle_target = 6;</code>
-     * @param PrincipleTargetInfo $var
+     * @param \Xray\App\Router\Command\PrincipleTargetInfo $var
      * @return $this
      */
     public function setPrincipleTarget($var)
     {
-        GPBUtil::checkMessage($var, PrincipleTargetInfo::class);
+        GPBUtil::checkMessage($var, \Xray\App\Router\Command\PrincipleTargetInfo::class);
         $this->principle_target = $var;
 
         return $this;

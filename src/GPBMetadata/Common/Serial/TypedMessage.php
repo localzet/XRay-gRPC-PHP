@@ -4,28 +4,25 @@
 
 namespace GPBMetadata\Common\Serial;
 
-use Google\Protobuf\Internal\DescriptorPool;
-
 class TypedMessage
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
-        $pool = DescriptorPool::getGeneratedPool();
+    public static function initOnce() {
+        $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
         if (static::$is_initialized == true) {
-            return;
+          return;
         }
         $pool->internalAddGeneratedFile(
             '
-ï¿½
+Æ
 !common/serial/typed_message.protoxray.common.serial"+
 TypedMessage
 type (	
 value (BX
-com.xray.common.serialPZ\'github.com/xtls/xray-core/common/serialï¿½Xray.Common.Serialbproto3'
-            , true);
+com.xray.common.serialPZ\'github.com/xtls/xray-core/common/serialªXray.Common.Serialbproto3'
+        , true);
 
         static::$is_initialized = true;
     }

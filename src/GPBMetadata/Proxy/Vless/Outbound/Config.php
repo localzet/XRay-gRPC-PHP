@@ -4,29 +4,25 @@
 
 namespace GPBMetadata\Proxy\Vless\Outbound;
 
-use Google\Protobuf\Internal\DescriptorPool;
-use GPBMetadata\Common\Protocol\ServerSpec;
-
 class Config
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
-        $pool = DescriptorPool::getGeneratedPool();
+    public static function initOnce() {
+        $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
         if (static::$is_initialized == true) {
-            return;
+          return;
         }
-        ServerSpec::initOnce();
+        \GPBMetadata\Common\Protocol\ServerSpec::initOnce();
         $pool->internalAddGeneratedFile(
             '
-ï¿½
+ô
 !proxy/vless/outbound/config.protoxray.proxy.vless.outbound"=
 Config3
 vnext (2$.xray.common.protocol.ServerEndpointBm
-com.xray.proxy.vless.outboundPZ.github.com/xtls/xray-core/proxy/vless/outboundï¿½Xray.Proxy.Vless.Outboundbproto3'
-            , true);
+com.xray.proxy.vless.outboundPZ.github.com/xtls/xray-core/proxy/vless/outboundªXray.Proxy.Vless.Outboundbproto3'
+        , true);
 
         static::$is_initialized = true;
     }

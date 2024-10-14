@@ -4,15 +4,14 @@
 
 namespace Xray\App\Policy\Policy;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
-use GPBMetadata\App\Policy\Config;
-use Xray\App\Policy\Policy_Buffer;
 
 /**
  * Generated from protobuf message <code>xray.app.policy.Policy.Buffer</code>
  */
-class Buffer extends Message
+class Buffer extends \Google\Protobuf\Internal\Message
 {
     /**
      * Buffer size per connection, in bytes. -1 for unlimited buffer.
@@ -27,13 +26,12 @@ class Buffer extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type int $connection
+     *     @type int $connection
      *           Buffer size per connection, in bytes. -1 for unlimited buffer.
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Config::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\App\Policy\Config::initOnce();
         parent::__construct($data);
     }
 
@@ -66,5 +64,5 @@ class Buffer extends Message
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Buffer::class, Policy_Buffer::class);
+class_alias(Buffer::class, \Xray\App\Policy\Policy_Buffer::class);
 

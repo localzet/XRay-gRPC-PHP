@@ -5,18 +5,15 @@
 namespace Xray\App\Router;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 use Google\Protobuf\Internal\RepeatedField;
-use Xray\App\Router\Domain\Attribute;
-use Xray\App\Router\Domain\Type;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * Domain for routing decision.
  *
  * Generated from protobuf message <code>xray.app.router.Domain</code>
  */
-class Domain extends Message
+class Domain extends \Google\Protobuf\Internal\Message
 {
     /**
      * Domain matching type.
@@ -43,16 +40,15 @@ class Domain extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type int $type
+     *     @type int $type
      *           Domain matching type.
-     * @type string $value
+     *     @type string $value
      *           Domain value.
-     * @type array<Attribute>|RepeatedField $attribute
+     *     @type array<\Xray\App\Router\Domain\Attribute>|\Google\Protobuf\Internal\RepeatedField $attribute
      *           Attributes of this domain. May be used for filtering.
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\App\Router\Config::initOnce();
         parent::__construct($data);
     }
@@ -77,7 +73,7 @@ class Domain extends Message
      */
     public function setType($var)
     {
-        GPBUtil::checkEnum($var, Type::class);
+        GPBUtil::checkEnum($var, \Xray\App\Router\Domain\Type::class);
         $this->type = $var;
 
         return $this;
@@ -113,7 +109,7 @@ class Domain extends Message
      * Attributes of this domain. May be used for filtering.
      *
      * Generated from protobuf field <code>repeated .xray.app.router.Domain.Attribute attribute = 3;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getAttribute()
     {
@@ -124,12 +120,12 @@ class Domain extends Message
      * Attributes of this domain. May be used for filtering.
      *
      * Generated from protobuf field <code>repeated .xray.app.router.Domain.Attribute attribute = 3;</code>
-     * @param array<Attribute>|RepeatedField $var
+     * @param array<\Xray\App\Router\Domain\Attribute>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setAttribute($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, Attribute::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Xray\App\Router\Domain\Attribute::class);
         $this->attribute = $arr;
 
         return $this;

@@ -4,14 +4,14 @@
 
 namespace Xray\App\Stats\Command;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
-use GPBMetadata\App\Stats\Command\Command;
 
 /**
  * Generated from protobuf message <code>xray.app.stats.command.QueryStatsRequest</code>
  */
-class QueryStatsRequest extends Message
+class QueryStatsRequest extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>string pattern = 1;</code>
@@ -28,13 +28,12 @@ class QueryStatsRequest extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $pattern
-     * @type bool $reset
+     *     @type string $pattern
+     *     @type bool $reset
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Command::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\App\Stats\Command\Command::initOnce();
         parent::__construct($data);
     }
 

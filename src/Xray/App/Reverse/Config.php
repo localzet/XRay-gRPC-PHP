@@ -5,14 +5,13 @@
 namespace Xray\App\Reverse;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 use Google\Protobuf\Internal\RepeatedField;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * Generated from protobuf message <code>xray.app.reverse.Config</code>
  */
-class Config extends Message
+class Config extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>repeated .xray.app.reverse.BridgeConfig bridge_config = 1;</code>
@@ -29,19 +28,18 @@ class Config extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type array<BridgeConfig>|RepeatedField $bridge_config
-     * @type array<PortalConfig>|RepeatedField $portal_config
+     *     @type array<\Xray\App\Reverse\BridgeConfig>|\Google\Protobuf\Internal\RepeatedField $bridge_config
+     *     @type array<\Xray\App\Reverse\PortalConfig>|\Google\Protobuf\Internal\RepeatedField $portal_config
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\App\Reverse\Config::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>repeated .xray.app.reverse.BridgeConfig bridge_config = 1;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getBridgeConfig()
     {
@@ -50,12 +48,12 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.app.reverse.BridgeConfig bridge_config = 1;</code>
-     * @param array<BridgeConfig>|RepeatedField $var
+     * @param array<\Xray\App\Reverse\BridgeConfig>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setBridgeConfig($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, BridgeConfig::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Xray\App\Reverse\BridgeConfig::class);
         $this->bridge_config = $arr;
 
         return $this;
@@ -63,7 +61,7 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.app.reverse.PortalConfig portal_config = 2;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getPortalConfig()
     {
@@ -72,12 +70,12 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.app.reverse.PortalConfig portal_config = 2;</code>
-     * @param array<PortalConfig>|RepeatedField $var
+     * @param array<\Xray\App\Reverse\PortalConfig>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setPortalConfig($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, PortalConfig::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Xray\App\Reverse\PortalConfig::class);
         $this->portal_config = $arr;
 
         return $this;

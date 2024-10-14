@@ -4,26 +4,23 @@
 
 namespace GPBMetadata\Transport\Internet\Udp;
 
-use Google\Protobuf\Internal\DescriptorPool;
-
 class Config
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
-        $pool = DescriptorPool::getGeneratedPool();
+    public static function initOnce() {
+        $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
         if (static::$is_initialized == true) {
-            return;
+          return;
         }
         $pool->internalAddGeneratedFile(
             '
-ï¿½
+É
 #transport/internet/udp/config.protoxray.transport.internet.udp"
 ConfigBs
-com.xray.transport.internet.udpPZ0github.com/xtls/xray-core/transport/internet/udpï¿½Xray.Transport.Internet.Udpbproto3'
-            , true);
+com.xray.transport.internet.udpPZ0github.com/xtls/xray-core/transport/internet/udpªXray.Transport.Internet.Udpbproto3'
+        , true);
 
         static::$is_initialized = true;
     }

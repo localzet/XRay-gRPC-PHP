@@ -4,14 +4,14 @@
 
 namespace Xray\Proxy\Http;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
-use GPBMetadata\Proxy\Http\Config;
 
 /**
  * Generated from protobuf message <code>xray.proxy.http.Header</code>
  */
-class Header extends Message
+class Header extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>string key = 1;</code>
@@ -28,13 +28,12 @@ class Header extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $key
-     * @type string $value
+     *     @type string $key
+     *     @type string $value
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Config::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\Proxy\Http\Config::initOnce();
         parent::__construct($data);
     }
 

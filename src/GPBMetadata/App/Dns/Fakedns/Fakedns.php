@@ -4,30 +4,27 @@
 
 namespace GPBMetadata\App\Dns\Fakedns;
 
-use Google\Protobuf\Internal\DescriptorPool;
-
 class Fakedns
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
-        $pool = DescriptorPool::getGeneratedPool();
+    public static function initOnce() {
+        $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
         if (static::$is_initialized == true) {
-            return;
+          return;
         }
         $pool->internalAddGeneratedFile(
             '
-ï¿½
+”
 app/dns/fakedns/fakedns.protoxray.app.dns.fakedns"/
 FakeDnsPool
 ip_pool (	
 lruSize ("D
 FakeDnsPoolMulti0
 pools (2!.xray.app.dns.fakedns.FakeDnsPoolB^
-com.xray.app.dns.fakednsPZ)github.com/xtls/xray-core/app/dns/fakednsï¿½Xray.App.Dns.Fakednsbproto3'
-            , true);
+com.xray.app.dns.fakednsPZ)github.com/xtls/xray-core/app/dns/fakednsªXray.App.Dns.Fakednsbproto3'
+        , true);
 
         static::$is_initialized = true;
     }

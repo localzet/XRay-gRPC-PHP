@@ -5,15 +5,13 @@
 namespace Xray\Proxy\Wireguard;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 use Google\Protobuf\Internal\RepeatedField;
-use GPBMetadata\Proxy\Wireguard\Config;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * Generated from protobuf message <code>xray.proxy.wireguard.PeerConfig</code>
  */
-class PeerConfig extends Message
+class PeerConfig extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>string public_key = 1;</code>
@@ -42,16 +40,15 @@ class PeerConfig extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $public_key
-     * @type string $pre_shared_key
-     * @type string $endpoint
-     * @type int $keep_alive
-     * @type array<string>|RepeatedField $allowed_ips
+     *     @type string $public_key
+     *     @type string $pre_shared_key
+     *     @type string $endpoint
+     *     @type int $keep_alive
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $allowed_ips
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Config::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\Proxy\Wireguard\Config::initOnce();
         parent::__construct($data);
     }
 
@@ -145,7 +142,7 @@ class PeerConfig extends Message
 
     /**
      * Generated from protobuf field <code>repeated string allowed_ips = 5;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getAllowedIps()
     {
@@ -154,12 +151,12 @@ class PeerConfig extends Message
 
     /**
      * Generated from protobuf field <code>repeated string allowed_ips = 5;</code>
-     * @param array<string>|RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setAllowedIps($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::STRING);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->allowed_ips = $arr;
 
         return $this;

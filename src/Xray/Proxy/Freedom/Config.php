@@ -5,15 +5,13 @@
 namespace Xray\Proxy\Freedom;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 use Google\Protobuf\Internal\RepeatedField;
-use Xray\Proxy\Freedom\Config\DomainStrategy;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * Generated from protobuf message <code>xray.proxy.freedom.Config</code>
  */
-class Config extends Message
+class Config extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>.xray.proxy.freedom.Config.DomainStrategy domain_strategy = 1;</code>
@@ -46,16 +44,15 @@ class Config extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type int $domain_strategy
-     * @type DestinationOverride $destination_override
-     * @type int $user_level
-     * @type Fragment $fragment
-     * @type int $proxy_protocol
-     * @type array<Noise>|RepeatedField $noises
+     *     @type int $domain_strategy
+     *     @type \Xray\Proxy\Freedom\DestinationOverride $destination_override
+     *     @type int $user_level
+     *     @type \Xray\Proxy\Freedom\Fragment $fragment
+     *     @type int $proxy_protocol
+     *     @type array<\Xray\Proxy\Freedom\Noise>|\Google\Protobuf\Internal\RepeatedField $noises
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Proxy\Freedom\Config::initOnce();
         parent::__construct($data);
     }
@@ -76,7 +73,7 @@ class Config extends Message
      */
     public function setDomainStrategy($var)
     {
-        GPBUtil::checkEnum($var, DomainStrategy::class);
+        GPBUtil::checkEnum($var, \Xray\Proxy\Freedom\Config\DomainStrategy::class);
         $this->domain_strategy = $var;
 
         return $this;
@@ -84,7 +81,7 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>.xray.proxy.freedom.DestinationOverride destination_override = 3;</code>
-     * @return DestinationOverride|null
+     * @return \Xray\Proxy\Freedom\DestinationOverride|null
      */
     public function getDestinationOverride()
     {
@@ -103,12 +100,12 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>.xray.proxy.freedom.DestinationOverride destination_override = 3;</code>
-     * @param DestinationOverride $var
+     * @param \Xray\Proxy\Freedom\DestinationOverride $var
      * @return $this
      */
     public function setDestinationOverride($var)
     {
-        GPBUtil::checkMessage($var, DestinationOverride::class);
+        GPBUtil::checkMessage($var, \Xray\Proxy\Freedom\DestinationOverride::class);
         $this->destination_override = $var;
 
         return $this;
@@ -138,7 +135,7 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>.xray.proxy.freedom.Fragment fragment = 5;</code>
-     * @return Fragment|null
+     * @return \Xray\Proxy\Freedom\Fragment|null
      */
     public function getFragment()
     {
@@ -157,12 +154,12 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>.xray.proxy.freedom.Fragment fragment = 5;</code>
-     * @param Fragment $var
+     * @param \Xray\Proxy\Freedom\Fragment $var
      * @return $this
      */
     public function setFragment($var)
     {
-        GPBUtil::checkMessage($var, Fragment::class);
+        GPBUtil::checkMessage($var, \Xray\Proxy\Freedom\Fragment::class);
         $this->fragment = $var;
 
         return $this;
@@ -192,7 +189,7 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.proxy.freedom.Noise noises = 7;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getNoises()
     {
@@ -201,12 +198,12 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.proxy.freedom.Noise noises = 7;</code>
-     * @param array<Noise>|RepeatedField $var
+     * @param array<\Xray\Proxy\Freedom\Noise>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setNoises($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, Noise::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Xray\Proxy\Freedom\Noise::class);
         $this->noises = $arr;
 
         return $this;

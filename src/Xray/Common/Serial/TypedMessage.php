@@ -4,15 +4,16 @@
 
 namespace Xray\Common\Serial;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 
 /**
  * TypedMessage is a serialized proto message along with its type name.
  *
  * Generated from protobuf message <code>xray.common.serial.TypedMessage</code>
  */
-class TypedMessage extends Message
+class TypedMessage extends \Google\Protobuf\Internal\Message
 {
     /**
      * The name of the message type, retrieved from protobuf API.
@@ -33,14 +34,13 @@ class TypedMessage extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $type
+     *     @type string $type
      *           The name of the message type, retrieved from protobuf API.
-     * @type string $value
+     *     @type string $value
      *           Serialized proto message.
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Common\Serial\TypedMessage::initOnce();
         parent::__construct($data);
     }

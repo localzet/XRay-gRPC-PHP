@@ -4,13 +4,14 @@
 
 namespace Xray\App\Stats;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 
 /**
  * Generated from protobuf message <code>xray.app.stats.ChannelConfig</code>
  */
-class ChannelConfig extends Message
+class ChannelConfig extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>bool Blocking = 1;</code>
@@ -31,13 +32,12 @@ class ChannelConfig extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type bool $Blocking
-     * @type int $SubscriberLimit
-     * @type int $BufferSize
+     *     @type bool $Blocking
+     *     @type int $SubscriberLimit
+     *     @type int $BufferSize
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\App\Stats\Config::initOnce();
         parent::__construct($data);
     }

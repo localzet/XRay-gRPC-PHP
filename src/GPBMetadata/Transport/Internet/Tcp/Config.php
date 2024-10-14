@@ -4,30 +4,26 @@
 
 namespace GPBMetadata\Transport\Internet\Tcp;
 
-use Google\Protobuf\Internal\DescriptorPool;
-use GPBMetadata\Common\Serial\TypedMessage;
-
 class Config
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
-        $pool = DescriptorPool::getGeneratedPool();
+    public static function initOnce() {
+        $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
         if (static::$is_initialized == true) {
-            return;
+          return;
         }
-        TypedMessage::initOnce();
+        \GPBMetadata\Common\Serial\TypedMessage::initOnce();
         $pool->internalAddGeneratedFile(
             '
-ï¿½
+©
 #transport/internet/tcp/config.protoxray.transport.internet.tcp"h
 Config9
 header_settings (2 .xray.common.serial.TypedMessage
 accept_proxy_protocol (JBs
-com.xray.transport.internet.tcpPZ0github.com/xtls/xray-core/transport/internet/tcpï¿½Xray.Transport.Internet.Tcpbproto3'
-            , true);
+com.xray.transport.internet.tcpPZ0github.com/xtls/xray-core/transport/internet/tcpªXray.Transport.Internet.Tcpbproto3'
+        , true);
 
         static::$is_initialized = true;
     }

@@ -4,33 +4,28 @@
 
 namespace GPBMetadata\Common\Protocol;
 
-use Google\Protobuf\Internal\DescriptorPool;
-use GPBMetadata\Common\Net\Address;
-
 class ServerSpec
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
-        $pool = DescriptorPool::getGeneratedPool();
+    public static function initOnce() {
+        $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
         if (static::$is_initialized == true) {
-            return;
+          return;
         }
-        Address::initOnce();
-        User::initOnce();
+        \GPBMetadata\Common\Net\Address::initOnce();
+        \GPBMetadata\Common\Protocol\User::initOnce();
         $pool->internalAddGeneratedFile(
             '
-ï¿½
+µ
 !common/protocol/server_spec.protoxray.common.protocolcommon/protocol/user.proto"v
 ServerEndpoint,
 address (2.xray.common.net.IPOrDomain
-port (
-(
+port ((
 user (2.xray.common.protocol.UserB^
-com.xray.common.protocolPZ)github.com/xtls/xray-core/common/protocolï¿½Xray.Common.Protocolbproto3'
-            , true);
+com.xray.common.protocolPZ)github.com/xtls/xray-core/common/protocolªXray.Common.Protocolbproto3'
+        , true);
 
         static::$is_initialized = true;
     }

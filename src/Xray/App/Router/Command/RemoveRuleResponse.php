@@ -4,13 +4,14 @@
 
 namespace Xray\App\Router\Command;
 
-use Google\Protobuf\Internal\Message;
-use GPBMetadata\App\Router\Command\Command;
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * Generated from protobuf message <code>xray.app.router.command.RemoveRuleResponse</code>
  */
-class RemoveRuleResponse extends Message
+class RemoveRuleResponse extends \Google\Protobuf\Internal\Message
 {
 
     /**
@@ -21,9 +22,8 @@ class RemoveRuleResponse extends Message
      *
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Command::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\App\Router\Command\Command::initOnce();
         parent::__construct($data);
     }
 

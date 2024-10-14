@@ -5,7 +5,6 @@
 namespace Xray\App\Router\Domain;
 
 use UnexpectedValueException;
-use Xray\App\Router\Domain_Type;
 
 /**
  * Type of domain value.
@@ -50,7 +49,7 @@ class Type
     {
         if (!isset(self::$valueToName[$value])) {
             throw new UnexpectedValueException(sprintf(
-                'Enum %s has no name defined for value %s', __CLASS__, $value));
+                    'Enum %s has no name defined for value %s', __CLASS__, $value));
         }
         return self::$valueToName[$value];
     }
@@ -61,12 +60,12 @@ class Type
         $const = __CLASS__ . '::' . strtoupper($name);
         if (!defined($const)) {
             throw new UnexpectedValueException(sprintf(
-                'Enum %s has no value defined for name %s', __CLASS__, $name));
+                    'Enum %s has no value defined for name %s', __CLASS__, $name));
         }
         return constant($const);
     }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Type::class, Domain_Type::class);
+class_alias(Type::class, \Xray\App\Router\Domain_Type::class);
 

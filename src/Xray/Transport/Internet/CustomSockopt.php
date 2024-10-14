@@ -4,14 +4,14 @@
 
 namespace Xray\Transport\Internet;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
-use GPBMetadata\Transport\Internet\Config;
 
 /**
  * Generated from protobuf message <code>xray.transport.internet.CustomSockopt</code>
  */
-class CustomSockopt extends Message
+class CustomSockopt extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>string level = 1;</code>
@@ -36,15 +36,14 @@ class CustomSockopt extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $level
-     * @type string $opt
-     * @type string $value
-     * @type string $type
+     *     @type string $level
+     *     @type string $opt
+     *     @type string $value
+     *     @type string $type
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Config::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\Transport\Internet\Config::initOnce();
         parent::__construct($data);
     }
 

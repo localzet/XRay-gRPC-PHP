@@ -5,14 +5,13 @@
 namespace Xray\Core\App\Observatory;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 use Google\Protobuf\Internal\RepeatedField;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * Generated from protobuf message <code>xray.core.app.observatory.ObservationResult</code>
  */
-class ObservationResult extends Message
+class ObservationResult extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>repeated .xray.core.app.observatory.OutboundStatus status = 1;</code>
@@ -25,18 +24,17 @@ class ObservationResult extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type array<OutboundStatus>|RepeatedField $status
+     *     @type array<\Xray\Core\App\Observatory\OutboundStatus>|\Google\Protobuf\Internal\RepeatedField $status
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\App\Observatory\Config::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>repeated .xray.core.app.observatory.OutboundStatus status = 1;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getStatus()
     {
@@ -45,12 +43,12 @@ class ObservationResult extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.core.app.observatory.OutboundStatus status = 1;</code>
-     * @param array<OutboundStatus>|RepeatedField $var
+     * @param array<\Xray\Core\App\Observatory\OutboundStatus>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setStatus($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, OutboundStatus::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Xray\Core\App\Observatory\OutboundStatus::class);
         $this->status = $arr;
 
         return $this;

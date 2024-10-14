@@ -4,60 +4,53 @@
 
 namespace GPBMetadata\App\Policy;
 
-use Google\Protobuf\Internal\DescriptorPool;
-
 class Config
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
-        $pool = DescriptorPool::getGeneratedPool();
+    public static function initOnce() {
+        $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
         if (static::$is_initialized == true) {
-            return;
+          return;
         }
         $pool->internalAddGeneratedFile(
             '
-ï¿½
+º
 app/policy/config.protoxray.app.policy"
 Second
-value (
-"ï¿½
+value ("³
 Policy0
 timeout (2.xray.app.policy.Policy.Timeout,
 stats (2.xray.app.policy.Policy.Stats.
-buffer (2.xray.app.policy.Policy.Bufferï¿½
+buffer (2.xray.app.policy.Policy.BufferÅ
 Timeout*
 	handshake (2.xray.app.policy.Second0
 connection_idle (2.xray.app.policy.Second,
 uplink_only (2.xray.app.policy.Second.
-
-downlink_only (2.xray.app.policy.Second3
+downlink_only (2.xray.app.policy.Second3
 Stats
 user_uplink (
-
-user_downlink (
+user_downlink (
 Buffer
 
-connection ("ï¿½
+connection ("±
 SystemPolicy2
 stats (2#.xray.app.policy.SystemPolicy.Statsm
 Stats
 inbound_uplink (
 inbound_downlink (
 outbound_uplink (
-outbound_downlink ("ï¿½
+outbound_downlink ("±
 Config1
 level (2".xray.app.policy.Config.LevelEntry-
 system (2.xray.app.policy.SystemPolicyE
 
 LevelEntry
-key (
-&
+key (&
 value (2.xray.app.policy.Policy:8BO
-com.xray.app.policyPZ$github.com/xtls/xray-core/app/policyï¿½Xray.App.Policybproto3'
-            , true);
+com.xray.app.policyPZ$github.com/xtls/xray-core/app/policyªXray.App.Policybproto3'
+        , true);
 
         static::$is_initialized = true;
     }

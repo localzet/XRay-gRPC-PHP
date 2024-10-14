@@ -4,13 +4,14 @@
 
 namespace Xray\Proxy\Freedom;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 
 /**
  * Generated from protobuf message <code>xray.proxy.freedom.Noise</code>
  */
-class Noise extends Message
+class Noise extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>uint64 length_min = 1;</code>
@@ -39,15 +40,14 @@ class Noise extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type int|string $length_min
-     * @type int|string $length_max
-     * @type int|string $delay_min
-     * @type int|string $delay_max
-     * @type string $str_noise
+     *     @type int|string $length_min
+     *     @type int|string $length_max
+     *     @type int|string $delay_min
+     *     @type int|string $delay_max
+     *     @type string $str_noise
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Proxy\Freedom\Config::initOnce();
         parent::__construct($data);
     }

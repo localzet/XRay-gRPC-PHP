@@ -4,27 +4,24 @@
 
 namespace GPBMetadata\Transport\Internet\Headers\Dns;
 
-use Google\Protobuf\Internal\DescriptorPool;
-
 class Config
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
-        $pool = DescriptorPool::getGeneratedPool();
+    public static function initOnce() {
+        $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
         if (static::$is_initialized == true) {
-            return;
+          return;
         }
         $pool->internalAddGeneratedFile(
             '
-ï¿½
+‚
 +transport/internet/headers/dns/config.proto#xray.transport.internet.headers.dns"
 Config
-domain (	Bï¿½
-\'com.xray.transport.internet.headers.dnsPZ8github.com/xtls/xray-core/transport/internet/headers/dnsï¿½#Xray.Transport.Internet.Headers.DNSbproto3'
-            , true);
+domain (	B‹
+\'com.xray.transport.internet.headers.dnsPZ8github.com/xtls/xray-core/transport/internet/headers/dnsª#Xray.Transport.Internet.Headers.DNSbproto3'
+        , true);
 
         static::$is_initialized = true;
     }

@@ -4,31 +4,28 @@
 
 namespace GPBMetadata\Transport\Internet\Grpc\Encoding;
 
-use Google\Protobuf\Internal\DescriptorPool;
-
 class Stream
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
-        $pool = DescriptorPool::getGeneratedPool();
+    public static function initOnce() {
+        $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
         if (static::$is_initialized == true) {
-            return;
+          return;
         }
         $pool->internalAddGeneratedFile(
             '
-ï¿½
+¶
 -transport/internet/grpc/encoding/stream.proto%xray.transport.internet.grpc.encoding"
 Hunk
 data ("
 	MultiHunk
-data (2ï¿½
+data (2æ
 GRPCServicec
 Tun+.xray.transport.internet.grpc.encoding.Hunk+.xray.transport.internet.grpc.encoding.Hunk(0r
 TunMulti0.xray.transport.internet.grpc.encoding.MultiHunk0.xray.transport.internet.grpc.encoding.MultiHunk(0B<Z:github.com/xtls/xray-core/transport/internet/grpc/encodingbproto3'
-            , true);
+        , true);
 
         static::$is_initialized = true;
     }

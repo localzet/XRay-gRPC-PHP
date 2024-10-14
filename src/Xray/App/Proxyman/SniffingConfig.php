@@ -5,15 +5,13 @@
 namespace Xray\App\Proxyman;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 use Google\Protobuf\Internal\RepeatedField;
-use GPBMetadata\App\Proxyman\Config;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * Generated from protobuf message <code>xray.app.proxyman.SniffingConfig</code>
  */
-class SniffingConfig extends Message
+class SniffingConfig extends \Google\Protobuf\Internal\Message
 {
     /**
      * Whether or not to enable content sniffing on an inbound connection.
@@ -51,22 +49,21 @@ class SniffingConfig extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type bool $enabled
+     *     @type bool $enabled
      *           Whether or not to enable content sniffing on an inbound connection.
-     * @type array<string>|RepeatedField $destination_override
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $destination_override
      *           Override target destination if sniff'ed protocol is in the given list.
      *           Supported values are "http", "tls", "fakedns".
-     * @type array<string>|RepeatedField $domains_excluded
-     * @type bool $metadata_only
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $domains_excluded
+     *     @type bool $metadata_only
      *           Whether should only try to sniff metadata without waiting for client input.
      *           Can be used to support SMTP like protocol where server send the first
      *           message.
-     * @type bool $route_only
+     *     @type bool $route_only
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Config::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\App\Proxyman\Config::initOnce();
         parent::__construct($data);
     }
 
@@ -101,7 +98,7 @@ class SniffingConfig extends Message
      * Supported values are "http", "tls", "fakedns".
      *
      * Generated from protobuf field <code>repeated string destination_override = 2;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getDestinationOverride()
     {
@@ -113,12 +110,12 @@ class SniffingConfig extends Message
      * Supported values are "http", "tls", "fakedns".
      *
      * Generated from protobuf field <code>repeated string destination_override = 2;</code>
-     * @param array<string>|RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setDestinationOverride($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::STRING);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->destination_override = $arr;
 
         return $this;
@@ -126,7 +123,7 @@ class SniffingConfig extends Message
 
     /**
      * Generated from protobuf field <code>repeated string domains_excluded = 3;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getDomainsExcluded()
     {
@@ -135,12 +132,12 @@ class SniffingConfig extends Message
 
     /**
      * Generated from protobuf field <code>repeated string domains_excluded = 3;</code>
-     * @param array<string>|RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setDomainsExcluded($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::STRING);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->domains_excluded = $arr;
 
         return $this;

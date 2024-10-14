@@ -4,27 +4,24 @@
 
 namespace GPBMetadata\Proxy\Loopback;
 
-use Google\Protobuf\Internal\DescriptorPool;
-
 class Config
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
-        $pool = DescriptorPool::getGeneratedPool();
+    public static function initOnce() {
+        $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
         if (static::$is_initialized == true) {
-            return;
+          return;
         }
         $pool->internalAddGeneratedFile(
             '
-ï¿½
+¶
 proxy/loopback/config.protoxray.proxy.loopback"
 Config
 inbound_tag (	B[
-com.xray.proxy.loopbackPZ(github.com/xtls/xray-core/proxy/loopbackï¿½Xray.Proxy.Loopbackbproto3'
-            , true);
+com.xray.proxy.loopbackPZ(github.com/xtls/xray-core/proxy/loopbackªXray.Proxy.Loopbackbproto3'
+        , true);
 
         static::$is_initialized = true;
     }

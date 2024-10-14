@@ -4,33 +4,28 @@
 
 namespace GPBMetadata\Proxy\Vmess;
 
-use Google\Protobuf\Internal\DescriptorPool;
-use GPBMetadata\Common\Protocol\Headers;
-
 class Account
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
-        $pool = DescriptorPool::getGeneratedPool();
+    public static function initOnce() {
+        $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
         if (static::$is_initialized == true) {
-            return;
+          return;
         }
-        Headers::initOnce();
+        \GPBMetadata\Common\Protocol\Headers::initOnce();
         $pool->internalAddGeneratedFile(
             '
-ï¿½
+ø
 proxy/vmess/account.protoxray.proxy.vmess"m
 Account
 
 id (	?
 security_settings (2$.xray.common.protocol.SecurityConfig
-
-tests_enabled (	BR
-com.xray.proxy.vmessPZ%github.com/xtls/xray-core/proxy/vmessï¿½Xray.Proxy.Vmessbproto3'
-            , true);
+tests_enabled (	BR
+com.xray.proxy.vmessPZ%github.com/xtls/xray-core/proxy/vmessªXray.Proxy.Vmessbproto3'
+        , true);
 
         static::$is_initialized = true;
     }

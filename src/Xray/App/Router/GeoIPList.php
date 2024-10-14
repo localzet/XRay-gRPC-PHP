@@ -5,14 +5,13 @@
 namespace Xray\App\Router;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 use Google\Protobuf\Internal\RepeatedField;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * Generated from protobuf message <code>xray.app.router.GeoIPList</code>
  */
-class GeoIPList extends Message
+class GeoIPList extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>repeated .xray.app.router.GeoIP entry = 1;</code>
@@ -25,18 +24,17 @@ class GeoIPList extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type array<GeoIP>|RepeatedField $entry
+     *     @type array<\Xray\App\Router\GeoIP>|\Google\Protobuf\Internal\RepeatedField $entry
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\App\Router\Config::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>repeated .xray.app.router.GeoIP entry = 1;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getEntry()
     {
@@ -45,12 +43,12 @@ class GeoIPList extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.app.router.GeoIP entry = 1;</code>
-     * @param array<GeoIP>|RepeatedField $var
+     * @param array<\Xray\App\Router\GeoIP>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setEntry($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, GeoIP::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Xray\App\Router\GeoIP::class);
         $this->entry = $arr;
 
         return $this;

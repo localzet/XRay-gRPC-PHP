@@ -9,9 +9,7 @@ if (false) {
      * This class is deprecated. Use Xray\App\Proxyman\AllocationStrategy\AllocationStrategyRefresh instead.
      * @deprecated
      */
-    class AllocationStrategy_AllocationStrategyRefresh
-    {
-    }
+    class AllocationStrategy_AllocationStrategyRefresh {}
 }
 class_exists(AllocationStrategy\AllocationStrategyRefresh::class);
 @trigger_error('Xray\App\Proxyman\AllocationStrategy_AllocationStrategyRefresh is deprecated and will be removed in the next major release. Use Xray\App\Proxyman\AllocationStrategy\AllocationStrategyRefresh instead', E_USER_DEPRECATED);

@@ -5,15 +5,13 @@
 namespace Xray\Transport\Internet\Grpc\Encoding;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 use Google\Protobuf\Internal\RepeatedField;
-use GPBMetadata\Transport\Internet\Grpc\Encoding\Stream;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * Generated from protobuf message <code>xray.transport.internet.grpc.encoding.MultiHunk</code>
  */
-class MultiHunk extends Message
+class MultiHunk extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>repeated bytes data = 1;</code>
@@ -26,18 +24,17 @@ class MultiHunk extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type array<string>|RepeatedField $data
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $data
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Stream::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\Transport\Internet\Grpc\Encoding\Stream::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>repeated bytes data = 1;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getData()
     {
@@ -46,12 +43,12 @@ class MultiHunk extends Message
 
     /**
      * Generated from protobuf field <code>repeated bytes data = 1;</code>
-     * @param array<string>|RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setData($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::BYTES);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::BYTES);
         $this->data = $arr;
 
         return $this;

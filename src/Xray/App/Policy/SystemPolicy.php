@@ -4,14 +4,14 @@
 
 namespace Xray\App\Policy;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
-use Xray\App\Policy\SystemPolicy\Stats;
 
 /**
  * Generated from protobuf message <code>xray.app.policy.SystemPolicy</code>
  */
-class SystemPolicy extends Message
+class SystemPolicy extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>.xray.app.policy.SystemPolicy.Stats stats = 1;</code>
@@ -24,18 +24,17 @@ class SystemPolicy extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type Stats $stats
+     *     @type \Xray\App\Policy\SystemPolicy\Stats $stats
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\App\Policy\Config::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>.xray.app.policy.SystemPolicy.Stats stats = 1;</code>
-     * @return Stats|null
+     * @return \Xray\App\Policy\SystemPolicy\Stats|null
      */
     public function getStats()
     {
@@ -54,12 +53,12 @@ class SystemPolicy extends Message
 
     /**
      * Generated from protobuf field <code>.xray.app.policy.SystemPolicy.Stats stats = 1;</code>
-     * @param Stats $var
+     * @param \Xray\App\Policy\SystemPolicy\Stats $var
      * @return $this
      */
     public function setStats($var)
     {
-        GPBUtil::checkMessage($var, Stats::class);
+        GPBUtil::checkMessage($var, \Xray\App\Policy\SystemPolicy\Stats::class);
         $this->stats = $var;
 
         return $this;

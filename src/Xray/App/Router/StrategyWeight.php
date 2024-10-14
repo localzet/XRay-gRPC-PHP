@@ -4,13 +4,14 @@
 
 namespace Xray\App\Router;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 
 /**
  * Generated from protobuf message <code>xray.app.router.StrategyWeight</code>
  */
-class StrategyWeight extends Message
+class StrategyWeight extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>bool regexp = 1;</code>
@@ -31,13 +32,12 @@ class StrategyWeight extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type bool $regexp
-     * @type string $match
-     * @type float $value
+     *     @type bool $regexp
+     *     @type string $match
+     *     @type float $value
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\App\Router\Config::initOnce();
         parent::__construct($data);
     }

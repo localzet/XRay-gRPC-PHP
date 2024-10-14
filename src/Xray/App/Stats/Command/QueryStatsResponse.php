@@ -5,15 +5,13 @@
 namespace Xray\App\Stats\Command;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 use Google\Protobuf\Internal\RepeatedField;
-use GPBMetadata\App\Stats\Command\Command;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * Generated from protobuf message <code>xray.app.stats.command.QueryStatsResponse</code>
  */
-class QueryStatsResponse extends Message
+class QueryStatsResponse extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>repeated .xray.app.stats.command.Stat stat = 1;</code>
@@ -26,18 +24,17 @@ class QueryStatsResponse extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type array<Stat>|RepeatedField $stat
+     *     @type array<\Xray\App\Stats\Command\Stat>|\Google\Protobuf\Internal\RepeatedField $stat
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Command::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\App\Stats\Command\Command::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>repeated .xray.app.stats.command.Stat stat = 1;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getStat()
     {
@@ -46,12 +43,12 @@ class QueryStatsResponse extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.app.stats.command.Stat stat = 1;</code>
-     * @param array<Stat>|RepeatedField $var
+     * @param array<\Xray\App\Stats\Command\Stat>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setStat($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, Stat::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Xray\App\Stats\Command\Stat::class);
         $this->stat = $arr;
 
         return $this;

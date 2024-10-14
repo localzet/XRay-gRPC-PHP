@@ -4,26 +4,21 @@
 
 namespace GPBMetadata\Proxy\Trojan;
 
-use Google\Protobuf\Internal\DescriptorPool;
-use GPBMetadata\Common\Protocol\ServerSpec;
-use GPBMetadata\Common\Protocol\User;
-
 class Config
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
-        $pool = DescriptorPool::getGeneratedPool();
+    public static function initOnce() {
+        $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
         if (static::$is_initialized == true) {
-            return;
+          return;
         }
-        User::initOnce();
-        ServerSpec::initOnce();
+        \GPBMetadata\Common\Protocol\User::initOnce();
+        \GPBMetadata\Common\Protocol\ServerSpec::initOnce();
         $pool->internalAddGeneratedFile(
             '
-ï¿½
+Þ
 proxy/trojan/config.protoxray.proxy.trojan!common/protocol/server_spec.proto"
 Account
 password (	"^
@@ -39,8 +34,8 @@ class Config
 ServerConfig)
 users (2.xray.common.protocol.User.
 	fallbacks (2.xray.proxy.trojan.FallbackBU
-com.xray.proxy.trojanPZ&github.com/xtls/xray-core/proxy/trojanï¿½Xray.Proxy.Trojanbproto3'
-            , true);
+com.xray.proxy.trojanPZ&github.com/xtls/xray-core/proxy/trojanªXray.Proxy.Trojanbproto3'
+        , true);
 
         static::$is_initialized = true;
     }

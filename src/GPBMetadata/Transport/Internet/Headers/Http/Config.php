@@ -4,22 +4,19 @@
 
 namespace GPBMetadata\Transport\Internet\Headers\Http;
 
-use Google\Protobuf\Internal\DescriptorPool;
-
 class Config
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
-        $pool = DescriptorPool::getGeneratedPool();
+    public static function initOnce() {
+        $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
         if (static::$is_initialized == true) {
-            return;
+          return;
         }
         $pool->internalAddGeneratedFile(
             '
-ï¿½
+²
 ,transport/internet/headers/http/config.proto$xray.transport.internet.headers.http"%
 Header
 name (	
@@ -27,25 +24,24 @@ class Config
 Version
 value (	"
 Method
-value (	"ï¿½
-
-RequestConfig>
+value (	"Ø
+RequestConfig>
 version (2-.xray.transport.internet.headers.http.Version<
 method (2,.xray.transport.internet.headers.http.Method
 uri (	<
 header (2,.xray.transport.internet.headers.http.Header"&
 Status
 code (	
-reason (	"ï¿½
+reason (	"Ì
 ResponseConfig>
 version (2-.xray.transport.internet.headers.http.Version<
 status (2,.xray.transport.internet.headers.http.Status<
-header (2,.xray.transport.internet.headers.http.Header"ï¿½
+header (2,.xray.transport.internet.headers.http.Header"–
 ConfigD
 request (23.xray.transport.internet.headers.http.RequestConfigF
-response (24.xray.transport.internet.headers.http.ResponseConfigBï¿½
-(com.xray.transport.internet.headers.httpPZ9github.com/xtls/xray-core/transport/internet/headers/httpï¿½$Xray.Transport.Internet.Headers.Httpbproto3'
-            , true);
+response (24.xray.transport.internet.headers.http.ResponseConfigB
+(com.xray.transport.internet.headers.httpPZ9github.com/xtls/xray-core/transport/internet/headers/httpª$Xray.Transport.Internet.Headers.Httpbproto3'
+        , true);
 
         static::$is_initialized = true;
     }

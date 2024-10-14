@@ -4,13 +4,14 @@
 
 namespace Xray\Proxy\Vmess\Inbound;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 
 /**
  * Generated from protobuf message <code>xray.proxy.vmess.inbound.DefaultConfig</code>
  */
-class DefaultConfig extends Message
+class DefaultConfig extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>uint32 level = 2;</code>
@@ -23,11 +24,10 @@ class DefaultConfig extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type int $level
+     *     @type int $level
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Proxy\Vmess\Inbound\Config::initOnce();
         parent::__construct($data);
     }

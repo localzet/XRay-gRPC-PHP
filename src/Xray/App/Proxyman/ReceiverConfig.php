@@ -4,17 +4,14 @@
 
 namespace Xray\App\Proxyman;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
-use GPBMetadata\App\Proxyman\Config;
-use Xray\Common\Net\IPOrDomain;
-use Xray\Common\Net\PortList;
-use Xray\Transport\Internet\StreamConfig;
 
 /**
  * Generated from protobuf message <code>xray.app.proxyman.ReceiverConfig</code>
  */
-class ReceiverConfig extends Message
+class ReceiverConfig extends \Google\Protobuf\Internal\Message
 {
     /**
      * PortList specifies the ports which the Receiver should listen on.
@@ -51,19 +48,18 @@ class ReceiverConfig extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type PortList $port_list
+     *     @type \Xray\Common\Net\PortList $port_list
      *           PortList specifies the ports which the Receiver should listen on.
-     * @type IPOrDomain $listen
+     *     @type \Xray\Common\Net\IPOrDomain $listen
      *           Listen specifies the IP address that the Receiver should listen on.
-     * @type AllocationStrategy $allocation_strategy
-     * @type StreamConfig $stream_settings
-     * @type bool $receive_original_destination
-     * @type SniffingConfig $sniffing_settings
+     *     @type \Xray\App\Proxyman\AllocationStrategy $allocation_strategy
+     *     @type \Xray\Transport\Internet\StreamConfig $stream_settings
+     *     @type bool $receive_original_destination
+     *     @type \Xray\App\Proxyman\SniffingConfig $sniffing_settings
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Config::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\App\Proxyman\Config::initOnce();
         parent::__construct($data);
     }
 
@@ -71,7 +67,7 @@ class ReceiverConfig extends Message
      * PortList specifies the ports which the Receiver should listen on.
      *
      * Generated from protobuf field <code>.xray.common.net.PortList port_list = 1;</code>
-     * @return PortList|null
+     * @return \Xray\Common\Net\PortList|null
      */
     public function getPortList()
     {
@@ -92,12 +88,12 @@ class ReceiverConfig extends Message
      * PortList specifies the ports which the Receiver should listen on.
      *
      * Generated from protobuf field <code>.xray.common.net.PortList port_list = 1;</code>
-     * @param PortList $var
+     * @param \Xray\Common\Net\PortList $var
      * @return $this
      */
     public function setPortList($var)
     {
-        GPBUtil::checkMessage($var, PortList::class);
+        GPBUtil::checkMessage($var, \Xray\Common\Net\PortList::class);
         $this->port_list = $var;
 
         return $this;
@@ -107,7 +103,7 @@ class ReceiverConfig extends Message
      * Listen specifies the IP address that the Receiver should listen on.
      *
      * Generated from protobuf field <code>.xray.common.net.IPOrDomain listen = 2;</code>
-     * @return IPOrDomain|null
+     * @return \Xray\Common\Net\IPOrDomain|null
      */
     public function getListen()
     {
@@ -128,12 +124,12 @@ class ReceiverConfig extends Message
      * Listen specifies the IP address that the Receiver should listen on.
      *
      * Generated from protobuf field <code>.xray.common.net.IPOrDomain listen = 2;</code>
-     * @param IPOrDomain $var
+     * @param \Xray\Common\Net\IPOrDomain $var
      * @return $this
      */
     public function setListen($var)
     {
-        GPBUtil::checkMessage($var, IPOrDomain::class);
+        GPBUtil::checkMessage($var, \Xray\Common\Net\IPOrDomain::class);
         $this->listen = $var;
 
         return $this;
@@ -141,7 +137,7 @@ class ReceiverConfig extends Message
 
     /**
      * Generated from protobuf field <code>.xray.app.proxyman.AllocationStrategy allocation_strategy = 3;</code>
-     * @return AllocationStrategy|null
+     * @return \Xray\App\Proxyman\AllocationStrategy|null
      */
     public function getAllocationStrategy()
     {
@@ -160,12 +156,12 @@ class ReceiverConfig extends Message
 
     /**
      * Generated from protobuf field <code>.xray.app.proxyman.AllocationStrategy allocation_strategy = 3;</code>
-     * @param AllocationStrategy $var
+     * @param \Xray\App\Proxyman\AllocationStrategy $var
      * @return $this
      */
     public function setAllocationStrategy($var)
     {
-        GPBUtil::checkMessage($var, AllocationStrategy::class);
+        GPBUtil::checkMessage($var, \Xray\App\Proxyman\AllocationStrategy::class);
         $this->allocation_strategy = $var;
 
         return $this;
@@ -173,7 +169,7 @@ class ReceiverConfig extends Message
 
     /**
      * Generated from protobuf field <code>.xray.transport.internet.StreamConfig stream_settings = 4;</code>
-     * @return StreamConfig|null
+     * @return \Xray\Transport\Internet\StreamConfig|null
      */
     public function getStreamSettings()
     {
@@ -192,12 +188,12 @@ class ReceiverConfig extends Message
 
     /**
      * Generated from protobuf field <code>.xray.transport.internet.StreamConfig stream_settings = 4;</code>
-     * @param StreamConfig $var
+     * @param \Xray\Transport\Internet\StreamConfig $var
      * @return $this
      */
     public function setStreamSettings($var)
     {
-        GPBUtil::checkMessage($var, StreamConfig::class);
+        GPBUtil::checkMessage($var, \Xray\Transport\Internet\StreamConfig::class);
         $this->stream_settings = $var;
 
         return $this;
@@ -227,7 +223,7 @@ class ReceiverConfig extends Message
 
     /**
      * Generated from protobuf field <code>.xray.app.proxyman.SniffingConfig sniffing_settings = 7;</code>
-     * @return SniffingConfig|null
+     * @return \Xray\App\Proxyman\SniffingConfig|null
      */
     public function getSniffingSettings()
     {
@@ -246,12 +242,12 @@ class ReceiverConfig extends Message
 
     /**
      * Generated from protobuf field <code>.xray.app.proxyman.SniffingConfig sniffing_settings = 7;</code>
-     * @param SniffingConfig $var
+     * @param \Xray\App\Proxyman\SniffingConfig $var
      * @return $this
      */
     public function setSniffingSettings($var)
     {
-        GPBUtil::checkMessage($var, SniffingConfig::class);
+        GPBUtil::checkMessage($var, \Xray\App\Proxyman\SniffingConfig::class);
         $this->sniffing_settings = $var;
 
         return $this;

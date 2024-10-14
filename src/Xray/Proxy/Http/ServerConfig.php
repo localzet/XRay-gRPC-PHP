@@ -5,17 +5,15 @@
 namespace Xray\Proxy\Http;
 
 use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\MapField;
-use Google\Protobuf\Internal\Message;
-use GPBMetadata\Proxy\Http\Config;
 
 /**
  * Config for HTTP proxy server.
  *
  * Generated from protobuf message <code>xray.proxy.http.ServerConfig</code>
  */
-class ServerConfig extends Message
+class ServerConfig extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>map<string, string> accounts = 2;</code>
@@ -36,20 +34,19 @@ class ServerConfig extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type array|MapField $accounts
-     * @type bool $allow_transparent
-     * @type int $user_level
+     *     @type array|\Google\Protobuf\Internal\MapField $accounts
+     *     @type bool $allow_transparent
+     *     @type int $user_level
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Config::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\Proxy\Http\Config::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>map<string, string> accounts = 2;</code>
-     * @return MapField
+     * @return \Google\Protobuf\Internal\MapField
      */
     public function getAccounts()
     {
@@ -58,12 +55,12 @@ class ServerConfig extends Message
 
     /**
      * Generated from protobuf field <code>map<string, string> accounts = 2;</code>
-     * @param array|MapField $var
+     * @param array|\Google\Protobuf\Internal\MapField $var
      * @return $this
      */
     public function setAccounts($var)
     {
-        $arr = GPBUtil::checkMapField($var, GPBType::STRING, GPBType::STRING);
+        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::STRING);
         $this->accounts = $arr;
 
         return $this;

@@ -5,7 +5,6 @@
 namespace Xray\Transport\Internet\Tls\Certificate;
 
 use UnexpectedValueException;
-use Xray\Transport\Internet\Tls\Certificate_Usage;
 
 /**
  * Protobuf type <code>xray.transport.internet.tls.Certificate.Usage</code>
@@ -35,7 +34,7 @@ class Usage
     {
         if (!isset(self::$valueToName[$value])) {
             throw new UnexpectedValueException(sprintf(
-                'Enum %s has no name defined for value %s', __CLASS__, $value));
+                    'Enum %s has no name defined for value %s', __CLASS__, $value));
         }
         return self::$valueToName[$value];
     }
@@ -46,12 +45,12 @@ class Usage
         $const = __CLASS__ . '::' . strtoupper($name);
         if (!defined($const)) {
             throw new UnexpectedValueException(sprintf(
-                'Enum %s has no value defined for name %s', __CLASS__, $name));
+                    'Enum %s has no value defined for name %s', __CLASS__, $name));
         }
         return constant($const);
     }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Usage::class, Certificate_Usage::class);
+class_alias(Usage::class, \Xray\Transport\Internet\Tls\Certificate_Usage::class);
 

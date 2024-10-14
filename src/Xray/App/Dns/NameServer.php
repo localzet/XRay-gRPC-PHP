@@ -5,18 +5,13 @@
 namespace Xray\App\Dns;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 use Google\Protobuf\Internal\RepeatedField;
-use Xray\App\Dns\NameServer\OriginalRule;
-use Xray\App\Dns\NameServer\PriorityDomain;
-use Xray\App\Router\GeoIP;
-use Xray\Common\Net\Endpoint;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * Generated from protobuf message <code>xray.app.dns.NameServer</code>
  */
-class NameServer extends Message
+class NameServer extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>.xray.common.net.Endpoint address = 1;</code>
@@ -53,24 +48,23 @@ class NameServer extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type Endpoint $address
-     * @type string $client_ip
-     * @type bool $skipFallback
-     * @type array<PriorityDomain>|RepeatedField $prioritized_domain
-     * @type array<GeoIP>|RepeatedField $geoip
-     * @type array<OriginalRule>|RepeatedField $original_rules
-     * @type int $query_strategy
+     *     @type \Xray\Common\Net\Endpoint $address
+     *     @type string $client_ip
+     *     @type bool $skipFallback
+     *     @type array<\Xray\App\Dns\NameServer\PriorityDomain>|\Google\Protobuf\Internal\RepeatedField $prioritized_domain
+     *     @type array<\Xray\App\Router\GeoIP>|\Google\Protobuf\Internal\RepeatedField $geoip
+     *     @type array<\Xray\App\Dns\NameServer\OriginalRule>|\Google\Protobuf\Internal\RepeatedField $original_rules
+     *     @type int $query_strategy
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\App\Dns\Config::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>.xray.common.net.Endpoint address = 1;</code>
-     * @return Endpoint|null
+     * @return \Xray\Common\Net\Endpoint|null
      */
     public function getAddress()
     {
@@ -89,12 +83,12 @@ class NameServer extends Message
 
     /**
      * Generated from protobuf field <code>.xray.common.net.Endpoint address = 1;</code>
-     * @param Endpoint $var
+     * @param \Xray\Common\Net\Endpoint $var
      * @return $this
      */
     public function setAddress($var)
     {
-        GPBUtil::checkMessage($var, Endpoint::class);
+        GPBUtil::checkMessage($var, \Xray\Common\Net\Endpoint::class);
         $this->address = $var;
 
         return $this;
@@ -146,7 +140,7 @@ class NameServer extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.app.dns.NameServer.PriorityDomain prioritized_domain = 2;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getPrioritizedDomain()
     {
@@ -155,12 +149,12 @@ class NameServer extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.app.dns.NameServer.PriorityDomain prioritized_domain = 2;</code>
-     * @param array<PriorityDomain>|RepeatedField $var
+     * @param array<\Xray\App\Dns\NameServer\PriorityDomain>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setPrioritizedDomain($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, PriorityDomain::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Xray\App\Dns\NameServer\PriorityDomain::class);
         $this->prioritized_domain = $arr;
 
         return $this;
@@ -168,7 +162,7 @@ class NameServer extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.app.router.GeoIP geoip = 3;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getGeoip()
     {
@@ -177,12 +171,12 @@ class NameServer extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.app.router.GeoIP geoip = 3;</code>
-     * @param array<GeoIP>|RepeatedField $var
+     * @param array<\Xray\App\Router\GeoIP>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setGeoip($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, GeoIP::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Xray\App\Router\GeoIP::class);
         $this->geoip = $arr;
 
         return $this;
@@ -190,7 +184,7 @@ class NameServer extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.app.dns.NameServer.OriginalRule original_rules = 4;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getOriginalRules()
     {
@@ -199,12 +193,12 @@ class NameServer extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.app.dns.NameServer.OriginalRule original_rules = 4;</code>
-     * @param array<OriginalRule>|RepeatedField $var
+     * @param array<\Xray\App\Dns\NameServer\OriginalRule>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setOriginalRules($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, OriginalRule::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Xray\App\Dns\NameServer\OriginalRule::class);
         $this->original_rules = $arr;
 
         return $this;
@@ -226,7 +220,7 @@ class NameServer extends Message
      */
     public function setQueryStrategy($var)
     {
-        GPBUtil::checkEnum($var, QueryStrategy::class);
+        GPBUtil::checkEnum($var, \Xray\App\Dns\QueryStrategy::class);
         $this->query_strategy = $var;
 
         return $this;

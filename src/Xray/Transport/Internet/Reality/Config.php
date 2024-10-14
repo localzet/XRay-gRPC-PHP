@@ -5,14 +5,13 @@
 namespace Xray\Transport\Internet\Reality;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 use Google\Protobuf\Internal\RepeatedField;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * Generated from protobuf message <code>xray.transport.internet.reality.Config</code>
  */
-class Config extends Message
+class Config extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>bool show = 1;</code>
@@ -89,27 +88,26 @@ class Config extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type bool $show
-     * @type string $dest
-     * @type string $type
-     * @type int|string $xver
-     * @type array<string>|RepeatedField $server_names
-     * @type string $private_key
-     * @type string $min_client_ver
-     * @type string $max_client_ver
-     * @type int|string $max_time_diff
-     * @type array<string>|RepeatedField $short_ids
-     * @type string $Fingerprint
-     * @type string $server_name
-     * @type string $public_key
-     * @type string $short_id
-     * @type string $spider_x
-     * @type array<int>|array<string>|RepeatedField $spider_y
-     * @type string $master_key_log
+     *     @type bool $show
+     *     @type string $dest
+     *     @type string $type
+     *     @type int|string $xver
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $server_names
+     *     @type string $private_key
+     *     @type string $min_client_ver
+     *     @type string $max_client_ver
+     *     @type int|string $max_time_diff
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $short_ids
+     *     @type string $Fingerprint
+     *     @type string $server_name
+     *     @type string $public_key
+     *     @type string $short_id
+     *     @type string $spider_x
+     *     @type array<int>|array<string>|\Google\Protobuf\Internal\RepeatedField $spider_y
+     *     @type string $master_key_log
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Transport\Internet\Reality\Config::initOnce();
         parent::__construct($data);
     }
@@ -204,7 +202,7 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>repeated string server_names = 5;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getServerNames()
     {
@@ -213,12 +211,12 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>repeated string server_names = 5;</code>
-     * @param array<string>|RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setServerNames($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::STRING);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->server_names = $arr;
 
         return $this;
@@ -314,7 +312,7 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>repeated bytes short_ids = 10;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getShortIds()
     {
@@ -323,12 +321,12 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>repeated bytes short_ids = 10;</code>
-     * @param array<string>|RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setShortIds($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::BYTES);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::BYTES);
         $this->short_ids = $arr;
 
         return $this;
@@ -446,7 +444,7 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>repeated int64 spider_y = 26;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getSpiderY()
     {
@@ -455,12 +453,12 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>repeated int64 spider_y = 26;</code>
-     * @param array<int>|array<string>|RepeatedField $var
+     * @param array<int>|array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setSpiderY($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::INT64);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::INT64);
         $this->spider_y = $arr;
 
         return $this;

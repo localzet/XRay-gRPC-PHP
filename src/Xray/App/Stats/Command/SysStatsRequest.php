@@ -4,13 +4,14 @@
 
 namespace Xray\App\Stats\Command;
 
-use Google\Protobuf\Internal\Message;
-use GPBMetadata\App\Stats\Command\Command;
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * Generated from protobuf message <code>xray.app.stats.command.SysStatsRequest</code>
  */
-class SysStatsRequest extends Message
+class SysStatsRequest extends \Google\Protobuf\Internal\Message
 {
 
     /**
@@ -21,9 +22,8 @@ class SysStatsRequest extends Message
      *
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Command::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\App\Stats\Command\Command::initOnce();
         parent::__construct($data);
     }
 

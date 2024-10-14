@@ -4,18 +4,16 @@
 
 namespace Xray\App\Policy\Policy;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
-use GPBMetadata\App\Policy\Config;
-use Xray\App\Policy\Policy_Timeout;
-use Xray\App\Policy\Second;
 
 /**
  * Timeout is a message for timeout settings in various stages, in seconds.
  *
  * Generated from protobuf message <code>xray.app.policy.Policy.Timeout</code>
  */
-class Timeout extends Message
+class Timeout extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>.xray.app.policy.Second handshake = 1;</code>
@@ -40,21 +38,20 @@ class Timeout extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type Second $handshake
-     * @type Second $connection_idle
-     * @type Second $uplink_only
-     * @type Second $downlink_only
+     *     @type \Xray\App\Policy\Second $handshake
+     *     @type \Xray\App\Policy\Second $connection_idle
+     *     @type \Xray\App\Policy\Second $uplink_only
+     *     @type \Xray\App\Policy\Second $downlink_only
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Config::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\App\Policy\Config::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>.xray.app.policy.Second handshake = 1;</code>
-     * @return Second|null
+     * @return \Xray\App\Policy\Second|null
      */
     public function getHandshake()
     {
@@ -73,12 +70,12 @@ class Timeout extends Message
 
     /**
      * Generated from protobuf field <code>.xray.app.policy.Second handshake = 1;</code>
-     * @param Second $var
+     * @param \Xray\App\Policy\Second $var
      * @return $this
      */
     public function setHandshake($var)
     {
-        GPBUtil::checkMessage($var, Second::class);
+        GPBUtil::checkMessage($var, \Xray\App\Policy\Second::class);
         $this->handshake = $var;
 
         return $this;
@@ -86,7 +83,7 @@ class Timeout extends Message
 
     /**
      * Generated from protobuf field <code>.xray.app.policy.Second connection_idle = 2;</code>
-     * @return Second|null
+     * @return \Xray\App\Policy\Second|null
      */
     public function getConnectionIdle()
     {
@@ -105,12 +102,12 @@ class Timeout extends Message
 
     /**
      * Generated from protobuf field <code>.xray.app.policy.Second connection_idle = 2;</code>
-     * @param Second $var
+     * @param \Xray\App\Policy\Second $var
      * @return $this
      */
     public function setConnectionIdle($var)
     {
-        GPBUtil::checkMessage($var, Second::class);
+        GPBUtil::checkMessage($var, \Xray\App\Policy\Second::class);
         $this->connection_idle = $var;
 
         return $this;
@@ -118,7 +115,7 @@ class Timeout extends Message
 
     /**
      * Generated from protobuf field <code>.xray.app.policy.Second uplink_only = 3;</code>
-     * @return Second|null
+     * @return \Xray\App\Policy\Second|null
      */
     public function getUplinkOnly()
     {
@@ -137,12 +134,12 @@ class Timeout extends Message
 
     /**
      * Generated from protobuf field <code>.xray.app.policy.Second uplink_only = 3;</code>
-     * @param Second $var
+     * @param \Xray\App\Policy\Second $var
      * @return $this
      */
     public function setUplinkOnly($var)
     {
-        GPBUtil::checkMessage($var, Second::class);
+        GPBUtil::checkMessage($var, \Xray\App\Policy\Second::class);
         $this->uplink_only = $var;
 
         return $this;
@@ -150,7 +147,7 @@ class Timeout extends Message
 
     /**
      * Generated from protobuf field <code>.xray.app.policy.Second downlink_only = 4;</code>
-     * @return Second|null
+     * @return \Xray\App\Policy\Second|null
      */
     public function getDownlinkOnly()
     {
@@ -169,12 +166,12 @@ class Timeout extends Message
 
     /**
      * Generated from protobuf field <code>.xray.app.policy.Second downlink_only = 4;</code>
-     * @param Second $var
+     * @param \Xray\App\Policy\Second $var
      * @return $this
      */
     public function setDownlinkOnly($var)
     {
-        GPBUtil::checkMessage($var, Second::class);
+        GPBUtil::checkMessage($var, \Xray\App\Policy\Second::class);
         $this->downlink_only = $var;
 
         return $this;
@@ -183,5 +180,5 @@ class Timeout extends Message
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Timeout::class, Policy_Timeout::class);
+class_alias(Timeout::class, \Xray\App\Policy\Policy_Timeout::class);
 

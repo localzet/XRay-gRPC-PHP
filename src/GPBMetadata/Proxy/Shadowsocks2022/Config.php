@@ -4,33 +4,28 @@
 
 namespace GPBMetadata\Proxy\Shadowsocks2022;
 
-use Google\Protobuf\Internal\DescriptorPool;
-use GPBMetadata\Common\Net\Address;
-use GPBMetadata\Common\Net\Network;
-
 class Config
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
-        $pool = DescriptorPool::getGeneratedPool();
+    public static function initOnce() {
+        $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
         if (static::$is_initialized == true) {
-            return;
+          return;
         }
-        Network::initOnce();
-        Address::initOnce();
+        \GPBMetadata\Common\Net\Network::initOnce();
+        \GPBMetadata\Common\Net\Address::initOnce();
         $pool->internalAddGeneratedFile(
             '
-ï¿½
+Ñ
 #proxy/shadowsocks_2022/config.protoxray.proxy.shadowsocks_2022common/net/address.proto"t
 ServerConfig
 method (	
 key (	
 email (	
 level ()
-network (2.xray.common.net.Network"ï¿½
+network (2.xray.common.net.Network"‘
 MultiUserServerConfig
 method (	
 key (	0
@@ -39,10 +34,9 @@ class Config
 RelayDestination
 key (	,
 address (2.xray.common.net.IPOrDomain
-port (
-
+port (
 email (	
-level ("ï¿½
+level (" 
 RelayServerConfig
 method (	
 key (	C
@@ -51,18 +45,16 @@ class Config
 User
 key (	
 email (	
-level ("ï¿½
+level ("›
 ClientConfig,
 address (2.xray.common.net.IPOrDomain
-port (
-
+port (
 method (	
 key (	
 udp_over_tcp (
-udp_over_tcp_version (
-Br
-com.xray.proxy.shadowsocks_2022PZ0github.com/xtls/xray-core/proxy/shadowsocks_2022ï¿½Xray.Proxy.Shadowsocks2022bproto3'
-            , true);
+udp_over_tcp_version (Br
+com.xray.proxy.shadowsocks_2022PZ0github.com/xtls/xray-core/proxy/shadowsocks_2022ªXray.Proxy.Shadowsocks2022bproto3'
+        , true);
 
         static::$is_initialized = true;
     }

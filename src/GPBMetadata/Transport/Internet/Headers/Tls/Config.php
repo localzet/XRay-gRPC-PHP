@@ -4,26 +4,23 @@
 
 namespace GPBMetadata\Transport\Internet\Headers\Tls;
 
-use Google\Protobuf\Internal\DescriptorPool;
-
 class Config
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
-        $pool = DescriptorPool::getGeneratedPool();
+    public static function initOnce() {
+        $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
         if (static::$is_initialized == true) {
-            return;
+          return;
         }
         $pool->internalAddGeneratedFile(
             '
-ï¿½
+ø
 +transport/internet/headers/tls/config.proto#xray.transport.internet.headers.tls"
-PacketConfigBï¿½
-\'com.xray.transport.internet.headers.tlsPZ8github.com/xtls/xray-core/transport/internet/headers/tlsï¿½#Xray.Transport.Internet.Headers.Tlsbproto3'
-            , true);
+PacketConfigB‹
+\'com.xray.transport.internet.headers.tlsPZ8github.com/xtls/xray-core/transport/internet/headers/tlsª#Xray.Transport.Internet.Headers.Tlsbproto3'
+        , true);
 
         static::$is_initialized = true;
     }

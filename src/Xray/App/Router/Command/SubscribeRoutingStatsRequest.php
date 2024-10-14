@@ -5,10 +5,8 @@
 namespace Xray\App\Router\Command;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 use Google\Protobuf\Internal\RepeatedField;
-use GPBMetadata\App\Router\Command\Command;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * SubscribeRoutingStatsRequest subscribes to routing statistics channel if
@@ -31,7 +29,7 @@ use GPBMetadata\App\Router\Command\Command;
  *
  * Generated from protobuf message <code>xray.app.router.command.SubscribeRoutingStatsRequest</code>
  */
-class SubscribeRoutingStatsRequest extends Message
+class SubscribeRoutingStatsRequest extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>repeated string FieldSelectors = 1;</code>
@@ -44,18 +42,17 @@ class SubscribeRoutingStatsRequest extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type array<string>|RepeatedField $FieldSelectors
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $FieldSelectors
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Command::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\App\Router\Command\Command::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>repeated string FieldSelectors = 1;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getFieldSelectors()
     {
@@ -64,12 +61,12 @@ class SubscribeRoutingStatsRequest extends Message
 
     /**
      * Generated from protobuf field <code>repeated string FieldSelectors = 1;</code>
-     * @param array<string>|RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setFieldSelectors($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::STRING);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->FieldSelectors = $arr;
 
         return $this;

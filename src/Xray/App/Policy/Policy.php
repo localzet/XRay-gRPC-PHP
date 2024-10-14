@@ -4,16 +4,14 @@
 
 namespace Xray\App\Policy;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
-use Xray\App\Policy\Policy\Buffer;
-use Xray\App\Policy\Policy\Stats;
-use Xray\App\Policy\Policy\Timeout;
 
 /**
  * Generated from protobuf message <code>xray.app.policy.Policy</code>
  */
-class Policy extends Message
+class Policy extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>.xray.app.policy.Policy.Timeout timeout = 1;</code>
@@ -34,20 +32,19 @@ class Policy extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type Timeout $timeout
-     * @type Stats $stats
-     * @type Buffer $buffer
+     *     @type \Xray\App\Policy\Policy\Timeout $timeout
+     *     @type \Xray\App\Policy\Policy\Stats $stats
+     *     @type \Xray\App\Policy\Policy\Buffer $buffer
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\App\Policy\Config::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>.xray.app.policy.Policy.Timeout timeout = 1;</code>
-     * @return Timeout|null
+     * @return \Xray\App\Policy\Policy\Timeout|null
      */
     public function getTimeout()
     {
@@ -66,12 +63,12 @@ class Policy extends Message
 
     /**
      * Generated from protobuf field <code>.xray.app.policy.Policy.Timeout timeout = 1;</code>
-     * @param Timeout $var
+     * @param \Xray\App\Policy\Policy\Timeout $var
      * @return $this
      */
     public function setTimeout($var)
     {
-        GPBUtil::checkMessage($var, Timeout::class);
+        GPBUtil::checkMessage($var, \Xray\App\Policy\Policy\Timeout::class);
         $this->timeout = $var;
 
         return $this;
@@ -79,7 +76,7 @@ class Policy extends Message
 
     /**
      * Generated from protobuf field <code>.xray.app.policy.Policy.Stats stats = 2;</code>
-     * @return Stats|null
+     * @return \Xray\App\Policy\Policy\Stats|null
      */
     public function getStats()
     {
@@ -98,12 +95,12 @@ class Policy extends Message
 
     /**
      * Generated from protobuf field <code>.xray.app.policy.Policy.Stats stats = 2;</code>
-     * @param Stats $var
+     * @param \Xray\App\Policy\Policy\Stats $var
      * @return $this
      */
     public function setStats($var)
     {
-        GPBUtil::checkMessage($var, Stats::class);
+        GPBUtil::checkMessage($var, \Xray\App\Policy\Policy\Stats::class);
         $this->stats = $var;
 
         return $this;
@@ -111,7 +108,7 @@ class Policy extends Message
 
     /**
      * Generated from protobuf field <code>.xray.app.policy.Policy.Buffer buffer = 3;</code>
-     * @return Buffer|null
+     * @return \Xray\App\Policy\Policy\Buffer|null
      */
     public function getBuffer()
     {
@@ -130,12 +127,12 @@ class Policy extends Message
 
     /**
      * Generated from protobuf field <code>.xray.app.policy.Policy.Buffer buffer = 3;</code>
-     * @param Buffer $var
+     * @param \Xray\App\Policy\Policy\Buffer $var
      * @return $this
      */
     public function setBuffer($var)
     {
-        GPBUtil::checkMessage($var, Buffer::class);
+        GPBUtil::checkMessage($var, \Xray\App\Policy\Policy\Buffer::class);
         $this->buffer = $var;
 
         return $this;

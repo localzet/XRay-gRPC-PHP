@@ -5,16 +5,13 @@
 namespace Xray\Proxy\Wireguard;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 use Google\Protobuf\Internal\RepeatedField;
-use GPBMetadata\Proxy\Wireguard\Config;
-use Xray\Proxy\Wireguard\DeviceConfig\DomainStrategy;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * Generated from protobuf message <code>xray.proxy.wireguard.DeviceConfig</code>
  */
-class DeviceConfig extends Message
+class DeviceConfig extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>string secret_key = 1;</code>
@@ -59,20 +56,19 @@ class DeviceConfig extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $secret_key
-     * @type array<string>|RepeatedField $endpoint
-     * @type array<PeerConfig>|RepeatedField $peers
-     * @type int $mtu
-     * @type int $num_workers
-     * @type string $reserved
-     * @type int $domain_strategy
-     * @type bool $is_client
-     * @type bool $kernel_mode
+     *     @type string $secret_key
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $endpoint
+     *     @type array<\Xray\Proxy\Wireguard\PeerConfig>|\Google\Protobuf\Internal\RepeatedField $peers
+     *     @type int $mtu
+     *     @type int $num_workers
+     *     @type string $reserved
+     *     @type int $domain_strategy
+     *     @type bool $is_client
+     *     @type bool $kernel_mode
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Config::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\Proxy\Wireguard\Config::initOnce();
         parent::__construct($data);
     }
 
@@ -100,7 +96,7 @@ class DeviceConfig extends Message
 
     /**
      * Generated from protobuf field <code>repeated string endpoint = 2;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getEndpoint()
     {
@@ -109,12 +105,12 @@ class DeviceConfig extends Message
 
     /**
      * Generated from protobuf field <code>repeated string endpoint = 2;</code>
-     * @param array<string>|RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setEndpoint($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::STRING);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->endpoint = $arr;
 
         return $this;
@@ -122,7 +118,7 @@ class DeviceConfig extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.proxy.wireguard.PeerConfig peers = 3;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getPeers()
     {
@@ -131,12 +127,12 @@ class DeviceConfig extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.proxy.wireguard.PeerConfig peers = 3;</code>
-     * @param array<PeerConfig>|RepeatedField $var
+     * @param array<\Xray\Proxy\Wireguard\PeerConfig>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setPeers($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, PeerConfig::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Xray\Proxy\Wireguard\PeerConfig::class);
         $this->peers = $arr;
 
         return $this;
@@ -224,7 +220,7 @@ class DeviceConfig extends Message
      */
     public function setDomainStrategy($var)
     {
-        GPBUtil::checkEnum($var, DomainStrategy::class);
+        GPBUtil::checkEnum($var, \Xray\Proxy\Wireguard\DeviceConfig\DomainStrategy::class);
         $this->domain_strategy = $var;
 
         return $this;

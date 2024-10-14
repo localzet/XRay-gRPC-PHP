@@ -4,13 +4,14 @@
 
 namespace Xray\Core\App\Observatory\Burst;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 
 /**
  * Generated from protobuf message <code>xray.core.app.observatory.burst.HealthPingConfig</code>
  */
-class HealthPingConfig extends Message
+class HealthPingConfig extends \Google\Protobuf\Internal\Message
 {
     /**
      * destination url, need 204 for success return
@@ -50,21 +51,20 @@ class HealthPingConfig extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $destination
+     *     @type string $destination
      *           destination url, need 204 for success return
      *           default https://connectivitycheck.gstatic.com/generate_204
-     * @type string $connectivity
+     *     @type string $connectivity
      *           connectivity check url
-     * @type int|string $interval
+     *     @type int|string $interval
      *           health check interval, int64 values of time.Duration
-     * @type int $samplingCount
+     *     @type int $samplingCount
      *           sampling count is the amount of recent ping results which are kept for calculation
-     * @type int|string $timeout
+     *     @type int|string $timeout
      *           ping timeout, int64 values of time.Duration
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\App\Observatory\Burst\Config::initOnce();
         parent::__construct($data);
     }

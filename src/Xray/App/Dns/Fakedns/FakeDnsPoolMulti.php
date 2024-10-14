@@ -5,15 +5,13 @@
 namespace Xray\App\Dns\Fakedns;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 use Google\Protobuf\Internal\RepeatedField;
-use GPBMetadata\App\Dns\Fakedns\Fakedns;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * Generated from protobuf message <code>xray.app.dns.fakedns.FakeDnsPoolMulti</code>
  */
-class FakeDnsPoolMulti extends Message
+class FakeDnsPoolMulti extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>repeated .xray.app.dns.fakedns.FakeDnsPool pools = 1;</code>
@@ -26,18 +24,17 @@ class FakeDnsPoolMulti extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type array<FakeDnsPool>|RepeatedField $pools
+     *     @type array<\Xray\App\Dns\Fakedns\FakeDnsPool>|\Google\Protobuf\Internal\RepeatedField $pools
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Fakedns::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\App\Dns\Fakedns\Fakedns::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>repeated .xray.app.dns.fakedns.FakeDnsPool pools = 1;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getPools()
     {
@@ -46,12 +43,12 @@ class FakeDnsPoolMulti extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.app.dns.fakedns.FakeDnsPool pools = 1;</code>
-     * @param array<FakeDnsPool>|RepeatedField $var
+     * @param array<\Xray\App\Dns\Fakedns\FakeDnsPool>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setPools($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, FakeDnsPool::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Xray\App\Dns\Fakedns\FakeDnsPool::class);
         $this->pools = $arr;
 
         return $this;

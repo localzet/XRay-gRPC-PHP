@@ -5,15 +5,13 @@
 namespace Xray\App\Router\Command;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 use Google\Protobuf\Internal\RepeatedField;
-use GPBMetadata\App\Router\Command\Command;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * Generated from protobuf message <code>xray.app.router.command.PrincipleTargetInfo</code>
  */
-class PrincipleTargetInfo extends Message
+class PrincipleTargetInfo extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>repeated string tag = 1;</code>
@@ -26,18 +24,17 @@ class PrincipleTargetInfo extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type array<string>|RepeatedField $tag
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $tag
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Command::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\App\Router\Command\Command::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>repeated string tag = 1;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getTag()
     {
@@ -46,12 +43,12 @@ class PrincipleTargetInfo extends Message
 
     /**
      * Generated from protobuf field <code>repeated string tag = 1;</code>
-     * @param array<string>|RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setTag($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::STRING);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->tag = $arr;
 
         return $this;

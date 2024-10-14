@@ -9,9 +9,7 @@ if (false) {
      * This class is deprecated. Use Xray\App\Proxyman\AllocationStrategy\AllocationStrategyConcurrency instead.
      * @deprecated
      */
-    class AllocationStrategy_AllocationStrategyConcurrency
-    {
-    }
+    class AllocationStrategy_AllocationStrategyConcurrency {}
 }
 class_exists(AllocationStrategy\AllocationStrategyConcurrency::class);
 @trigger_error('Xray\App\Proxyman\AllocationStrategy_AllocationStrategyConcurrency is deprecated and will be removed in the next major release. Use Xray\App\Proxyman\AllocationStrategy\AllocationStrategyConcurrency instead', E_USER_DEPRECATED);

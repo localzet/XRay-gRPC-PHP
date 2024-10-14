@@ -4,23 +4,20 @@
 
 namespace GPBMetadata\Transport\Internet\Grpc;
 
-use Google\Protobuf\Internal\DescriptorPool;
-
 class Config
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
-        $pool = DescriptorPool::getGeneratedPool();
+    public static function initOnce() {
+        $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
         if (static::$is_initialized == true) {
-            return;
+          return;
         }
         $pool->internalAddGeneratedFile(
             '
-ï¿½
-$transport/internet/grpc/config.proto%xray.transport.internet.grpc.encoding"ï¿½
+×
+$transport/internet/grpc/config.proto%xray.transport.internet.grpc.encoding"Ê
 Config
 	authority (	
 service_name (	
@@ -32,7 +29,7 @@ multi_mode (
 initial_windows_size (
 
 user_agent (	B3Z1github.com/xtls/xray-core/transport/internet/grpcbproto3'
-            , true);
+        , true);
 
         static::$is_initialized = true;
     }

@@ -4,14 +4,14 @@
 
 namespace Xray\App\Dns\Fakedns;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
-use GPBMetadata\App\Dns\Fakedns\Fakedns;
 
 /**
  * Generated from protobuf message <code>xray.app.dns.fakedns.FakeDnsPool</code>
  */
-class FakeDnsPool extends Message
+class FakeDnsPool extends \Google\Protobuf\Internal\Message
 {
     /**
      *CIDR of IP pool used as fake DNS IP
@@ -32,15 +32,14 @@ class FakeDnsPool extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $ip_pool
+     *     @type string $ip_pool
      *          CIDR of IP pool used as fake DNS IP
-     * @type int|string $lruSize
+     *     @type int|string $lruSize
      *          Size of Pool for remembering relationship between domain name and IP address
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Fakedns::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\App\Dns\Fakedns\Fakedns::initOnce();
         parent::__construct($data);
     }
 

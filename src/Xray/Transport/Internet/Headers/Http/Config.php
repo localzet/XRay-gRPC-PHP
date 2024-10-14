@@ -4,13 +4,14 @@
 
 namespace Xray\Transport\Internet\Headers\Http;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 
 /**
  * Generated from protobuf message <code>xray.transport.internet.headers.http.Config</code>
  */
-class Config extends Message
+class Config extends \Google\Protobuf\Internal\Message
 {
     /**
      * Settings for authenticating requests. If not set, client side will not send
@@ -33,16 +34,15 @@ class Config extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type RequestConfig $request
+     *     @type \Xray\Transport\Internet\Headers\Http\RequestConfig $request
      *           Settings for authenticating requests. If not set, client side will not send
      *           authentication header, and server side will bypass authentication.
-     * @type ResponseConfig $response
+     *     @type \Xray\Transport\Internet\Headers\Http\ResponseConfig $response
      *           Settings for authenticating responses. If not set, client side will bypass
      *           authentication, and server side will not send authentication header.
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Transport\Internet\Headers\Http\Config::initOnce();
         parent::__construct($data);
     }
@@ -52,7 +52,7 @@ class Config extends Message
      * authentication header, and server side will bypass authentication.
      *
      * Generated from protobuf field <code>.xray.transport.internet.headers.http.RequestConfig request = 1;</code>
-     * @return RequestConfig|null
+     * @return \Xray\Transport\Internet\Headers\Http\RequestConfig|null
      */
     public function getRequest()
     {
@@ -74,12 +74,12 @@ class Config extends Message
      * authentication header, and server side will bypass authentication.
      *
      * Generated from protobuf field <code>.xray.transport.internet.headers.http.RequestConfig request = 1;</code>
-     * @param RequestConfig $var
+     * @param \Xray\Transport\Internet\Headers\Http\RequestConfig $var
      * @return $this
      */
     public function setRequest($var)
     {
-        GPBUtil::checkMessage($var, RequestConfig::class);
+        GPBUtil::checkMessage($var, \Xray\Transport\Internet\Headers\Http\RequestConfig::class);
         $this->request = $var;
 
         return $this;
@@ -90,7 +90,7 @@ class Config extends Message
      * authentication, and server side will not send authentication header.
      *
      * Generated from protobuf field <code>.xray.transport.internet.headers.http.ResponseConfig response = 2;</code>
-     * @return ResponseConfig|null
+     * @return \Xray\Transport\Internet\Headers\Http\ResponseConfig|null
      */
     public function getResponse()
     {
@@ -112,12 +112,12 @@ class Config extends Message
      * authentication, and server side will not send authentication header.
      *
      * Generated from protobuf field <code>.xray.transport.internet.headers.http.ResponseConfig response = 2;</code>
-     * @param ResponseConfig $var
+     * @param \Xray\Transport\Internet\Headers\Http\ResponseConfig $var
      * @return $this
      */
     public function setResponse($var)
     {
-        GPBUtil::checkMessage($var, ResponseConfig::class);
+        GPBUtil::checkMessage($var, \Xray\Transport\Internet\Headers\Http\ResponseConfig::class);
         $this->response = $var;
 
         return $this;

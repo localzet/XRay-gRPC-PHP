@@ -28,7 +28,7 @@ class SecurityType
      */
     const CHACHA20_POLY1305 = 4;
     /**
-     * [DEPRECATED 2023-06]
+     * [DEPRECATED 2023-06] 
      *
      * Generated from protobuf enum <code>NONE = 5;</code>
      */
@@ -51,7 +51,7 @@ class SecurityType
     {
         if (!isset(self::$valueToName[$value])) {
             throw new UnexpectedValueException(sprintf(
-                'Enum %s has no name defined for value %s', __CLASS__, $value));
+                    'Enum %s has no name defined for value %s', __CLASS__, $value));
         }
         return self::$valueToName[$value];
     }
@@ -62,7 +62,7 @@ class SecurityType
         $const = __CLASS__ . '::' . strtoupper($name);
         if (!defined($const)) {
             throw new UnexpectedValueException(sprintf(
-                'Enum %s has no value defined for name %s', __CLASS__, $name));
+                    'Enum %s has no value defined for name %s', __CLASS__, $name));
         }
         return constant($const);
     }

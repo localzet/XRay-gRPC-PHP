@@ -4,9 +4,9 @@
 
 namespace Xray\Common\Net;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
-use GPBMetadata\Common\Net\Address;
 
 /**
  * Address of a network host. It may be either an IP address or a domain
@@ -14,7 +14,7 @@ use GPBMetadata\Common\Net\Address;
  *
  * Generated from protobuf message <code>xray.common.net.IPOrDomain</code>
  */
-class IPOrDomain extends Message
+class IPOrDomain extends \Google\Protobuf\Internal\Message
 {
     protected $address;
 
@@ -24,15 +24,14 @@ class IPOrDomain extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $ip
+     *     @type string $ip
      *           IP address. Must by either 4 or 16 bytes.
-     * @type string $domain
+     *     @type string $domain
      *           Domain address.
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Address::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\Common\Net\Address::initOnce();
         parent::__construct($data);
     }
 

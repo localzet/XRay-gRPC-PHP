@@ -4,16 +4,14 @@
 
 namespace Xray\App\Dns\NameServer;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
-use GPBMetadata\App\Dns\Config;
-use Xray\App\Dns\DomainMatchingType;
-use Xray\App\Dns\NameServer_PriorityDomain;
 
 /**
  * Generated from protobuf message <code>xray.app.dns.NameServer.PriorityDomain</code>
  */
-class PriorityDomain extends Message
+class PriorityDomain extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>.xray.app.dns.DomainMatchingType type = 1;</code>
@@ -30,13 +28,12 @@ class PriorityDomain extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type int $type
-     * @type string $domain
+     *     @type int $type
+     *     @type string $domain
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Config::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\App\Dns\Config::initOnce();
         parent::__construct($data);
     }
 
@@ -56,7 +53,7 @@ class PriorityDomain extends Message
      */
     public function setType($var)
     {
-        GPBUtil::checkEnum($var, DomainMatchingType::class);
+        GPBUtil::checkEnum($var, \Xray\App\Dns\DomainMatchingType::class);
         $this->type = $var;
 
         return $this;
@@ -87,5 +84,5 @@ class PriorityDomain extends Message
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(PriorityDomain::class, NameServer_PriorityDomain::class);
+class_alias(PriorityDomain::class, \Xray\App\Dns\NameServer_PriorityDomain::class);
 

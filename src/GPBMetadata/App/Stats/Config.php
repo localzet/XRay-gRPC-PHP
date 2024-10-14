@@ -4,32 +4,28 @@
 
 namespace GPBMetadata\App\Stats;
 
-use Google\Protobuf\Internal\DescriptorPool;
-
 class Config
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
-        $pool = DescriptorPool::getGeneratedPool();
+    public static function initOnce() {
+        $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
         if (static::$is_initialized == true) {
-            return;
+          return;
         }
         $pool->internalAddGeneratedFile(
             '
-ï¿½
+Ø
 app/stats/config.protoxray.app.stats"
 Config"N
-
-ChannelConfig
+ChannelConfig
 Blocking (
 SubscriberLimit (
 
 BufferSize (BL
-com.xray.app.statsPZ#github.com/xtls/xray-core/app/statsï¿½Xray.App.Statsbproto3'
-            , true);
+com.xray.app.statsPZ#github.com/xtls/xray-core/app/statsªXray.App.Statsbproto3'
+        , true);
 
         static::$is_initialized = true;
     }

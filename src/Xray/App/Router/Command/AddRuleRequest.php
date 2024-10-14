@@ -4,15 +4,14 @@
 
 namespace Xray\App\Router\Command;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
-use GPBMetadata\App\Router\Command\Command;
-use Xray\Common\Serial\TypedMessage;
 
 /**
  * Generated from protobuf message <code>xray.app.router.command.AddRuleRequest</code>
  */
-class AddRuleRequest extends Message
+class AddRuleRequest extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>.xray.common.serial.TypedMessage config = 1;</code>
@@ -29,19 +28,18 @@ class AddRuleRequest extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type TypedMessage $config
-     * @type bool $shouldAppend
+     *     @type \Xray\Common\Serial\TypedMessage $config
+     *     @type bool $shouldAppend
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Command::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\App\Router\Command\Command::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>.xray.common.serial.TypedMessage config = 1;</code>
-     * @return TypedMessage|null
+     * @return \Xray\Common\Serial\TypedMessage|null
      */
     public function getConfig()
     {
@@ -60,12 +58,12 @@ class AddRuleRequest extends Message
 
     /**
      * Generated from protobuf field <code>.xray.common.serial.TypedMessage config = 1;</code>
-     * @param TypedMessage $var
+     * @param \Xray\Common\Serial\TypedMessage $var
      * @return $this
      */
     public function setConfig($var)
     {
-        GPBUtil::checkMessage($var, TypedMessage::class);
+        GPBUtil::checkMessage($var, \Xray\Common\Serial\TypedMessage::class);
         $this->config = $var;
 
         return $this;

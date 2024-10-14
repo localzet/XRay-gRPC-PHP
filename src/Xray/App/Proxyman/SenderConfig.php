@@ -4,17 +4,14 @@
 
 namespace Xray\App\Proxyman;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
-use GPBMetadata\App\Proxyman\Config;
-use Xray\Common\Net\IPOrDomain;
-use Xray\Transport\Internet\ProxyConfig;
-use Xray\Transport\Internet\StreamConfig;
 
 /**
  * Generated from protobuf message <code>xray.app.proxyman.SenderConfig</code>
  */
-class SenderConfig extends Message
+class SenderConfig extends \Google\Protobuf\Internal\Message
 {
     /**
      * Send traffic through the given IP. Only IP is allowed.
@@ -45,17 +42,16 @@ class SenderConfig extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type IPOrDomain $via
+     *     @type \Xray\Common\Net\IPOrDomain $via
      *           Send traffic through the given IP. Only IP is allowed.
-     * @type StreamConfig $stream_settings
-     * @type ProxyConfig $proxy_settings
-     * @type MultiplexingConfig $multiplex_settings
-     * @type string $via_cidr
+     *     @type \Xray\Transport\Internet\StreamConfig $stream_settings
+     *     @type \Xray\Transport\Internet\ProxyConfig $proxy_settings
+     *     @type \Xray\App\Proxyman\MultiplexingConfig $multiplex_settings
+     *     @type string $via_cidr
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Config::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\App\Proxyman\Config::initOnce();
         parent::__construct($data);
     }
 
@@ -63,7 +59,7 @@ class SenderConfig extends Message
      * Send traffic through the given IP. Only IP is allowed.
      *
      * Generated from protobuf field <code>.xray.common.net.IPOrDomain via = 1;</code>
-     * @return IPOrDomain|null
+     * @return \Xray\Common\Net\IPOrDomain|null
      */
     public function getVia()
     {
@@ -84,12 +80,12 @@ class SenderConfig extends Message
      * Send traffic through the given IP. Only IP is allowed.
      *
      * Generated from protobuf field <code>.xray.common.net.IPOrDomain via = 1;</code>
-     * @param IPOrDomain $var
+     * @param \Xray\Common\Net\IPOrDomain $var
      * @return $this
      */
     public function setVia($var)
     {
-        GPBUtil::checkMessage($var, IPOrDomain::class);
+        GPBUtil::checkMessage($var, \Xray\Common\Net\IPOrDomain::class);
         $this->via = $var;
 
         return $this;
@@ -97,7 +93,7 @@ class SenderConfig extends Message
 
     /**
      * Generated from protobuf field <code>.xray.transport.internet.StreamConfig stream_settings = 2;</code>
-     * @return StreamConfig|null
+     * @return \Xray\Transport\Internet\StreamConfig|null
      */
     public function getStreamSettings()
     {
@@ -116,12 +112,12 @@ class SenderConfig extends Message
 
     /**
      * Generated from protobuf field <code>.xray.transport.internet.StreamConfig stream_settings = 2;</code>
-     * @param StreamConfig $var
+     * @param \Xray\Transport\Internet\StreamConfig $var
      * @return $this
      */
     public function setStreamSettings($var)
     {
-        GPBUtil::checkMessage($var, StreamConfig::class);
+        GPBUtil::checkMessage($var, \Xray\Transport\Internet\StreamConfig::class);
         $this->stream_settings = $var;
 
         return $this;
@@ -129,7 +125,7 @@ class SenderConfig extends Message
 
     /**
      * Generated from protobuf field <code>.xray.transport.internet.ProxyConfig proxy_settings = 3;</code>
-     * @return ProxyConfig|null
+     * @return \Xray\Transport\Internet\ProxyConfig|null
      */
     public function getProxySettings()
     {
@@ -148,12 +144,12 @@ class SenderConfig extends Message
 
     /**
      * Generated from protobuf field <code>.xray.transport.internet.ProxyConfig proxy_settings = 3;</code>
-     * @param ProxyConfig $var
+     * @param \Xray\Transport\Internet\ProxyConfig $var
      * @return $this
      */
     public function setProxySettings($var)
     {
-        GPBUtil::checkMessage($var, ProxyConfig::class);
+        GPBUtil::checkMessage($var, \Xray\Transport\Internet\ProxyConfig::class);
         $this->proxy_settings = $var;
 
         return $this;
@@ -161,7 +157,7 @@ class SenderConfig extends Message
 
     /**
      * Generated from protobuf field <code>.xray.app.proxyman.MultiplexingConfig multiplex_settings = 4;</code>
-     * @return MultiplexingConfig|null
+     * @return \Xray\App\Proxyman\MultiplexingConfig|null
      */
     public function getMultiplexSettings()
     {
@@ -180,12 +176,12 @@ class SenderConfig extends Message
 
     /**
      * Generated from protobuf field <code>.xray.app.proxyman.MultiplexingConfig multiplex_settings = 4;</code>
-     * @param MultiplexingConfig $var
+     * @param \Xray\App\Proxyman\MultiplexingConfig $var
      * @return $this
      */
     public function setMultiplexSettings($var)
     {
-        GPBUtil::checkMessage($var, MultiplexingConfig::class);
+        GPBUtil::checkMessage($var, \Xray\App\Proxyman\MultiplexingConfig::class);
         $this->multiplex_settings = $var;
 
         return $this;

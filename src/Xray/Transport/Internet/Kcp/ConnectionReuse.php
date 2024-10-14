@@ -4,13 +4,14 @@
 
 namespace Xray\Transport\Internet\Kcp;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 
 /**
  * Generated from protobuf message <code>xray.transport.internet.kcp.ConnectionReuse</code>
  */
-class ConnectionReuse extends Message
+class ConnectionReuse extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>bool enable = 1;</code>
@@ -23,11 +24,10 @@ class ConnectionReuse extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type bool $enable
+     *     @type bool $enable
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Transport\Internet\Kcp\Config::initOnce();
         parent::__construct($data);
     }

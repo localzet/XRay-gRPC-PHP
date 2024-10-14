@@ -4,14 +4,14 @@
 
 namespace Xray\Transport\Internet\Tcp;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
-use Xray\Common\Serial\TypedMessage;
 
 /**
  * Generated from protobuf message <code>xray.transport.internet.tcp.Config</code>
  */
-class Config extends Message
+class Config extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>.xray.common.serial.TypedMessage header_settings = 2;</code>
@@ -28,19 +28,18 @@ class Config extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type TypedMessage $header_settings
-     * @type bool $accept_proxy_protocol
+     *     @type \Xray\Common\Serial\TypedMessage $header_settings
+     *     @type bool $accept_proxy_protocol
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Transport\Internet\Tcp\Config::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>.xray.common.serial.TypedMessage header_settings = 2;</code>
-     * @return TypedMessage|null
+     * @return \Xray\Common\Serial\TypedMessage|null
      */
     public function getHeaderSettings()
     {
@@ -59,12 +58,12 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>.xray.common.serial.TypedMessage header_settings = 2;</code>
-     * @param TypedMessage $var
+     * @param \Xray\Common\Serial\TypedMessage $var
      * @return $this
      */
     public function setHeaderSettings($var)
     {
-        GPBUtil::checkMessage($var, TypedMessage::class);
+        GPBUtil::checkMessage($var, \Xray\Common\Serial\TypedMessage::class);
         $this->header_settings = $var;
 
         return $this;

@@ -4,14 +4,16 @@
 
 namespace Xray\App\Commander;
 
-use Google\Protobuf\Internal\Message;
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * ReflectionConfig is the placeholder config for ReflectionService.
  *
  * Generated from protobuf message <code>xray.app.commander.ReflectionConfig</code>
  */
-class ReflectionConfig extends Message
+class ReflectionConfig extends \Google\Protobuf\Internal\Message
 {
 
     /**
@@ -22,8 +24,7 @@ class ReflectionConfig extends Message
      *
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\App\Commander\Config::initOnce();
         parent::__construct($data);
     }

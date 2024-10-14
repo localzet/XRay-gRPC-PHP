@@ -4,14 +4,14 @@
 
 namespace Xray\App\Proxyman;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
-use GPBMetadata\App\Proxyman\Config;
 
 /**
  * Generated from protobuf message <code>xray.app.proxyman.MultiplexingConfig</code>
  */
-class MultiplexingConfig extends Message
+class MultiplexingConfig extends \Google\Protobuf\Internal\Message
 {
     /**
      * Whether or not Mux is enabled.
@@ -44,19 +44,18 @@ class MultiplexingConfig extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type bool $enabled
+     *     @type bool $enabled
      *           Whether or not Mux is enabled.
-     * @type int $concurrency
+     *     @type int $concurrency
      *           Max number of concurrent connections that one Mux connection can handle.
-     * @type int $xudpConcurrency
+     *     @type int $xudpConcurrency
      *           Transport XUDP in another Mux.
-     * @type string $xudpProxyUDP443
+     *     @type string $xudpProxyUDP443
      *           "reject" (default), "allow" or "skip".
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Config::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\App\Proxyman\Config::initOnce();
         parent::__construct($data);
     }
 

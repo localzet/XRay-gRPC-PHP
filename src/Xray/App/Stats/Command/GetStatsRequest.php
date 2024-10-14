@@ -4,14 +4,14 @@
 
 namespace Xray\App\Stats\Command;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
-use GPBMetadata\App\Stats\Command\Command;
 
 /**
  * Generated from protobuf message <code>xray.app.stats.command.GetStatsRequest</code>
  */
-class GetStatsRequest extends Message
+class GetStatsRequest extends \Google\Protobuf\Internal\Message
 {
     /**
      * Name of the stat counter.
@@ -32,15 +32,14 @@ class GetStatsRequest extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $name
+     *     @type string $name
      *           Name of the stat counter.
-     * @type bool $reset
+     *     @type bool $reset
      *           Whether or not to reset the counter to fetching its value.
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Command::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\App\Stats\Command\Command::initOnce();
         parent::__construct($data);
     }
 

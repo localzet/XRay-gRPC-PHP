@@ -4,27 +4,24 @@
 
 namespace GPBMetadata\Transport\Internet\Headers\Noop;
 
-use Google\Protobuf\Internal\DescriptorPool;
-
 class Config
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
-        $pool = DescriptorPool::getGeneratedPool();
+    public static function initOnce() {
+        $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
         if (static::$is_initialized == true) {
-            return;
+          return;
         }
         $pool->internalAddGeneratedFile(
             '
-ï¿½
+‹
 ,transport/internet/headers/noop/config.proto$xray.transport.internet.headers.noop"
 Config"
-ConnectionConfigBï¿½
-(com.xray.transport.internet.headers.noopPZ9github.com/xtls/xray-core/transport/internet/headers/noopï¿½$Xray.Transport.Internet.Headers.Noopbproto3'
-            , true);
+ConnectionConfigBŽ
+(com.xray.transport.internet.headers.noopPZ9github.com/xtls/xray-core/transport/internet/headers/noopª$Xray.Transport.Internet.Headers.Noopbproto3'
+        , true);
 
         static::$is_initialized = true;
     }

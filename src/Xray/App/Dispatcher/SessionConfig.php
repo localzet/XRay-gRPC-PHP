@@ -4,12 +4,14 @@
 
 namespace Xray\App\Dispatcher;
 
-use Google\Protobuf\Internal\Message;
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * Generated from protobuf message <code>xray.app.dispatcher.SessionConfig</code>
  */
-class SessionConfig extends Message
+class SessionConfig extends \Google\Protobuf\Internal\Message
 {
 
     /**
@@ -20,8 +22,7 @@ class SessionConfig extends Message
      *
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\App\Dispatcher\Config::initOnce();
         parent::__construct($data);
     }

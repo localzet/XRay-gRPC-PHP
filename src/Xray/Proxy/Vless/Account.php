@@ -4,13 +4,14 @@
 
 namespace Xray\Proxy\Vless;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 
 /**
  * Generated from protobuf message <code>xray.proxy.vless.Account</code>
  */
-class Account extends Message
+class Account extends \Google\Protobuf\Internal\Message
 {
     /**
      * ID of the account, in the form of a UUID, e.g., "66ad4540-b58c-4ad2-9926-ea63445a9b57".
@@ -37,16 +38,15 @@ class Account extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $id
+     *     @type string $id
      *           ID of the account, in the form of a UUID, e.g., "66ad4540-b58c-4ad2-9926-ea63445a9b57".
-     * @type string $flow
+     *     @type string $flow
      *           Flow settings. May be "xtls-rprx-vision".
-     * @type string $encryption
+     *     @type string $encryption
      *           Encryption settings. Only applies to client side, and only accepts "none" for now.
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Proxy\Vless\Account::initOnce();
         parent::__construct($data);
     }

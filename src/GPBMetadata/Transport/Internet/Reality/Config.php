@@ -4,23 +4,20 @@
 
 namespace GPBMetadata\Transport\Internet\Reality;
 
-use Google\Protobuf\Internal\DescriptorPool;
-
 class Config
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
-        $pool = DescriptorPool::getGeneratedPool();
+    public static function initOnce() {
+        $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
         if (static::$is_initialized == true) {
-            return;
+          return;
         }
         $pool->internalAddGeneratedFile(
             '
-ï¿½
-\'transport/internet/reality/config.protoxray.transport.internet.reality"ï¿½
+§
+\'transport/internet/reality/config.protoxray.transport.internet.reality"Ñ
 Config
 show (
 dest (	
@@ -30,8 +27,7 @@ class Config
 private_key (
 min_client_ver (
 max_client_ver (
-
-max_time_diff	 (
+max_time_diff	 (
 	short_ids
  (
 Fingerprint (	
@@ -42,8 +38,8 @@ public_key (
 spider_x (	
 spider_y (
 master_key_log (	B
-#com.xray.transport.internet.realityPZ4github.com/xtls/xray-core/transport/internet/realityï¿½Xray.Transport.Internet.Realitybproto3'
-            , true);
+#com.xray.transport.internet.realityPZ4github.com/xtls/xray-core/transport/internet/realityªXray.Transport.Internet.Realitybproto3'
+        , true);
 
         static::$is_initialized = true;
     }

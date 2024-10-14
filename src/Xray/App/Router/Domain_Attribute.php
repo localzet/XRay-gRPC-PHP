@@ -9,9 +9,7 @@ if (false) {
      * This class is deprecated. Use Xray\App\Router\Domain\Attribute instead.
      * @deprecated
      */
-    class Domain_Attribute
-    {
-    }
+    class Domain_Attribute {}
 }
 class_exists(Domain\Attribute::class);
 @trigger_error('Xray\App\Router\Domain_Attribute is deprecated and will be removed in the next major release. Use Xray\App\Router\Domain\Attribute instead', E_USER_DEPRECATED);

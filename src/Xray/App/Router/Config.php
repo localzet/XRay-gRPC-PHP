@@ -5,15 +5,13 @@
 namespace Xray\App\Router;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 use Google\Protobuf\Internal\RepeatedField;
-use Xray\App\Router\Config\DomainStrategy;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * Generated from protobuf message <code>xray.app.router.Config</code>
  */
-class Config extends Message
+class Config extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>.xray.app.router.Config.DomainStrategy domain_strategy = 1;</code>
@@ -34,13 +32,12 @@ class Config extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type int $domain_strategy
-     * @type array<RoutingRule>|RepeatedField $rule
-     * @type array<BalancingRule>|RepeatedField $balancing_rule
+     *     @type int $domain_strategy
+     *     @type array<\Xray\App\Router\RoutingRule>|\Google\Protobuf\Internal\RepeatedField $rule
+     *     @type array<\Xray\App\Router\BalancingRule>|\Google\Protobuf\Internal\RepeatedField $balancing_rule
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\App\Router\Config::initOnce();
         parent::__construct($data);
     }
@@ -61,7 +58,7 @@ class Config extends Message
      */
     public function setDomainStrategy($var)
     {
-        GPBUtil::checkEnum($var, DomainStrategy::class);
+        GPBUtil::checkEnum($var, \Xray\App\Router\Config\DomainStrategy::class);
         $this->domain_strategy = $var;
 
         return $this;
@@ -69,7 +66,7 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.app.router.RoutingRule rule = 2;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getRule()
     {
@@ -78,12 +75,12 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.app.router.RoutingRule rule = 2;</code>
-     * @param array<RoutingRule>|RepeatedField $var
+     * @param array<\Xray\App\Router\RoutingRule>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setRule($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, RoutingRule::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Xray\App\Router\RoutingRule::class);
         $this->rule = $arr;
 
         return $this;
@@ -91,7 +88,7 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.app.router.BalancingRule balancing_rule = 3;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getBalancingRule()
     {
@@ -100,12 +97,12 @@ class Config extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.app.router.BalancingRule balancing_rule = 3;</code>
-     * @param array<BalancingRule>|RepeatedField $var
+     * @param array<\Xray\App\Router\BalancingRule>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setBalancingRule($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, BalancingRule::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Xray\App\Router\BalancingRule::class);
         $this->balancing_rule = $arr;
 
         return $this;

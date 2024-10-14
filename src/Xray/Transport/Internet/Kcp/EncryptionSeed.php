@@ -4,15 +4,16 @@
 
 namespace Xray\Transport\Internet\Kcp;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 
 /**
  * Maximum Transmission Unit, in bytes.
  *
  * Generated from protobuf message <code>xray.transport.internet.kcp.EncryptionSeed</code>
  */
-class EncryptionSeed extends Message
+class EncryptionSeed extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>string seed = 1;</code>
@@ -25,11 +26,10 @@ class EncryptionSeed extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $seed
+     *     @type string $seed
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Transport\Internet\Kcp\Config::initOnce();
         parent::__construct($data);
     }

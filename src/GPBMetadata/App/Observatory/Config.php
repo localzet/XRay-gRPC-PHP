@@ -4,22 +4,19 @@
 
 namespace GPBMetadata\App\Observatory;
 
-use Google\Protobuf\Internal\DescriptorPool;
-
 class Config
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
-        $pool = DescriptorPool::getGeneratedPool();
+    public static function initOnce() {
+        $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
         if (static::$is_initialized == true) {
-            return;
+          return;
         }
         $pool->internalAddGeneratedFile(
             '
-ï¿½
+Ÿ
 app/observatory/config.protoxray.core.app.observatory"N
 ObservationResult9
 status (2).xray.core.app.observatory.OutboundStatus"v
@@ -29,30 +26,28 @@ class Config
 	deviation (
 average (
 max (
-min ("ï¿½
+min ("Û
 OutboundStatus
 alive (
 delay (
 last_error_reason (	
 outbound_tag (	
 last_seen_time (
-
-last_try_time (K
+last_try_time (K
 health_ping (26.xray.core.app.observatory.HealthPingMeasurementResult"F
 ProbeResult
 alive (
 delay (
 last_error_reason (	"#
 	Intensity
-probe_interval (
-"i
+probe_interval ("i
 Config
 subject_selector (	
 	probe_url (	
 probe_interval (
 enable_concurrency (B^
-com.xray.app.observatoryPZ)github.com/xtls/xray-core/app/observatoryï¿½Xray.App.Observatorybproto3'
-            , true);
+com.xray.app.observatoryPZ)github.com/xtls/xray-core/app/observatoryªXray.App.Observatorybproto3'
+        , true);
 
         static::$is_initialized = true;
     }

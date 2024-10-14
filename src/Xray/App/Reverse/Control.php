@@ -4,14 +4,14 @@
 
 namespace Xray\App\Reverse;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
-use Xray\App\Reverse\Control\State;
 
 /**
  * Generated from protobuf message <code>xray.app.reverse.Control</code>
  */
-class Control extends Message
+class Control extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>.xray.app.reverse.Control.State state = 1;</code>
@@ -28,12 +28,11 @@ class Control extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type int $state
-     * @type string $random
+     *     @type int $state
+     *     @type string $random
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\App\Reverse\Config::initOnce();
         parent::__construct($data);
     }
@@ -54,7 +53,7 @@ class Control extends Message
      */
     public function setState($var)
     {
-        GPBUtil::checkEnum($var, State::class);
+        GPBUtil::checkEnum($var, \Xray\App\Reverse\Control\State::class);
         $this->state = $var;
 
         return $this;

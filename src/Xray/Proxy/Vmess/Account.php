@@ -4,14 +4,14 @@
 
 namespace Xray\Proxy\Vmess;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
-use Xray\Common\Protocol\SecurityConfig;
 
 /**
  * Generated from protobuf message <code>xray.proxy.vmess.Account</code>
  */
-class Account extends Message
+class Account extends \Google\Protobuf\Internal\Message
 {
     /**
      * ID of the account, in the form of a UUID, e.g.,
@@ -39,17 +39,16 @@ class Account extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $id
+     *     @type string $id
      *           ID of the account, in the form of a UUID, e.g.,
      *           "66ad4540-b58c-4ad2-9926-ea63445a9b57".
-     * @type SecurityConfig $security_settings
+     *     @type \Xray\Common\Protocol\SecurityConfig $security_settings
      *           Security settings. Only applies to client side.
-     * @type string $tests_enabled
+     *     @type string $tests_enabled
      *           Define tests enabled for this account
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Proxy\Vmess\Account::initOnce();
         parent::__construct($data);
     }
@@ -86,7 +85,7 @@ class Account extends Message
      * Security settings. Only applies to client side.
      *
      * Generated from protobuf field <code>.xray.common.protocol.SecurityConfig security_settings = 3;</code>
-     * @return SecurityConfig|null
+     * @return \Xray\Common\Protocol\SecurityConfig|null
      */
     public function getSecuritySettings()
     {
@@ -107,12 +106,12 @@ class Account extends Message
      * Security settings. Only applies to client side.
      *
      * Generated from protobuf field <code>.xray.common.protocol.SecurityConfig security_settings = 3;</code>
-     * @param SecurityConfig $var
+     * @param \Xray\Common\Protocol\SecurityConfig $var
      * @return $this
      */
     public function setSecuritySettings($var)
     {
-        GPBUtil::checkMessage($var, SecurityConfig::class);
+        GPBUtil::checkMessage($var, \Xray\Common\Protocol\SecurityConfig::class);
         $this->security_settings = $var;
 
         return $this;

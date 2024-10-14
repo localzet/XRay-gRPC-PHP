@@ -4,14 +4,14 @@
 
 namespace Xray\Proxy\Freedom;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
-use Xray\Common\Protocol\ServerEndpoint;
 
 /**
  * Generated from protobuf message <code>xray.proxy.freedom.DestinationOverride</code>
  */
-class DestinationOverride extends Message
+class DestinationOverride extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>.xray.common.protocol.ServerEndpoint server = 1;</code>
@@ -24,18 +24,17 @@ class DestinationOverride extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type ServerEndpoint $server
+     *     @type \Xray\Common\Protocol\ServerEndpoint $server
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Proxy\Freedom\Config::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>.xray.common.protocol.ServerEndpoint server = 1;</code>
-     * @return ServerEndpoint|null
+     * @return \Xray\Common\Protocol\ServerEndpoint|null
      */
     public function getServer()
     {
@@ -54,12 +53,12 @@ class DestinationOverride extends Message
 
     /**
      * Generated from protobuf field <code>.xray.common.protocol.ServerEndpoint server = 1;</code>
-     * @param ServerEndpoint $var
+     * @param \Xray\Common\Protocol\ServerEndpoint $var
      * @return $this
      */
     public function setServer($var)
     {
-        GPBUtil::checkMessage($var, ServerEndpoint::class);
+        GPBUtil::checkMessage($var, \Xray\Common\Protocol\ServerEndpoint::class);
         $this->server = $var;
 
         return $this;

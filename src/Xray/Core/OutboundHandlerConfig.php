@@ -4,16 +4,16 @@
 
 namespace Xray\Core;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
-use Xray\Common\Serial\TypedMessage;
 
 /**
  * OutboundHandlerConfig is the configuration for outbound handler.
  *
  * Generated from protobuf message <code>xray.core.OutboundHandlerConfig</code>
  */
-class OutboundHandlerConfig extends Message
+class OutboundHandlerConfig extends \Google\Protobuf\Internal\Message
 {
     /**
      * Tag of this outbound handler.
@@ -52,20 +52,19 @@ class OutboundHandlerConfig extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $tag
+     *     @type string $tag
      *           Tag of this outbound handler.
-     * @type TypedMessage $sender_settings
+     *     @type \Xray\Common\Serial\TypedMessage $sender_settings
      *           Settings for how to dial connection for this outbound handler.
-     * @type TypedMessage $proxy_settings
+     *     @type \Xray\Common\Serial\TypedMessage $proxy_settings
      *           Settings for this outbound proxy. Must be one of the outbound proxies.
-     * @type int|string $expire
+     *     @type int|string $expire
      *           If not zero, this outbound will be expired in seconds. Not used for now.
-     * @type string $comment
+     *     @type string $comment
      *           Comment of this outbound handler. Not used for now.
      * }
      */
-    public function __construct($data = NULL)
-    {
+    public function __construct($data = NULL) {
         \GPBMetadata\Core\Config::initOnce();
         parent::__construct($data);
     }
@@ -100,7 +99,7 @@ class OutboundHandlerConfig extends Message
      * Settings for how to dial connection for this outbound handler.
      *
      * Generated from protobuf field <code>.xray.common.serial.TypedMessage sender_settings = 2;</code>
-     * @return TypedMessage|null
+     * @return \Xray\Common\Serial\TypedMessage|null
      */
     public function getSenderSettings()
     {
@@ -121,12 +120,12 @@ class OutboundHandlerConfig extends Message
      * Settings for how to dial connection for this outbound handler.
      *
      * Generated from protobuf field <code>.xray.common.serial.TypedMessage sender_settings = 2;</code>
-     * @param TypedMessage $var
+     * @param \Xray\Common\Serial\TypedMessage $var
      * @return $this
      */
     public function setSenderSettings($var)
     {
-        GPBUtil::checkMessage($var, TypedMessage::class);
+        GPBUtil::checkMessage($var, \Xray\Common\Serial\TypedMessage::class);
         $this->sender_settings = $var;
 
         return $this;
@@ -136,7 +135,7 @@ class OutboundHandlerConfig extends Message
      * Settings for this outbound proxy. Must be one of the outbound proxies.
      *
      * Generated from protobuf field <code>.xray.common.serial.TypedMessage proxy_settings = 3;</code>
-     * @return TypedMessage|null
+     * @return \Xray\Common\Serial\TypedMessage|null
      */
     public function getProxySettings()
     {
@@ -157,12 +156,12 @@ class OutboundHandlerConfig extends Message
      * Settings for this outbound proxy. Must be one of the outbound proxies.
      *
      * Generated from protobuf field <code>.xray.common.serial.TypedMessage proxy_settings = 3;</code>
-     * @param TypedMessage $var
+     * @param \Xray\Common\Serial\TypedMessage $var
      * @return $this
      */
     public function setProxySettings($var)
     {
-        GPBUtil::checkMessage($var, TypedMessage::class);
+        GPBUtil::checkMessage($var, \Xray\Common\Serial\TypedMessage::class);
         $this->proxy_settings = $var;
 
         return $this;

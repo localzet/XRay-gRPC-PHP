@@ -5,7 +5,6 @@
 namespace Xray\App\Reverse\Control;
 
 use UnexpectedValueException;
-use Xray\App\Reverse\Control_State;
 
 /**
  * Protobuf type <code>xray.app.reverse.Control.State</code>
@@ -30,7 +29,7 @@ class State
     {
         if (!isset(self::$valueToName[$value])) {
             throw new UnexpectedValueException(sprintf(
-                'Enum %s has no name defined for value %s', __CLASS__, $value));
+                    'Enum %s has no name defined for value %s', __CLASS__, $value));
         }
         return self::$valueToName[$value];
     }
@@ -41,12 +40,12 @@ class State
         $const = __CLASS__ . '::' . strtoupper($name);
         if (!defined($const)) {
             throw new UnexpectedValueException(sprintf(
-                'Enum %s has no value defined for name %s', __CLASS__, $name));
+                    'Enum %s has no value defined for name %s', __CLASS__, $name));
         }
         return constant($const);
     }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(State::class, Control_State::class);
+class_alias(State::class, \Xray\App\Reverse\Control_State::class);
 

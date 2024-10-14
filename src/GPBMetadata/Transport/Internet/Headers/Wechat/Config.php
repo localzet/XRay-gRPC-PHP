@@ -4,26 +4,23 @@
 
 namespace GPBMetadata\Transport\Internet\Headers\Wechat;
 
-use Google\Protobuf\Internal\DescriptorPool;
-
 class Config
 {
     public static $is_initialized = false;
 
-    public static function initOnce()
-    {
-        $pool = DescriptorPool::getGeneratedPool();
+    public static function initOnce() {
+        $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
 
         if (static::$is_initialized == true) {
-            return;
+          return;
         }
         $pool->internalAddGeneratedFile(
             '
-ï¿½
+†
 .transport/internet/headers/wechat/config.proto&xray.transport.internet.headers.wechat"
-VideoConfigBï¿½
-*com.xray.transport.internet.headers.wechatPZ;github.com/xtls/xray-core/transport/internet/headers/wechatï¿½&Xray.Transport.Internet.Headers.Wechatbproto3'
-            , true);
+VideoConfigB”
+*com.xray.transport.internet.headers.wechatPZ;github.com/xtls/xray-core/transport/internet/headers/wechatª&Xray.Transport.Internet.Headers.Wechatbproto3'
+        , true);
 
         static::$is_initialized = true;
     }

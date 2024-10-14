@@ -5,16 +5,13 @@
 namespace Xray\Transport\Internet;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
 use Google\Protobuf\Internal\RepeatedField;
-use GPBMetadata\Transport\Internet\Config;
-use Xray\Common\Serial\TypedMessage;
+use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * Generated from protobuf message <code>xray.transport.internet.StreamConfig</code>
  */
-class StreamConfig extends Message
+class StreamConfig extends \Google\Protobuf\Internal\Message
 {
     /**
      * Effective network.
@@ -49,19 +46,18 @@ class StreamConfig extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $protocol_name
+     *     @type string $protocol_name
      *           Effective network.
-     * @type array<TransportConfig>|RepeatedField $transport_settings
-     * @type string $security_type
+     *     @type array<\Xray\Transport\Internet\TransportConfig>|\Google\Protobuf\Internal\RepeatedField $transport_settings
+     *     @type string $security_type
      *           Type of security. Must be a message name of the settings proto.
-     * @type array<TypedMessage>|RepeatedField $security_settings
+     *     @type array<\Xray\Common\Serial\TypedMessage>|\Google\Protobuf\Internal\RepeatedField $security_settings
      *           Settings for transport security. For now the only choice is TLS.
-     * @type SocketConfig $socket_settings
+     *     @type \Xray\Transport\Internet\SocketConfig $socket_settings
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Config::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\Transport\Internet\Config::initOnce();
         parent::__construct($data);
     }
 
@@ -93,7 +89,7 @@ class StreamConfig extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.transport.internet.TransportConfig transport_settings = 2;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getTransportSettings()
     {
@@ -102,12 +98,12 @@ class StreamConfig extends Message
 
     /**
      * Generated from protobuf field <code>repeated .xray.transport.internet.TransportConfig transport_settings = 2;</code>
-     * @param array<TransportConfig>|RepeatedField $var
+     * @param array<\Xray\Transport\Internet\TransportConfig>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setTransportSettings($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, TransportConfig::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Xray\Transport\Internet\TransportConfig::class);
         $this->transport_settings = $arr;
 
         return $this;
@@ -143,7 +139,7 @@ class StreamConfig extends Message
      * Settings for transport security. For now the only choice is TLS.
      *
      * Generated from protobuf field <code>repeated .xray.common.serial.TypedMessage security_settings = 4;</code>
-     * @return RepeatedField
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getSecuritySettings()
     {
@@ -154,12 +150,12 @@ class StreamConfig extends Message
      * Settings for transport security. For now the only choice is TLS.
      *
      * Generated from protobuf field <code>repeated .xray.common.serial.TypedMessage security_settings = 4;</code>
-     * @param array<TypedMessage>|RepeatedField $var
+     * @param array<\Xray\Common\Serial\TypedMessage>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setSecuritySettings($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, TypedMessage::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Xray\Common\Serial\TypedMessage::class);
         $this->security_settings = $arr;
 
         return $this;
@@ -167,7 +163,7 @@ class StreamConfig extends Message
 
     /**
      * Generated from protobuf field <code>.xray.transport.internet.SocketConfig socket_settings = 6;</code>
-     * @return SocketConfig|null
+     * @return \Xray\Transport\Internet\SocketConfig|null
      */
     public function getSocketSettings()
     {
@@ -186,12 +182,12 @@ class StreamConfig extends Message
 
     /**
      * Generated from protobuf field <code>.xray.transport.internet.SocketConfig socket_settings = 6;</code>
-     * @param SocketConfig $var
+     * @param \Xray\Transport\Internet\SocketConfig $var
      * @return $this
      */
     public function setSocketSettings($var)
     {
-        GPBUtil::checkMessage($var, SocketConfig::class);
+        GPBUtil::checkMessage($var, \Xray\Transport\Internet\SocketConfig::class);
         $this->socket_settings = $var;
 
         return $this;

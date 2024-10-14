@@ -4,14 +4,14 @@
 
 namespace Xray\App\Proxyman\Command;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Google\Protobuf\Internal\Message;
-use GPBMetadata\App\Proxyman\Command\Command;
 
 /**
  * Generated from protobuf message <code>xray.app.proxyman.command.RemoveUserOperation</code>
  */
-class RemoveUserOperation extends Message
+class RemoveUserOperation extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>string email = 1;</code>
@@ -24,12 +24,11 @@ class RemoveUserOperation extends Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     * @type string $email
+     *     @type string $email
      * }
      */
-    public function __construct($data = NULL)
-    {
-        Command::initOnce();
+    public function __construct($data = NULL) {
+        \GPBMetadata\App\Proxyman\Command\Command::initOnce();
         parent::__construct($data);
     }
 
