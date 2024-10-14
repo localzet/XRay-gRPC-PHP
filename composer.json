@@ -1,0 +1,35 @@
+{
+  "name": "localzet/xray-grpc",
+  "description": "XRay gRPC Library",
+  "type": "library",
+  "keywords": [
+    "PHP",
+    "gRPC",
+    "localzet",
+    "XRay"
+  ],
+  "license": "AGPL-3.0-or-later",
+  "authors": [
+    {
+      "role": "Developer",
+      "name": "Ivan Zorin",
+      "email": "creator@localzet.com",
+      "homepage": "https://github.com/localzet"
+    }
+  ],
+  "support": {
+    "email": "support@localzet.com",
+    "issues": "https://github.com/localzet/XRay-gRPC/issues",
+    "source": "https://github.com/localzet/XRay-gRPC"
+  },
+  "require": {
+    "ext-grpc": "*",
+    "grpc/grpc": "^1.57",
+    "google/protobuf": "^3"
+  },
+  "autoload": {
+    "psr-4": {
+      "\\": "src"
+    }
+  }
+}
