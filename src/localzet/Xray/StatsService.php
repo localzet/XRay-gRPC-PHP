@@ -2,7 +2,8 @@
 
 namespace localzet\Xray;
 
-use http\Exception\RuntimeException;
+use Grpc\ChannelCredentials;
+use RuntimeException;
 use Xray\App\Stats\Command\GetStatsRequest;
 use Xray\App\Stats\Command\GetStatsResponse;
 use Xray\App\Stats\Command\QueryStatsRequest;
@@ -16,9 +17,11 @@ class StatsService
 {
     private $client;
 
-    public function __construct($hostname, $opts, $channel = null)
+    public function __construct($hostname)
     {
-        $this->client = new StatsServiceClient($hostname, $opts, $channel);
+        $this->client = new StatsServiceClient($hostname, [
+            'credentials' => ChannelCredentials::createInsecure()
+        ]);
     }
 
     public function GetStats(string $name = null, bool $reset = null): array
