@@ -1,6 +1,12 @@
 <p align="center"><a href="#"><img src="https://static.zorin.space/media/logos/ZorinProjectsSP.svg" alt="Image"></a></p>
 
-Используемые классы:
+### Установка
+
+```shell
+composer require localzet/xray-grpc
+```
+
+### Используемые классы:
 
 ```php
 Xray\App\Proxyman\Command\HandlerServiceClient::class;
